@@ -1,0 +1,443 @@
+// Utility
+*{
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.hover-indication{
+	&:hover{
+		cursor: pointer;
+		opacity: 0.7;
+	}
+}
+.flex{
+    display: -webkit-box;
+    display: -moz-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+.flex-column{
+	.flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+.flex-wrap{
+	.flex;
+	-webkit-box-lines: multiple;
+	-moz-box-lines: multiple;
+	-ms-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.flex-center-image{
+	.flex;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+    justify-content: center;
+}
+img{
+	max-width: 100%;
+	max-height: 100%;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+
+// Animations
+
+
+// Breakpoints
+
+@mobile-md: 200px;
+
+// Colors
+@darkgray: #444;
+@nav-color: lightgray;
+@main-light: lighten(lightgray, 15);
+@main: lighten(lightgray, 10);
+
+// MAIN
+
+html{
+	font-family: 'Open Sans', sans-serif;
+}
+
+nav{
+	.flex;
+	justify-content: space-around;
+	height: 4em;
+	width: 100%;
+	background-color:  rgba(255, 255, 255, 0.6);
+}
+	.nav-link{
+		text-align: center;
+		width: 100%;
+		height: 4em;
+		line-height: 4em;
+		color: @darkgray;
+		font-weight:  bold;
+	}
+	.nav-link-active{
+		background-color: rgba(155, 155, 155, 0.5);
+	}
+
+.hero-section{
+	width: 100%;
+	height: 32em;
+	background-repeat: no-repeat;
+	background-size: cover;
+}	
+.hero-section-home{
+	background-image: url('../assets/img/sundial-night-wide.jpg');
+}
+.hero-section-about{
+	background-image: url('../assets/img/mtshasta-sunset-wide.jpg');
+}
+.hero-section-novapex{
+	background-image: url('../assets/img/sundial-night-wide.jpg');
+}
+.hero-section-calendar{
+	background-image: url('../assets/img/sundial-day-wide.jpg');
+}
+.hero-section-leadership{
+	background-image: url('../assets/img/redding.jpg');
+}
+.hero-section-contact{
+	background-image: url('../assets/img/shasta-retina-1.jpg');
+	height: 50em;
+}
+	.hero-content{
+		position: absolute;
+		background-color: rgba(0, 0, 0, 0.40);
+		border-radius: 7px;
+	}
+		.hero-content-wrapper{
+			width: 100%;
+			height: 100%;
+			color: lighten(gray,45);
+			padding: 1em;
+		}
+			.hero-content-block{
+				margin: 0;
+				font-size: 1.2em;
+				line-height: 1.7em;
+			}
+	.hero-content-about{
+		width: 40em;
+		height: 15em;
+		top:15em;
+		right: 2em;
+		// border: 1px solid black;
+	}
+	.hero-content-contact{
+		width: 40em;
+		// height: 30em;
+		top: 7em;
+		left: 2.7em;
+		padding-left: 1em;
+		p{
+			margin-top: 1.5em;
+			margin-bottom: 2em;
+		}
+		h2{
+			display: inline-block;
+		}
+
+	}		
+		.contact-label{
+			width: 200px;
+			text-decoration: underline;
+		}
+		.contact-label-address{
+			margin-bottom: 0em;
+		}
+		.contact-label-address-lower{
+			margin-top: 0.5em;
+		}
+// MAIN VIEWS
+
+	// Home
+
+	// About
+
+	.about-wrapper{
+		.flex-wrap;
+	}
+
+		.about-left{
+			.flex;
+			width: 25%;
+			background-color: @main;
+
+		}
+			.about-links{
+				width: 100%;
+				.flex-column;
+			}
+				.about-left-header-wrapper{
+					text-align: center;
+					height: 5em;
+					background-color: darken(@main, 5);
+					.flex;
+					align-items: center;
+					justify-content: center;
+					// margin-bottom: 2em;
+				}
+					.about-left-header{
+						margin: 0;
+						align-self: center;
+					}
+				.officer-link{
+					max-height: 8em;
+					min-height: 5em;
+					&:hover{
+						cursor: pointer;
+						background-color: darken(@main, 3);
+					}
+					
+					.flex;
+					align-items: center;
+					justify-content: center;
+				}
+					.officer-link-text{
+						margin: 0;
+						align-self: center;
+					}
+		.about-right{
+			.flex;
+			width: 75%;
+			background-color: @main-light;
+		}
+			.bio-wrapper{
+				.flex;
+				width: 100%;
+			}
+				.leader-bio{
+					width: 66.666%;
+					padding: 2em;
+					padding-top: 1em;
+				}
+					.leader-name{
+						font-size: 2em;
+					}
+					.leader-position{
+						font-size: 1.4em;
+					}
+					.leader-bio-text{
+
+					}
+				.leader-photo{
+					padding: 3em 2em;
+					width: 33.333%;
+					.flex-center-image;
+					img{
+						max-height: 300px;
+					}
+				}
+
+	// Novapex
+
+	.novapex-wrapper{
+		position: relative;
+	}
+		
+		.novapex-content{
+			position: absolute;
+			background-color: @main-light;
+			left: 0;
+			top: 0;
+			width: 60%;
+			padding-top: 2.2em;
+		}	
+			.novapex-content-block{
+				width: 80%;
+				font-size: 1.3em;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 3em;
+				line-height: 1.5em;
+			}
+		.novapex-right{
+			position: absolute;
+			right: 0;
+			width: 40%;
+			*{
+					overflow: hidden;
+				}
+		}
+			.novapex-docs{
+				
+				width: 100%;
+				height: 6em;
+				background-color: darken(@main, 10);
+				.flex;
+			}
+				.novapex-docs-header{
+					flex-grow: 2;
+					text-align: center;
+					font-size: 1.3em;
+					font-weight: bold;
+					line-height: (6em/1.3em);
+				}
+				.novapex-docs-links{
+					width: 8em;
+					background-color: darken(@main, 5);
+				}
+					.novapex-doc-link{
+						width: 100%;
+						height: 3em;
+						text-align: center;
+						line-height: 3em;
+						a:hover{
+							text-decoration: underline;
+						}
+					}	
+			.novapex-gallery{
+				width: 100%;
+			}	
+				.novapex-gallery-large{
+					.flex-center-image;
+					padding: 1em 2em;
+					width: 100%;
+					height: 20em;
+
+				}
+				.novapex-gallery-thumbs{
+					.flex-wrap;
+					width: 100%;
+					max-height: 30em;
+					padding: 0;
+				}
+					.novapex-gallery-image{
+						flex-shrink: 2;
+						flex-grow: 2;
+						flex-basis: 25%;
+						// max-width: 33.3334%;
+						height: auto;
+						img{
+							margin: 0;
+						}
+					}
+	// Calendar
+
+		.calendar-wrapper{
+			.flex-wrap;
+		}
+			.calendar-left{
+				.flex;
+				width: 70%;
+				min-width: 800px;
+				padding: 2em;
+			}	
+				.calendar-container{
+					height: 40em;
+					width: 80%;
+					margin: 0 auto;
+				}
+					.calendar-header{
+						.flex;
+						justify-content: space-between;
+						width: 100%;
+						height: 15%;
+					}
+						.calendar-prev-btn{
+			
+						}
+						.calendar-month-text{
+							margin: 0 auto;
+						}
+						.calendar-next-btn{
+
+						}
+					.calendar-row{
+						height: (85%/6);
+					}
+						.calendar-cell{
+							width: (100%/7);
+							height: 100%;
+							border: 2px solid black;
+							display: inline-block;
+							overflow: hidden;
+						}	
+						.calendar-cell-active{
+
+						}
+						.calendar-cell-event{
+							
+						}
+							.calendar-datebox{
+
+							}
+							.calendar-event-name{
+								font-size: 0.8em;
+								&:hover{
+									cursor: pointer;
+								}
+							}
+
+				
+			.calendar-right{
+				background-color: @main;
+				width: 30%;
+				.flex;
+			}	
+				.calendar-details{
+					
+					width: 100%;
+				}
+					.calendar-details-heading{
+						width: 100%;
+						text-align: center;
+						font-size: 2em;
+						margin-top: 1em;
+
+					}
+					.calendar-details-wrapper{
+						.flex-column;
+						justify-content: space-around;
+						height: 20em;
+						// width: 90%;
+						margin: 1em 2em;
+					}	
+						.calendar-event-label{
+							display: inline-block;
+							width: 20%;
+							min-width: 120px;
+							font-weight: bold;
+						}
+						.calendar-details-name{
+						
+						} 
+						.calendar-details-time{
+
+						} 
+						.calendar-details-location{
+
+						} 
+						.calendar-details-description{
+
+						} 
+						.calendar-details-note{
+
+						} 
+						.calendar-details-map{
+							width: 85%;
+							margin: 2em auto;
+							overflow: hidden;
+						} 
+
+				
+	// Contact
+

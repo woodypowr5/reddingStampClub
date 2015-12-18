@@ -1,0 +1,75 @@
+<div 
+	class="about-wrapper"
+	ng-class="{
+		'about-view': currentView === 'about'
+	}">
+
+	<div class="about-left">
+		<div class="about-links">
+			<div class="about-left-header-wrapper">
+				<h2 class="about-left-header">2015 Officers & Biographies</h2>
+			</div>
+			<div class="officer-link" ng-click="selectedBio = 1">
+				<h3 class="officer-link-text">Mark Woodward</h3>
+			</div>
+			<div class="officer-link" ng-click="selectedBio = 2">
+				<h3 class="officer-link-text">Roland Muhleman</h3>
+			</div>
+			<div class="officer-link" ng-click="selectedBio = 3">
+				<h3 class="officer-link-text">James M. Johnson</h3>
+			</div>
+		</div>
+	</div>
+
+	<div class="about-right">
+
+		<!-- BIOS -->
+		<div class="bio-wrapper" ng-show="selectedBio === 1">
+			<div class="leader-bio">
+				<h3 class="leader-name">Mark Woodward</h3>
+				<h4 class="leader-position">Leader Position</h4>
+				<p class="leader-bio-text">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta interdum tempor. Sed ac tellus eu augue ullamcorper euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean laoreet odio non ex consectetur, et aliquam nulla consequat. Quisque varius posuere quam, ut egestas risus gravida id. Vivamus vitae quam faucibus, congue enim et, dignissim nibh. Quisque pellentesque volutpat aliquet. Nulla fermentum dui sed nisi commodo mattis. Quisque cursus lacus arcu, id suscipit massa blandit eu. Duis facilisis fringilla purus id faucibus.
+				</p>
+				<p class="leader-bio-text">
+					Pellentesque congue mattis lacinia. Maecenas eget ligula et nibh elementum facilisis. Donec facilisis bibendum augue, aliquam accumsan augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris tellus ipsum, malesuada ut quam quis, efficitur posuere ligula. Vestibulum congue volutpat dolor, at porttitor enim fringilla in. Aenean eu pulvinar ex. Maecenas arcu quam, placerat ac posuere sed, porttitor et odio
+				</p>
+			</div>
+			<div class="leader-photo">
+				<img src="http://lorempixel.com/300/400/g" alt="">
+			</div>
+		</div>
+		
+		<div class="bio-wrapper" ng-show="selectedBio === 2">
+			<div class="leader-bio">
+				<h3 class="leader-name">Roland Muhleman</h3>
+				<h4 class="leader-position">Leader Position</h4>
+				<p class="leader-bio-text">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta interdum tempor. Sed ac tellus eu augue ullamcorper euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean  volutpat aliquet. Nulla fermentum dui sed nisi commodo mattis. Quisque cursus lacus arcu, id suscipit massa blandit eu. Duis facilisis fringilla purus id faucibus.
+				</p>
+				<p class="leader-bio-text">
+					Pellentesque congue mattis lacinia. Maecenas eget ligula et nibh elementum facilisis. Donec facilisis bibendum augue, aliquam accumsan augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris tellus ipsum, malesuada ut quam quis, efficitur posuere ligula. Vestibulum congue volutpat dolor, at porttitor enim fringilla in. Aenean eu pulvinar ex. Maecenas arcu quam, placerat ac posuere sed, porttitor et odio
+				</p>
+			</div>
+			<div class="leader-photo">
+				<img src="http://lorempixel.com/300/400/g" alt="">
+			</div>
+		</div>
+
+		<div class="bio-wrapper" ng-show="selectedBio === 3">
+			<div class="leader-bio">
+				<h3 class="leader-name">James M. Johnson</h3>
+				<h4 class="leader-position">Leader Position</h4>
+				<p class="leader-bio-text">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta interdum tempor. Sed ac tellus eu augue ullamcorper euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean laoreet odio non ex consectetur, et aliquam nulla consequat. Quisque varius posuere quam, ut egestas risus gravida id. Vivamus vitae quam faucibus, congue enim et, dignissim nibh. Quisque pellentesque volutpat aliquet. Nulla fermentum dui sed nisi commodo mattis. Quisque cursus lacus arcu, id suscipit massa blandit eu. Duis facilisis fringilla purus id faucibus.
+				</p>
+				<p class="leader-bio-text">
+					Pellentesque congue mattis lacinia. Maecenas eget ligula et nibh elementum facilisis. Donec facilisis bibendum augue, aliquam accumsan augue. Cum sociis nm congue volutpat dolor, at porttitor enim fringilla in. Aenean eu pulvinar ex. Maecenas arcu quam, placerat ac posuere sed, porttitor et odio
+				</p>
+			</div>
+			<div class="leader-photo">
+				<img src="http://lorempixel.com/300/400/g" alt="">
+			</div>
+		</div>
+	</div>
+</div>
