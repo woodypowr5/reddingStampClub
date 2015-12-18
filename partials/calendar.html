@@ -1,0 +1,20 @@
+<div class="calendar-container">
+	<div class="calendar-header">
+		<h2>{{calendar.data[calendar.currentMonth].name}}</h2>
+	</div>
+	<div class="calendar-row dayofweek-row">
+		<div class="calendar-cell calendar-day" ng-repeat="day in ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] track by $index">
+			<div class="calendar-dayofweek">{{day}}</div>
+		</div>
+	</div>
+	<div class="calendar-row" ng-repeat="row in calendar.data[calendar.currentMonth].dates track by $index">
+		<div class="calendar-cell calendar-date" ng-repeat="date in calendar.data[calendar.currentMonth].dates[$index] track by $index">
+			<div class="datebox">{{date}}</div>
+			<div class="events-container">
+				<div class="calendar-event-name">{{calendar.data[calendar.currentMonth].events[row[0]+$index].name}}</div>
+				<div class="calendar-event-time">{{calendar.data[calendar.currentMonth].events[row[0]+$index].time}}</div>
+				<div class="calendar-event-note">{{calendar.data[calendar.currentMonth].events[row[0]+$index].note}}</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/grid.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<!-- fonts I like: open sans -->
+</head>
+<body ng-controller="MainCtrl">
+	
+
+	<section 
+		class="hero-section"
+		ng-class="{
+			'hero-section-home': currentView === 'home',
+			'hero-section-about': currentView === 'about',
+			'hero-section-novapex': currentView === 'novapex',
+			'hero-section-calendar': currentView === 'calendar',
+			'hero-section-contact': currentView === 'contact'
+		}"
+		>
+		
+		<div class="hero-content"
+			ng-class="{
+			'hero-content-home': currentView === 'home',
+			'hero-content-about': currentView === 'about',
+			'hero-content-novapex': currentView === 'novapex',
+			'hero-content-calendar': currentView === 'calendar',
+			'hero-content-contact': currentView === 'contact'
+		}"
+		>
+			<div class="hero-content-wrapper hero-content-wrapper-about" ng-show="currentView === 'about'">
+				<p class="hero-content-block">
+					The Redding Stamp Club is the premier philatelic organization in Shasta County, California. Our members' interests and collections cover a wide array of stamp collecting. This includes worldwide and specific countries encompassing perfins, covers, train cancels, revenues, pre-cancelled and more
+				</p>
+			</div>
+
+		</div>
+		
+		<nav>
+			<a class="nav-link" ui-sref="home" ng-class="{'nav-link-active': currentView === 'home'}">
+				<!-- <div class="nav-link"> -->
+					Home
+				<!-- </div> -->
+			</a>	
+			<a class="nav-link" ui-sref="about" ng-class="{'nav-link-active': currentView === 'about'}">
+				<!-- <div class="nav-link"> -->
+					About
+				<!-- </div> -->
+			</a>
+			<a class="nav-link" ui-sref="novapex" ng-class="{'nav-link-active': currentView === 'novapex'}">
+				<!-- <div class="nav-link"> -->
+					NOVAPEX
+				<!-- </div> -->
+			</a>
+			<a class="nav-link" ui-sref="calendar" ng-class="{'nav-link-active': currentView === 'calendar'}">
+				<!-- <div class="nav-link"> -->
+					Calendar
+				<!-- </div> -->
+			</a>
+			<a class="nav-link" ui-sref="contact" ng-class="{'nav-link-active': currentView === 'contact'}">
+				<!-- <div class="nav-link"> -->
+					Contact
+				<!-- </div> -->
+			</a>	
+		</nav>
+
+	</section>
+
+	<section class="main-section">
+		<div class="ui-view">
+			<!-- VIEWS -->
+		</div>
+	</section>
+
+</body>
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-ui-router.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script src="js/MainCtrl.js"></script>
+
+</html>
