@@ -70,11 +70,12 @@
 	</section>
 
 	<section class="modal-section" ng-class="{'modal-active': modal.active === true}">
+		
 		<div class="modal-body">
-			<!-- <iframe src="{{modal.src}}" frameborder="0"></iframe> -->
-			<object data="{{modal.src}}" type="application/pdf">
-		        <embed src="{{modal.src}}" type="application/pdf" />
-		    </object>
+			<div class="modal-close-button" ng-click="deactivateModal()">
+				close(x)
+			</div>
+			<iframe src = "{{modal.src}}" width='400' height='300' allowfullscreen webkitallowfullscreen></iframe>
 		</div>
 	</section>
 

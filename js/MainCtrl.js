@@ -8,9 +8,17 @@ app.controller('MainCtrl', ['$scope', function($scope) {
 	}
 
 	$scope.activateModal = function(type, src){
-		$scope.modal.type = type ? type : 'document';
-		$scope.modal.src = src;
+		$scope.modal.type = type ? type : 'unknown';
+		$scope.modal.src = (type === 'pdf' || type === 'doc' || type === 'docx') ? "ViewerJS/#../"+src : src;
+		console.log($scope.modal.src);
 		$scope.modal.active = true;
+	}
+	$scope.deactivateModal = function(){
+		$scope.modal = {
+			'active': 	false,
+			'type': 	null,
+			'src': 		null
+		}
 	}
 
 	var googleMapsApiKey = "AIzaSyBW5IYe93clNAAsEcTIZN3huEgjmu6TJqE";
