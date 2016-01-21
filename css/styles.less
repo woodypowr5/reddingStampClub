@@ -67,8 +67,10 @@ a{
 	html{
 		font-family: 'Open Sans', sans-serif;
 	}
-	
+	body{
 
+	}
+	
 	.hero-section{
 		width: 100%;
 		height: @hero-height;
@@ -213,6 +215,7 @@ a{
 .main-section{
 	border-top: 3px solid lighten(gray, 30);
 }
+
 	// Home
 
 	// leadership
@@ -498,6 +501,39 @@ a{
 				
 	// Contact
 
+// Modal
+	.modal-section{	
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.8);
+		display: none;
+	}
+	.modal-section.modal-active{	
+		display: block;
+	}
+		.modal-body{
+			padding: 2em;
+			background-color: white;
+			position: fixed;
+			width: 70%;
+			margin-left: 15%;
+			margin-top: 3em;
+			min-height: 30em;
+
+			.modal-close-button{
+				position: absolute;
+				top: 5px;
+				right: 5px;
+			}
+
+			iframe{
+				width: 100%;
+				height: 50em;
+			}
+		}
 
 
 // Animations
