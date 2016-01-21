@@ -1,7 +1,5 @@
 // Utility
 *{
-    -moz-box-sizing:border-box;
-    -webkit-box-sizing:border-box;
     box-sizing:border-box;
 }
 .hover-indication{
@@ -11,40 +9,25 @@
 	}
 }
 .flex{
-    display: -webkit-box;
-    display: -moz-flexbox;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
 }
 .flex-column{
 	.flex;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-	-ms-flex-direction: column;
-	-webkit-flex-direction: column;
 	flex-direction: column;
 }
 .flex-wrap{
 	.flex;
-	-webkit-box-lines: multiple;
-	-moz-box-lines: multiple;
-	-ms-flex-wrap: wrap;
-	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
 .flex-center-image{
 	.flex;
-	-webkit-box-align: center;
-	-moz-box-align: center;
-	-ms-flex-align: center;
-	-webkit-align-items: center;
 	align-items: center;
-	-webkit-box-pack: center;
-	-moz-box-pack: center;
-	-ms-flex-pack: center;
-	-webkit-justify-content: center;
     justify-content: center;
+}
+.vertically-center-children{
+	.flex-column;
+  	align-items: center;
+  	justify-content: center;
 }
 img{
 	max-width: 100%;
@@ -54,9 +37,15 @@ a{
 	text-decoration: none;
 	color: black;
 }
+.view-header{
 
-// Animations
+}
 
+// Dimensions Units
+
+@border-width: 3px;
+@nav-height: 4em;
+@hero-height: 32em;
 
 // Breakpoints
 
@@ -68,62 +57,59 @@ a{
 @main-light: lighten(lightgray, 15);
 @main: lighten(lightgray, 10);
 
-// MAIN
+// Global  
 
-html{
-	font-family: 'Open Sans', sans-serif;
-}
 
-nav{
-	.flex;
-	justify-content: space-around;
-	height: 4em;
-	width: 100%;
-	background-color:  rgba(255, 255, 255, 0.6);
-}
-	.nav-link{
-		text-align: center;
+//// MAIN ////
+
+	
+
+	html{
+		font-family: 'Open Sans', sans-serif;
+	}
+	
+
+	.hero-section{
 		width: 100%;
-		height: 4em;
-		line-height: 4em;
-		color: @darkgray;
-		font-weight:  bold;
-	}
-	.nav-link-active{
-		background-color: rgba(155, 155, 155, 0.5);
-	}
+		height: @hero-height;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		// transition: opacity 0.15s ease-in-out;
+	}	
 
-.hero-section{
-	width: 100%;
-	height: 32em;
-	background-repeat: no-repeat;
-	background-size: cover;
-}	
-.hero-section-home{
-	background-image: url('../assets/img/sundial-night-wide.jpg');
-}
-.hero-section-about{
-	background-image: url('../assets/img/mtshasta-sunset-wide.jpg');
-}
-.hero-section-novapex{
-	background-image: url('../assets/img/sundial-night-wide.jpg');
-}
-.hero-section-calendar{
-	background-image: url('../assets/img/sundial-day-wide.jpg');
-}
-.hero-section-leadership{
-	background-image: url('../assets/img/redding.jpg');
-}
-.hero-section-contact{
-	background-image: url('../assets/img/shasta-retina-1.jpg');
-	height: 50em;
-}
-	.hero-content{
-		position: absolute;
-		background-color: rgba(0, 0, 0, 0.40);
-		border-radius: 7px;
-	}
-		.hero-content-wrapper{
+	// Navbar
+		nav{
+			position: absolute;
+			bottom: 0;
+			.flex;
+			justify-content: space-around;
+			height: @nav-height;
+			width: 100%;
+			background-color:  rgba(255, 255, 255, 0.9);
+			// border-bottom: 3px solid gray;
+			border-top: 3px solid lighten(gray, 20);
+		}
+			.nav-link{
+				outline-top: 3px solid lighten(gray, 20);
+				text-align: center;
+				width: 100%;
+				height: ~"calc(4em+@border-width)";
+				line-height: 4em;
+				color: @darkgray;
+				font-weight:  bold;
+			}
+			.nav-link-active{
+				background-color: rgba(155, 155, 155, 0.5);
+				transition: background-color 150ms linear;
+			}
+
+	// Hero Floating Content Classes
+		
+		.hero-content{
+			position: absolute;
+			background-color: rgba(0, 0, 0, 0.40);
+			border-radius: 7px;
 			width: 100%;
 			height: 100%;
 			color: lighten(gray,45);
@@ -134,118 +120,175 @@ nav{
 				font-size: 1.2em;
 				line-height: 1.7em;
 			}
-	.hero-content-about{
-		width: 40em;
-		height: 15em;
-		top:15em;
-		right: 2em;
-		// border: 1px solid black;
-	}
-	.hero-content-contact{
-		width: 40em;
-		// height: 30em;
-		top: 7em;
-		left: 2.7em;
-		padding-left: 1em;
-		p{
-			margin-top: 1.5em;
-			margin-bottom: 2em;
-		}
-		h2{
-			display: inline-block;
-		}
+		.hero-stamp{
+			height: (@hero-height)-(@nav-height);
+			.vertically-center-children;
+			position: absolute;
+			right: 2em;
+		}		
 
-	}		
-		.contact-label{
-			width: 200px;
-			text-decoration: underline;
+	// Hero FLoating Content Specific Instances
+
+		//Leadership
+		.hero-content-leadership{
+			width: 40em;
+			height: 15em;
+			top:11em;
+			right: 2em;
 		}
-		.contact-label-address{
-			margin-bottom: 0em;
-		}
-		.contact-label-address-lower{
-			margin-top: 0.5em;
-		}
+		//contact
+		.hero-content-contact{
+			width: 40em;
+			// height: 30em;
+			top: 7em;
+			left: 2.7em;
+			padding-left: 1em;
+			p{
+				margin-top: 1.5em;
+				margin-bottom: 2em;
+			}
+			h2{
+				display: inline-block;
+			}
+		}		
+			.contact-label{
+				width: 200px;
+				text-decoration: underline;
+			}
+			.contact-label-address{
+				margin-bottom: 0em;
+			}
+			.contact-label-address-lower{
+				margin-top: 0.5em;
+			}	
+		//novapex	
+		.hero-content-novapex{
+			
+		}	
+		.hero-stamp-yosemite{
+			img{
+				height: 70%;
+				border: 2px solid white;
+			}
+		}	
+
+// Background Images
+
+.hero-section-home{
+	background-image: url('../assets/img/sundial-night-wide.jpg');
+	opacity: 1;
+	// transition: opacity 350ms linear;
+}
+// .hero-section-home.add, .hero-section-home.remove{
+// 	background-image: none;
+// 	opacity: 0;
+// 	transition: opacity 350ms linear;
+// }	
+.hero-section-leadership{
+	background-image: url('../assets/img/mtshasta-sunset-wide.jpg');
+	opacity: 1;
+	// transition: opacity 350ms linear;
+}
+// .hero-section-leadership.add, .hero-section-leadership.remove{
+// 	background-image: none;
+// 	opacity: 0;
+// 	transition: opacity 350ms linear;
+// }	
+	
+.hero-section-novapex{
+	background-image: url('../assets/img/yosemite4.jpg');
+}
+.hero-section-calendar{
+	background-image: url('../assets/img/sundial-day-wide.jpg');
+}
+.hero-section-leadership{
+	background-image: url('../assets/img/redding.jpg');
+}
+.hero-section-contact{
+	background-image: url('../assets/img/shasta-retina-1.jpg');
+}
+
 // MAIN VIEWS
 
+.main-section{
+	border-top: 3px solid lighten(gray, 30);
+}
 	// Home
 
-	// About
+	// leadership
 
-	.about-wrapper{
-		.flex-wrap;
-	}
-
-		.about-left{
-			.flex;
-			width: 25%;
-			background-color: @main;
-
+		.leadership-wrapper{
+			.flex-wrap;
 		}
-			.about-links{
-				width: 100%;
-				.flex-column;
-			}
-				.about-left-header-wrapper{
-					text-align: center;
-					height: 5em;
-					background-color: darken(@main, 5);
-					.flex;
-					align-items: center;
-					justify-content: center;
-					// margin-bottom: 2em;
-				}
-					.about-left-header{
-						margin: 0;
-						align-self: center;
-					}
-				.officer-link{
-					max-height: 8em;
-					min-height: 5em;
-					&:hover{
-						cursor: pointer;
-						background-color: darken(@main, 3);
-					}
-					
-					.flex;
-					align-items: center;
-					justify-content: center;
-				}
-					.officer-link-text{
-						margin: 0;
-						align-self: center;
-					}
-		.about-right{
-			.flex;
-			width: 75%;
-			background-color: @main-light;
-		}
-			.bio-wrapper{
+			.leadership-left{
 				.flex;
-				width: 100%;
-			}
-				.leader-bio{
-					width: 66.666%;
-					padding: 2em;
-					padding-top: 1em;
-				}
-					.leader-name{
-						font-size: 2em;
-					}
-					.leader-position{
-						font-size: 1.4em;
-					}
-					.leader-bio-text{
+				width: 25%;
+				background-color: @main;
 
-					}
-				.leader-photo{
-					padding: 3em 2em;
-					width: 33.333%;
-					.flex-center-image;
-					img{
-						max-height: 300px;
-					}
+			}
+				.leadership-links{
+					width: 100%;
+					.flex-column;
 				}
+					.leadership-left-header-wrapper{
+						text-align: center;
+						height: 5em;
+						background-color: darken(@main, 5);
+						.flex;
+						align-items: center;
+						justify-content: center;
+					}
+						.leadership-left-header{
+							margin: 0;
+							align-self: center;
+						}
+					.officer-link{
+						max-height: 8em;
+						min-height: 5em;
+						&:hover{
+							cursor: pointer;
+							background-color: darken(@main, 3);
+						}
+						
+						.flex;
+						align-items: center;
+						justify-content: center;
+					}
+						.officer-link-text{
+							margin: 0;
+							align-self: center;
+						}
+			.leadership-right{
+				.flex;
+				width: 75%;
+				background-color: @main-light;
+			}
+				.bio-wrapper{
+					.flex;
+					width: 100%;
+				}
+					.leader-bio{
+						width: 66.666%;
+						padding: 2em;
+						padding-top: 1em;
+					}
+						.leader-name{
+							font-size: 2em;
+						}
+						.leader-position{
+							font-size: 1.4em;
+						}
+						.leader-bio-text{
+
+						}
+					.leader-photo{
+						padding: 3em 2em;
+						width: 33.333%;
+						.flex-center-image;
+						img{
+							max-height: 300px;
+						}
+					}
 
 	// Novapex
 
@@ -260,7 +303,13 @@ nav{
 			top: 0;
 			width: 60%;
 			padding-top: 2.2em;
+
 		}	
+			.novapex-header{
+				width: 80%;
+				margin-left: 10%;
+				margin-bottom: 1.2em;
+			}	
 			.novapex-content-block{
 				width: 80%;
 				font-size: 1.3em;
@@ -304,32 +353,40 @@ nav{
 							text-decoration: underline;
 						}
 					}	
-			.novapex-gallery{
-				width: 100%;
-			}	
-				.novapex-gallery-large{
-					.flex-center-image;
-					padding: 1em 2em;
-					width: 100%;
-					height: 20em;
+			.novapex-gallery-container{
+				position: relative;
+				// outline: 2px solid blue;
+			}		
+				.centennial-logo{
+					width: 80%;
+					margin: 3em 10%;	
+				}
+			// .novapex-gallery{
+			// 	width: 100%;
+			// }	
+			// 	.novapex-gallery-large{
+			// 		.flex-center-image;
+			// 		padding: 1em 2em;
+			// 		width: 100%;
+			// 		height: 20em;
 
-				}
-				.novapex-gallery-thumbs{
-					.flex-wrap;
-					width: 100%;
-					max-height: 30em;
-					padding: 0;
-				}
-					.novapex-gallery-image{
-						flex-shrink: 2;
-						flex-grow: 2;
-						flex-basis: 25%;
-						// max-width: 33.3334%;
-						height: auto;
-						img{
-							margin: 0;
-						}
-					}
+			// 	}
+			// 	.novapex-gallery-thumbs{
+			// 		.flex-wrap;
+			// 		width: 100%;
+			// 		max-height: 30em;
+			// 		padding: 0;
+			// 	}
+			// 		.novapex-gallery-image{
+			// 			flex-shrink: 2;
+			// 			flex-grow: 2;
+			// 			flex-basis: 25%;
+			// 			// max-width: 33.3334%;
+			// 			height: auto;
+			// 			img{
+			// 				margin: 0;
+			// 			}
+			// 		}
 	// Calendar
 
 		.calendar-wrapper{
@@ -441,3 +498,32 @@ nav{
 				
 	// Contact
 
+
+
+// Animations
+
+	.fade {
+	  opacity: 1;
+	}
+	.fade.ng-hide-add, .fade.ng-hide-remove {
+	  transition: opacity linear 0.1s;
+	}
+	.fade.ng-hide {
+	  opacity: 0;
+	}
+	.fade.ng-enter {
+	  transition:0.5s linear all;
+	  opacity:0 !important;
+	}
+	/* The finishing CSS styles for the enter animation */
+	.fade.ng-enter.ng-enter-active {
+	  opacity:1 !important;
+	}
+	.fade.ng-leave {
+	  transition:0.5s linear all;
+	  opacity:1 !important;
+	}
+	.fade.ng-leave.ng-leave-active {
+	  opacity:0 !important;
+	}
+	

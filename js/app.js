@@ -1,6 +1,6 @@
-var app = angular.module('app', ['ui.router']);
+var app = angular.module('app', ['ui.router', 'ngAnimate']);
 
-app.config(function($stateProvider, $urlRouterProvider){
+app.config(function($stateProvider, $urlRouterProvider, $provide){
 
 	$urlRouterProvider.otherwise('/home');
 
@@ -13,11 +13,11 @@ app.config(function($stateProvider, $urlRouterProvider){
 			data: {newView: 'home'}
 		})
 
-		// ABOUT
-		.state('about', {
-			url: '/about',
-			templateUrl: 'partials/about-view.html',
-			data: {newView: 'about'}
+		// LEADERSHIP
+		.state('leadership', {
+			url: '/leadership',
+			templateUrl: 'partials/leadership-view.html',
+			data: {newView: 'leadership'}
 		})
 
 		// NOVAPEX
@@ -27,13 +27,26 @@ app.config(function($stateProvider, $urlRouterProvider){
 			data: {newView: 'novapex'}
 		})
 
-		// CALENDAr
+		// CALENDAR
 		.state('calendar', {
 			url: '/calendar',
 			templateUrl: 'partials/calendar-view.html',
 			data: {newView: 'calendar'}
 		})
 
+		// CALENDAR
+		.state('links', {
+			url: '/links',
+			templateUrl: 'partials/links-view.html',
+			data: {newView: 'links'}
+		})
+
+		// CALENDAR
+		.state('news', {
+			url: '/news',
+			templateUrl: 'partials/news-view.html',
+			data: {newView: 'news'}
+		})
 
 		// CONTACT
 		.state('contact', {
@@ -41,4 +54,13 @@ app.config(function($stateProvider, $urlRouterProvider){
 			templateUrl: 'partials/contact-view.html',
 			data: {newView: 'contact'}
 		});
+
+		$provide.decorator('$uiViewScroll', function ($delegate) {
+		    return function (uiViewElement) {
+
+		      // var top = uiViewElement.getBoundingClientRect().top;
+		      // window.scrollTo(0, (top - 30));
+		      // Or some other custom behaviour...
+		    }; 
+		  });
 });
