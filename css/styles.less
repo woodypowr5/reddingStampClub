@@ -108,7 +108,7 @@ a{
 		
 		.hero-content{
 			position: absolute;
-			background-color: rgba(0, 0, 0, 0.40);
+			background-color: rgba(0, 0, 0, 0.50);
 			border-radius: 7px;
 			width: 100%;
 			height: 100%;
@@ -129,11 +129,11 @@ a{
 
 	// Hero FLoating Content Specific Instances
 
-		//Leadership
-		.hero-content-leadership{
+		//home
+		.hero-content-home{
 			width: 40em;
 			height: 15em;
-			top:11em;
+			top:2em;
 			right: 2em;
 		}
 		//contact
@@ -176,36 +176,27 @@ a{
 
 .hero-section-home{
 	background-image: url('../assets/img/sundial-night-wide.jpg');
-	opacity: 1;
-	// transition: opacity 350ms linear;
 }
-// .hero-section-home.add, .hero-section-home.remove{
-// 	background-image: none;
-// 	opacity: 0;
-// 	transition: opacity 350ms linear;
-// }	
 .hero-section-leadership{
 	background-image: url('../assets/img/mtshasta-sunset-wide.jpg');
-	opacity: 1;
-	// transition: opacity 350ms linear;
 }
-// .hero-section-leadership.add, .hero-section-leadership.remove{
-// 	background-image: none;
-// 	opacity: 0;
-// 	transition: opacity 350ms linear;
-// }	
-	
 .hero-section-novapex{
 	background-image: url('../assets/img/yosemite4.jpg');
 }
 .hero-section-calendar{
-	background-image: url('../assets/img/sundial-day-wide.jpg');
+	background-image: url('../assets/img/candidate/exhibits.jpg');
 }
 .hero-section-leadership{
-	background-image: url('../assets/img/redding.jpg');
+	background-image: url('../assets/img/candidate/gw.jpg');
+}
+.hero-section-news{
+	background-image: url('../assets/img/candidate/dubai3.jpg');
+}
+.hero-section-links{
+	background-image: url('../assets/img/candidate/stripes-cropped.jpg');
 }
 .hero-section-contact{
-	background-image: url('../assets/img/shasta-retina-1.jpg');
+	background-image: url('../assets/img/candidate/green.jpg');
 }
 
 // MAIN VIEWS
@@ -361,32 +352,7 @@ a{
 					width: 80%;
 					margin: 3em 10%;	
 				}
-			// .novapex-gallery{
-			// 	width: 100%;
-			// }	
-			// 	.novapex-gallery-large{
-			// 		.flex-center-image;
-			// 		padding: 1em 2em;
-			// 		width: 100%;
-			// 		height: 20em;
-
-			// 	}
-			// 	.novapex-gallery-thumbs{
-			// 		.flex-wrap;
-			// 		width: 100%;
-			// 		max-height: 30em;
-			// 		padding: 0;
-			// 	}
-			// 		.novapex-gallery-image{
-			// 			flex-shrink: 2;
-			// 			flex-grow: 2;
-			// 			flex-basis: 25%;
-			// 			// max-width: 33.3334%;
-			// 			height: auto;
-			// 			img{
-			// 				margin: 0;
-			// 			}
-			// 		}
+		
 	// Calendar
 
 		.calendar-wrapper{
@@ -494,8 +460,54 @@ a{
 							margin: 2em auto;
 							overflow: hidden;
 						} 
+	// Links
 
+	// News&Links
 				
+		.news-articles-wrapper{
+			position: relative;
+		}
+			.news-wrapper{
+				position: absolute;
+				background-color: @main-light;
+				left: 0;
+				top: 0;
+				width: 60%;
+				padding-top: 2.2em;
+
+			}	
+				.news-header{
+					width: 100%;
+					height: 3em;
+					background-color: rgba(0, 0, 0, 0.5);
+				}	
+				.news-grid{
+					width: 100%;
+					
+				}
+			.articles-wrapper{
+				position: absolute;
+				right: 0;
+				width: 40%;
+				*{
+						overflow: hidden;
+					}
+			}
+				.articles-header{
+					
+					width: 100%;
+					height: 6em;
+					background-color: darken(@main, 10);
+					.flex;
+				}
+					.articles-content{
+						flex-grow: 2;
+						text-align: center;
+						font-size: 1.3em;
+						font-weight: bold;
+						line-height: (6em/1.3em);
+					}		
+
 	// Contact
 
 

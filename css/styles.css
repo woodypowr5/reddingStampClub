@@ -70,7 +70,7 @@ nav {
 }
 .hero-content {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 7px;
   width: 100%;
   height: 100%;
@@ -91,10 +91,10 @@ nav {
   position: absolute;
   right: 2em;
 }
-.hero-content-leadership {
+.hero-content-home {
   width: 40em;
   height: 15em;
-  top: 11em;
+  top: 2em;
   right: 2em;
 }
 .hero-content-contact {
@@ -126,23 +126,27 @@ nav {
 }
 .hero-section-home {
   background-image: url('../assets/img/sundial-night-wide.jpg');
-  opacity: 1;
 }
 .hero-section-leadership {
   background-image: url('../assets/img/mtshasta-sunset-wide.jpg');
-  opacity: 1;
 }
 .hero-section-novapex {
   background-image: url('../assets/img/yosemite4.jpg');
 }
 .hero-section-calendar {
-  background-image: url('../assets/img/sundial-day-wide.jpg');
+  background-image: url('../assets/img/candidate/exhibits.jpg');
 }
 .hero-section-leadership {
-  background-image: url('../assets/img/redding.jpg');
+  background-image: url('../assets/img/candidate/gw.jpg');
+}
+.hero-section-news {
+  background-image: url('../assets/img/candidate/dubai3.jpg');
+}
+.hero-section-links {
+  background-image: url('../assets/img/candidate/stripes-cropped.jpg');
 }
 .hero-section-contact {
-  background-image: url('../assets/img/shasta-retina-1.jpg');
+  background-image: url('../assets/img/candidate/green.jpg');
 }
 .main-section {
   border-top: 3px solid #cdcdcd;
@@ -354,6 +358,46 @@ nav {
   width: 85%;
   margin: 2em auto;
   overflow: hidden;
+}
+.news-articles-wrapper {
+  position: relative;
+}
+.news-wrapper {
+  position: absolute;
+  background-color: #f9f9f9;
+  left: 0;
+  top: 0;
+  width: 60%;
+  padding-top: 2.2em;
+}
+.news-header {
+  width: 100%;
+  height: 3em;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.news-grid {
+  width: 100%;
+}
+.articles-wrapper {
+  position: absolute;
+  right: 0;
+  width: 40%;
+}
+.articles-wrapper * {
+  overflow: hidden;
+}
+.articles-header {
+  width: 100%;
+  height: 6em;
+  background-color: #d3d3d3;
+  display: flex;
+}
+.articles-content {
+  flex-grow: 2;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 4.61538462em;
 }
 .fade {
   opacity: 1;
