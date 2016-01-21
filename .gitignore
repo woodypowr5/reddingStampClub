@@ -54,6 +54,7 @@ composer.lock
 
 # ignore jekyll build directory
 /_site
+/assets
 
 # ignore OS generated files
 ehthumbs.db
