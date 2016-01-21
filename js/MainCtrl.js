@@ -1,6 +1,18 @@
 app.controller('MainCtrl', ['$scope', function($scope) {
 	$scope.currentView = 'home';
 	$scope.selectedBio = 1;
+	$scope.modal = {
+		'active': 	false,
+		'type': 	null,
+		'src': 		null
+	}
+
+	$scope.activateModal = function(type, src){
+		$scope.modal.type = type ? type : 'document';
+		$scope.modal.src = src;
+		$scope.modal.active = true;
+	}
+
 	var googleMapsApiKey = "AIzaSyBW5IYe93clNAAsEcTIZN3huEgjmu6TJqE";
 
 	$scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
