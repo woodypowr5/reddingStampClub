@@ -314,6 +314,11 @@ nav {
   border-top: 2px solid black;
   height: 90px;
 }
+.dayofweek-row .calendar-cell {
+  border-bottom: 2px solid #d9d9d9;
+  background: linear-gradient(315deg, #ffffff 0%, #fcfcfc 47%, #ebebeb 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f5f5f5', GradientType=1);
+}
 .calendar-row:last-child {
   border-bottom: 2px solid black;
 }
