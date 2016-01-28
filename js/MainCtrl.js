@@ -49,33 +49,88 @@ app.controller('MainCtrl', ['$scope', function($scope) {
 			}
 		}
 	}
+	$scope.checkPrevNextButtons = function(){
+		if($scope.calendar.currentMonth + 1 <= -1){
+			$scope.calendar.prevMonthInvalid = true;
+		} else if ($scope.calendar.currentMonth + 1 >= $scope.calendar.data.length){
+			$scope.calendar.nextMonthInvalid = true;
+		}
+		if($scope.calendar.currentMonth - 1 <= -1){
+			$scope.calendar.prevMonthInvalid = true;
+		} else if ($scope.calendar.currentMonth - 1 >= $scope.calendar.data.length){
+			$scope.calendar.nextMonthInvalid = true;
+		}
+	}
+	$scope.calendarChangeMonth = function(delta){
+		if(($scope.calendar.currentMonth + delta > -1) && ($scope.calendar.currentMonth + delta < $scope.calendar.data.length)){
+			$scope.calendar.currentMonth = $scope.calendar.currentMonth + delta;
+			$scope.calendar.prevMonthInvalid = false;
+			$scope.calendar.nextMonthInvalid = false;
+		}
+		$scope.checkPrevNextButtons();
+		
+	}
 	$scope.calendar = {
 		"data": [],
 		"currentMonth": 0,
 		"activeEvent": {}
 	}	
 	$scope.calendar.data[0] = {
-		"name": "October 2015",
+		"name": "January 2015",
 		"dates": [
-			["","","","",1,2,3],
-			[4,5,6,7,8,9,10],
-			[11,12,13,14,15,16,17],
-			[18,19,20,21,22,23,24],
-			[25,26,27,28,29,30,31]
+			["","","","","",1,2],
+			[3,4,5,6,7,8,9],
+			[10,11,12,13,14,15,16],
+			[17,18,19,20,21,22,23],
+			[24,25,26,27,28,29,30],
+			[31,"","","","","",""]
 		],
 		"events": []
 	};
 	$scope.calendar.data[1] = {
-		"name": "November 2015",
+		"name": "February 2015",
+		"dates": [
+			["",1,2,3,4,5,6],
+			[7,8,9,10,11,12,13],
+			[14,15,16,17,18,19,20],
+			[21,22,23,24,25,26,27],
+			[28,29, "", "", "", ""]
+		],
+		"events": []
+	};
+	$scope.calendar.data[2] = {
+		"name": "March 2015",
+		"dates": [
+			["","",1,2,3,4,5],
+			[6,7,8,9,10,11,12],
+			[13,14,15,16,17,18,19],
+			[20,21,22,23,24,25,26],
+			[27,28,29,30,31, "", ""]
+		],
+		"events": []
+	};
+	$scope.calendar.data[3] = {
+		"name": "April 2015",
+		"dates": [
+			["","","","","",1,2],
+			[3,4,5,6,7,8,9],
+			[10,11,12,13,14,15,16],
+			[17,18,19,20,21,22,23],
+			[24,25,26,27,28,29,30]
+		],
+		"events": []
+	};
+	$scope.calendar.data[4] = {
+		"name": "May 2015",
 		"dates": [
 			[1,2,3,4,5,6,7],
 			[8,9,10,11,12,13,14],
 			[15,16,17,18,19,20,21],
 			[22,23,24,25,26,27,28],
-			[29,30, "", "", "", "", ""]
+			[29, 30, 31, "", "", "", ""]
 		],
 		"events": []
-	}
+	};
 
 	// October Events
 	$scope.calendar.data[0].events[1] = {
@@ -108,20 +163,14 @@ app.controller('MainCtrl', ['$scope', function($scope) {
 		'description': 'This is only a test...',
 		'note': "Super awesome..."
 	};
-	$scope.calendar.data[1].events[30] = {
-		'id': 	4,
-		'name': 'Test Event 5',
-		'time': "8:00 to 11:00 AM",
-		'description': 'This is only a test...',
-		'note': "Super awesome..."
-	};
+	
 
 
 	// Run Calendar
 
 	$scope.calendar.currentMonth = 0;
 	$scope.initCalendarEvent();
-
+	$scope.checkPrevNextButtons();
 	
 
 

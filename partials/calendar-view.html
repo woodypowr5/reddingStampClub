@@ -2,9 +2,21 @@
 	<div class="calendar-left">
 		<div class="calendar-container">
 			<div class="calendar-header">
-				<div class="calendar-prev-btn">Prev</div>
+				<div 
+					class="calendar-prev-btn" 
+					ng-class="{'prev-month-invalid': calendar.prevMonthInvalid === true}"
+					ng-click="calendarChangeMonth(-1)"
+				>
+					Prev
+				</div>
 				<h2>{{calendar.data[calendar.currentMonth].name}}</h2>
-				<div class="calendar-next-btn">Next</div>
+				<div 
+					class="calendar-next-btn"
+					ng-class="{'next-month-invalid': calendar.nextMonthInvalid === true}"
+					ng-click="calendarChangeMonth(1)"
+				>
+					Next
+				</div>
 			</div>
 			<div class="calendar-row dayofweek-row">
 				<div class="calendar-cell calendar-day" ng-repeat="day in ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] track by $index">
@@ -53,7 +65,7 @@
 				</div>
 			</div>
 			<div class="calendar-details-map">	
-				<iframe width="100%" height="inherit" frameborder="0" style="border:1px solid black;" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJQ8Twj27r0lQRICmqWt11No0&key=AIzaSyBW5IYe93clNAAsEcTIZN3huEgjmu6TJqE" allowfullscreen></iframe>
+				<iframe width="100%" height="inherit" frameborder="0" style="border:1px solid black;" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJQ8Twj27r0lQRICmqWt11No0&key=AIzaSyB3ARGw6O6Ww2uu_ttgI4Vq6jgbgfHV0Ow" allowfullscreen></iframe>
 			</div>
 		</div>	
 	</div>
