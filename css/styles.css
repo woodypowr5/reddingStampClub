@@ -295,10 +295,9 @@ nav {
   display: flex;
   width: 70%;
   min-width: 800px;
-  padding: 2em;
+  padding: 3em 2em;
 }
 .calendar-container {
-  height: 40em;
   width: 80%;
   margin: 0 auto;
 }
@@ -312,7 +311,7 @@ nav {
   margin: 0 auto;
 }
 .calendar-row {
-  height: 14.16666667%;
+  height: 90px;
 }
 .calendar-cell {
   width: 14.28571429%;
@@ -346,7 +345,7 @@ nav {
   flex-direction: column;
   justify-content: space-around;
   height: 20em;
-  margin: 1em 2em;
+  margin: 1em 10%;
 }
 .calendar-event-label {
   display: inline-block;
@@ -355,7 +354,9 @@ nav {
   font-weight: bold;
 }
 .calendar-details-map {
-  width: 85%;
+  width: 81%;
+  height: 300px;
+  margin-left: 10%;
   margin: 2em auto;
   overflow: hidden;
 }
