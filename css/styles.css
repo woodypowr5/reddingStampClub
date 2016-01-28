@@ -311,14 +311,21 @@ nav {
   margin: 0 auto;
 }
 .calendar-row {
+  border-top: 2px solid black;
   height: 90px;
+}
+.calendar-row:last-child {
+  border-bottom: 2px solid black;
 }
 .calendar-cell {
   width: 14.28571429%;
   height: 100%;
-  border: 2px solid black;
+  border-left: 2px solid black;
   display: inline-block;
   overflow: hidden;
+}
+.calendar-cell:last-child {
+  border-right: 2px solid black;
 }
 .calendar-event-name {
   font-size: 0.8em;

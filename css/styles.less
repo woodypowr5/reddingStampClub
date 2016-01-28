@@ -388,15 +388,27 @@ a{
 						}
 					.calendar-row{
 						// height: (85%/6);
+						border-top: 2px solid black;
+						
 						height: 90px;
 					}
+					.calendar-row:last-child{
+						border-bottom: 2px solid black;
+					}
+					// .calendar-row:not(:nth-child(1)){
+					// 	border-top: none;
+					// }	
 						.calendar-cell{
 							width: (100%/7);
 							height: 100%;
-							border: 2px solid black;
+							border-left: 2px solid black;
+							
 							display: inline-block;
 							overflow: hidden;
-						}	
+						}
+						.calendar-cell:last-child{
+							border-right: 2px solid black;
+						}
 						.calendar-cell-active{
 
 						}
