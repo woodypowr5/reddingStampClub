@@ -41,8 +41,7 @@ a{
 
 }
 
-// Dimensions Units
-
+// Dimension Units
 @border-width: 3px;
 @nav-height: 4em;
 @hero-height: 32em;
@@ -60,9 +59,8 @@ a{
 // Global  
 
 
-//// MAIN ////
 
-	
+//// MAIN ////
 
 	html{
 		font-family: 'Open Sans', sans-serif;
@@ -365,10 +363,10 @@ a{
 				.flex;
 				width: 70%;
 				min-width: 800px;
-				padding: 2em;
+				padding: 3em 2em;
 			}	
 				.calendar-container{
-					height: 40em;
+					// height: 40em;
 					width: 80%;
 					margin: 0 auto;
 				}
@@ -388,31 +386,67 @@ a{
 
 						}
 					.calendar-row{
-						height: (85%/6);
+						// height: (85%/6);
+						border-top: 2px solid black;
+						
+						height: 90px;
 					}
+					.dayofweek-row{
+
+					}
+					.dayofweek-row .calendar-cell{
+						border-bottom: 2px solid lighten(gray, 35);
+						background: linear-gradient(315deg, rgba(255,255,255,1) 0%, rgba(252,252,252,1) 47%, rgba(235,235,235,1) 100%);
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f5f5f5', GradientType=1 );
+						
+					}
+					.calendar-row:last-child{
+						border-bottom: 2px solid black;
+					}
+					// .calendar-row:not(:nth-child(1)){
+					// 	border-top: none;
+					// }	
 						.calendar-cell{
 							width: (100%/7);
 							height: 100%;
-							border: 2px solid black;
+							border-left: 2px solid black;
+							
 							display: inline-block;
 							overflow: hidden;
-						}	
+						}
+						.calendar-cell:last-child{
+							border-right: 2px solid black;
+						}
 						.calendar-cell-active{
-
+	
 						}
 						.calendar-cell-event{
 							
 						}
+						
+							.calendar-dayofweek{
+								height: 100%;
+								.vertically-center-children;
+							}
 							.calendar-datebox{
-
+								padding-left: 2px;
 							}
 							.calendar-event-name{
 								font-size: 0.8em;
+								text-align: center;	
+								width: 80%;
+								padding-left: 4px;
+								padding-right: 4px;
+								
+								margin: 0 auto;
+								background-color: darken(white, 5%);
+								box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.75);
 								&:hover{
 									cursor: pointer;
+									background-color: darken(white, 25%);
+									color: white;
 								}
 							}
-
 				
 			.calendar-right{
 				background-color: @main;
@@ -435,7 +469,7 @@ a{
 						justify-content: space-around;
 						height: 20em;
 						// width: 90%;
-						margin: 1em 2em;
+						margin: 1em 10%;
 					}	
 						.calendar-event-label{
 							display: inline-block;
@@ -459,7 +493,9 @@ a{
 
 						} 
 						.calendar-details-map{
-							width: 85%;
+							width: 81%;
+							height: 300px;
+							margin-left: 10%; 
 							margin: 2em auto;
 							overflow: hidden;
 						} 

@@ -76,7 +76,7 @@ app.controller('MainCtrl', ['$scope', function($scope) {
 		"activeEvent": {}
 	}	
 	$scope.calendar.data[0] = {
-		"name": "January 2015",
+		"name": "January 2016",
 		"dates": [
 			["","","","","",1,2],
 			[3,4,5,6,7,8,9],
@@ -88,18 +88,18 @@ app.controller('MainCtrl', ['$scope', function($scope) {
 		"events": []
 	};
 	$scope.calendar.data[1] = {
-		"name": "February 2015",
+		"name": "February 2016",
 		"dates": [
 			["",1,2,3,4,5,6],
 			[7,8,9,10,11,12,13],
 			[14,15,16,17,18,19,20],
 			[21,22,23,24,25,26,27],
-			[28,29, "", "", "", ""]
+			[28,29, "", "", "", "",""]
 		],
 		"events": []
 	};
 	$scope.calendar.data[2] = {
-		"name": "March 2015",
+		"name": "March 2016",
 		"dates": [
 			["","",1,2,3,4,5],
 			[6,7,8,9,10,11,12],
@@ -110,7 +110,7 @@ app.controller('MainCtrl', ['$scope', function($scope) {
 		"events": []
 	};
 	$scope.calendar.data[3] = {
-		"name": "April 2015",
+		"name": "April 2016",
 		"dates": [
 			["","","","","",1,2],
 			[3,4,5,6,7,8,9],
@@ -121,7 +121,7 @@ app.controller('MainCtrl', ['$scope', function($scope) {
 		"events": []
 	};
 	$scope.calendar.data[4] = {
-		"name": "May 2015",
+		"name": "May 2016",
 		"dates": [
 			[1,2,3,4,5,6,7],
 			[8,9,10,11,12,13,14],
