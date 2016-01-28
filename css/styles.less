@@ -59,9 +59,8 @@ a{
 // Global  
 
 
-//// MAIN ////
 
-	
+//// MAIN ////
 
 	html{
 		font-family: 'Open Sans', sans-serif;
@@ -410,21 +409,35 @@ a{
 							border-right: 2px solid black;
 						}
 						.calendar-cell-active{
-
+	
 						}
 						.calendar-cell-event{
 							
 						}
+						
+							.calendar-dayofweek{
+								height: 100%;
+								.vertically-center-children;
+							}
 							.calendar-datebox{
-
+								padding-left: 2px;
 							}
 							.calendar-event-name{
 								font-size: 0.8em;
+								text-align: center;	
+								width: 80%;
+								padding-left: 4px;
+								padding-right: 4px;
+								
+								margin: 0 auto;
+								background-color: darken(white, 5%);
+								box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.75);
 								&:hover{
 									cursor: pointer;
+									background-color: darken(white, 25%);
+									color: white;
 								}
 							}
-
 				
 			.calendar-right{
 				background-color: @main;

@@ -327,11 +327,30 @@ nav {
 .calendar-cell:last-child {
   border-right: 2px solid black;
 }
+.calendar-dayofweek {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.calendar-datebox {
+  padding-left: 2px;
+}
 .calendar-event-name {
   font-size: 0.8em;
+  text-align: center;
+  width: 80%;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
 }
 .calendar-event-name:hover {
   cursor: pointer;
+  background-color: #bfbfbf;
+  color: white;
 }
 .calendar-right {
   background-color: #ececec;
