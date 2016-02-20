@@ -398,9 +398,8 @@ nav {
 }
 .news-articles-left {
   display: flex;
-  height: 40em;
   width: 60%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #f9f9f9;
 }
 .news-wrapper {
   width: 100%;
@@ -411,6 +410,16 @@ nav {
 }
 .news-grid {
   width: 100%;
+}
+.news-tile {
+  width: 25%;
+  display: inline-block;
+  float: left;
+  background-color: #f7f7f7;
+  border: 1px solid #d2d2d2;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  padding: 5px;
 }
 .news-articles-right {
   display: flex;

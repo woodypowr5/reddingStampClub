@@ -172,7 +172,7 @@ app.controller('MainCtrl', ['$scope', function($scope) {
 	$scope.initCalendarEvent();
 	$scope.checkPrevNextButtons();
 	
-
+	
 
 
 }]);
