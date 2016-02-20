@@ -4,22 +4,34 @@
 	<div class="news-articles-left">
 		<div class="news-wrapper">
 			<div class="news-header view-header">Philately News & Current Events</div>
-			<div class="news-grid grid" >
-				<div class="news-tile grid-item">
-					<div class="news-tile-wrapper">
-						<div class="news-tile-date">
-							Jan 12, 2016
-						</div>
-						<div class="news-tile-title">
-							Your mom is an amazing cook!
-						</div>
-						<div class="news-tile-summary">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. 
 
-							a aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. 
-						</div>
-					</div>	
-				</div>
+			<div 
+			       class="news-grid wall_container" 
+			       masonry-wall-dir=".item" 
+			       masonry-wall-options="{
+			           gutter: 0, 
+			           transitionDuration: '0.3s'
+			       }"
+			   >
+			       <div class="news-tile item" ng-repeat="item in toBeRepeated" custom-directive masonry-item-dir> 
+			           <!-- {{item.title}} + {{item.body}} -->
+			           	<div class="news-tile-wrapper">
+				           	<div class="news-tile-date">
+				           		{{item.date}}
+				           	</div>
+				           	<div class="news-tile-title">
+				           		{{item.title}}
+				           	</div>
+				           	<div class="news-tile-summary">
+				           		{{item.bodyText}}
+				           	</div>
+			           </div> <!-- news-tile-wrapper -->
+			       </div>
+			   </div>
+
+
+	<!-- 		<div class="news-grid grid" >
+				
 				<div class="news-tile">
 					<div class="news-tile-wrapper">
 						<div class="news-tile-date">
@@ -98,7 +110,7 @@
 						</div>
 					</div>	
 				</div>
-			</div>
+			</div> -->
 		</div>	
 	</div>
 	<div class="news-articles-right">
@@ -111,14 +123,3 @@
 	</div>	
 
 </div>
-
-<script>
-$( document ).ready(function() {
-    $('.grid').masonry({
-    	  // options
-    	  itemSelector: '.grid-item',
-    	  columnWidth: 200
-    	});
-});
-	
-</script>
