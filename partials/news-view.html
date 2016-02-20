@@ -12,19 +12,32 @@
 			           gutter: 0, 
 			           transitionDuration: '0.3s'
 			       }"
+
 			   >
-			       <div class="news-tile item" ng-repeat="item in toBeRepeated" custom-directive masonry-item-dir> 
-			           <!-- {{item.title}} + {{item.body}} -->
+			       <div 
+			       		class="news-tile item" 
+			       		ng-repeat="item in articles track by $index" 
+			       		custom-directive 
+			       		masonry-item-dir
+			       		ng-class="{'article-{{$index}}':1===1}"> 
+						
 			           	<div class="news-tile-wrapper">
-				           	<div class="news-tile-date">
-				           		{{item.date}}
-				           	</div>
-				           	<div class="news-tile-title">
-				           		{{item.title}}
-				           	</div>
-				           	<div class="news-tile-summary">
-				           		{{item.bodyText}}
-				           	</div>
+				        	<div 
+				        		class="news-tile-img"
+				        		ng-class="{'background': item.image.position === 'background'}">
+				        		<img ng-src="{{item.image.src}}" alt="">
+				        	</div>
+				        	<div class="news-tile-content">
+					           	<div class="news-tile-date">
+					           		{{item.date}}
+					           	</div>
+					           	<div class="news-tile-title">
+					           		{{item.title}}
+					           	</div>
+					           	<div class="news-tile-summary">
+					           		{{item.bodyText}}
+					           	</div>
+					        </div>   	
 			           </div> <!-- news-tile-wrapper -->
 			       </div>
 			   </div>

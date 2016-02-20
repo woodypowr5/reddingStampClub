@@ -1,7 +1,7 @@
 app.controller('MainCtrl', ['$scope', 'articleService', function($scope, articleService) {
 	$scope.currentView = 'home';
 	$scope.selectedBio = 1;
-	$scope.toBeRepeated = articleService.articles;
+	$scope.articles = articleService.articles;
 	$scope.modal = {
 		'active': 	false,
 		'type': 	null,
@@ -29,6 +29,13 @@ app.controller('MainCtrl', ['$scope', 'articleService', function($scope, article
         	$scope.currentView = toState.data.newView;
     	}
 	});
+
+
+	// Articles
+
+	$scope.setArticleImage = function(element, article){
+
+	}
 
 	// Calendar
 

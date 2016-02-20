@@ -6,15 +6,15 @@ app.service("articleService", ['$rootScope', function($rootScope){
 
     this.articles.push(
         {
-            "title":    "Your mom is an amazing cook!",
-            "date":     "Jan 12, 2016",
-            "bodyText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. a aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-            "referer":  "Coolsite.com",
-            "src":      "www.coolsite.com",
+            "title":    "15¢ gray Large Queen Canadian stamp will star at the next auction",
+            "date":     "Feb 18, 2016",
+            "bodyText": "The Canada 15¢ gray Large Queen stamp from the 1868 is unused and shows a cleans and complete letter of the rare ”Alexr. Pirie & Sons” script watermark. It is believed that this stamp is just one if six unused examples known to exist.",
+            "referer":  "StampNews.com",
+            "src":      "http://www.stampnews.com/stamps/stamps_2016/stamp_15%C2%A2-gray-large-queen-canadian-stamp-will-star-at-the-next-auction-collectors-are-eager-to-get-it.html",
             "image":    {
-                "src":          "www.exmple.com",
-                "alt":          "blah",
-                "position":     ""
+                "src":          "assets/img/articles/queen-canadian.jpg",
+                "alt":          "Queen Canadian Stamp",
+                "position":     "background"
             },
             "options":  {
 
