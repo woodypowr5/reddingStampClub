@@ -1,6 +1,7 @@
-app.controller('MainCtrl', ['$scope', function($scope) {
+app.controller('MainCtrl', ['$scope', 'articleService', function($scope, articleService) {
 	$scope.currentView = 'home';
 	$scope.selectedBio = 1;
+	$scope.articles = articleService.articles;
 	$scope.modal = {
 		'active': 	false,
 		'type': 	null,
@@ -29,6 +30,12 @@ app.controller('MainCtrl', ['$scope', function($scope) {
     	}
 	});
 
+
+	// Articles
+
+	$scope.setArticleImage = function(element, article){
+
+	}
 
 	// Calendar
 
@@ -172,7 +179,8 @@ app.controller('MainCtrl', ['$scope', function($scope) {
 	$scope.initCalendarEvent();
 	$scope.checkPrevNextButtons();
 	
-
+	console.log($scope.articles);
+	
 
 
 }]);

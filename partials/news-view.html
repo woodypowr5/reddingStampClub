@@ -1,18 +1,149 @@
 <div class="news-articles-wrapper">
 	
+	
+	<div class="news-articles-left">
+		<div class="news-wrapper">
+			<div class="news-header view-header">Philately News & Current Events</div>
 
-	<div class="news-wrapper">
-		<h1 class="news-header view-header">Philately News & Current Events</h1>
-		<div class="news-grid">
+			<div 
+			       class="news-grid wall_container" 
+			       masonry-wall-dir=".item" 
+			       masonry-wall-options="{
+			           gutter: 0, 
+			           transitionDuration: '0.3s'
+			       }"
+			   >
+
+			       <div 
+			       		class="news-tile item" 
+			       		ng-repeat="item in articles track by $index" 
+			       		custom-directive 
+			       		masonry-item-dir
+			       		ng-class="{'article-{{$index}}':1===1, 'double-wide': item.options.width === 'double', '{{item.image.position}}':1===1}"
+			       		image-position="{{item.image.position}}"
+			       		> 
+						<a href="{{item.src}}">
+			           	<div 
+			           		class="news-tile-wrapper" 
+			           		ng-class="{'article-{{$index}}':1===1, 'double-wide': item.options.width === 'double', '{{item.image.position}}':1===1}">
+				        	<div 
+				        		class="news-tile-img"
+				        		ng-class="{
+				        			'{{item.image.position}}':1===1
+				        		}">
+				        		<img ng-src="{{item.image.src}}" alt="">
+				        	</div>
+
+				        	<div class="news-tile-content">
+					        	<div class="news-tile-refer">
+					        		{{item.referer}}
+					        	</div>
+					           	<div class="news-tile-date">
+					           		{{item.date}}
+					           	</div>
+					           	<div class="news-tile-title">
+					           		{{item.title}}
+					           	</div>
+					           	<div class="news-tile-summary">
+					           		{{item.bodyText}}
+					           	</div>
+					        </div>   	
+			           </div> <!-- news-tile-wrapper -->
+			           </a>
+			       </div>
+			   </div>
+
+
+	<!-- 		<div class="news-grid grid" >
+				
+				<div class="news-tile">
+					<div class="news-tile-wrapper">
+						<div class="news-tile-date">
+							Jan 16, 2016
+						</div>
+						<div class="news-tile-title">
+							I just love cheese
+						</div>
+						<div class="news-tile-summary">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. 
+						</div>
+					</div>
+				</div>
+				<div class="news-tile">
+					<div class="news-tile-wrapper">
+						<div class="news-tile-date">
+							Jan 16, 2016
+						</div>
+						<div class="news-tile-title">
+							I love your mom too
+						</div>
+						<div class="news-tile-summary">
+							hitecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exer
+						</div>
+					</div>	
+				</div>
+				<div class="news-tile">
+					<div class="news-tile-wrapper">
+						<div class="news-tile-date">
+							Feb 02, 2016
+						</div>
+						<div class="news-tile-title">
+							One time I farted
+						</div>
+						<div class="news-tile-summary">
+							Same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is
+						</div>
+					</div>	
+				</div>
+				<div class="news-tile">
+					<div class="news-tile-wrapper">
+						<div class="news-tile-date">
+							Jan 16, 2016
+						</div>
+						<div class="news-tile-title">
+							I just love cheese
+						</div>
+						<div class="news-tile-summary">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. 
+						</div>
+					</div>
+				</div>
+				<div class="news-tile">
+					<div class="news-tile-wrapper">
+						<div class="news-tile-date">
+							Jan 16, 2016
+						</div>
+						<div class="news-tile-title">
+							I love your mom too
+						</div>
+						<div class="news-tile-summary">
+							hitecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exer
+						</div>
+					</div>	
+				</div>
+				<div class="news-tile">
+					<div class="news-tile-wrapper">
+						<div class="news-tile-date">
+							Feb 02, 2016
+						</div>
+						<div class="news-tile-title">
+							One time I farted
+						</div>
+						<div class="news-tile-summary">
+							Same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is
+						</div>
+					</div>	
+				</div>
+			</div> -->
+		</div>	
+	</div>
+	<div class="news-articles-right">
+		<div class="articles-wrapper">
+			<div class="articles-header">2016 news Documents:</div>
+			<div class="articles-content">
 			
+			</div>
 		</div>
-	</div>
-
-	<div class="articles-wrapper">
-		<div class="articles-header">2016 news Documents:</div>
-		<div class="articles-content">
-		
-		</div>
-	</div>
+	</div>	
 
 </div>
