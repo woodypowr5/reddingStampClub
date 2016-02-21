@@ -1,3 +1,13 @@
+.simple {
+  background: rgba(77, 104, 158, 0.58);
+  background: -moz-linear-gradient(left, rgba(77, 104, 158, 0.58) 0%, rgba(32, 124, 229, 0.58) 0%, rgba(145, 168, 189, 0.29) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(77, 104, 158, 0.58)), color-stop(0%, rgba(32, 124, 229, 0.58)), color-stop(100%, rgba(145, 168, 189, 0.29)));
+  background: -webkit-linear-gradient(left, rgba(77, 104, 158, 0.58) 0%, rgba(32, 124, 229, 0.58) 0%, rgba(145, 168, 189, 0.29) 100%);
+  background: -o-linear-gradient(left, rgba(77, 104, 158, 0.58) 0%, rgba(32, 124, 229, 0.58) 0%, rgba(145, 168, 189, 0.29) 100%);
+  background: -ms-linear-gradient(left, rgba(77, 104, 158, 0.58) 0%, rgba(32, 124, 229, 0.58) 0%, rgba(145, 168, 189, 0.29) 100%);
+  background: linear-gradient(to right, rgba(77, 104, 158, 0.58) 0%, rgba(32, 124, 229, 0.58) 0%, rgba(145, 168, 189, 0.29) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d689e', endColorstr='#91a8bd', GradientType=1);
+}
 * {
   box-sizing: border-box;
 }
@@ -398,7 +408,7 @@ nav {
 }
 .news-articles-left {
   display: flex;
-  width: 60%;
+  width: 75%;
   background-color: #f9f9f9;
 }
 .news-wrapper {
@@ -413,19 +423,33 @@ nav {
   width: 100%;
 }
 .news-tile {
-  width: 25%;
+  width: 20%;
   position: relative;
   overflow: hidden;
   padding: 5px;
 }
+.news-tile.double-wide {
+  width: 40%;
+}
 .news-tile-wrapper {
   position: relative;
-  padding: 15px;
   background-color: #f7f7f7;
   border: 1px solid #d2d2d2;
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
   z-index: 1;
   overflow: hidden;
+}
+.news-tile-wrapper:hover {
+  cursor: pointer;
+  border: 1px solid black;
+  background-color: #e6e6e6;
+}
+.news-tile-wrapper.left {
+  display: flex;
+}
+.news-tile-img img {
+  z-index: 2;
+  width: 100%;
 }
 .news-tile-img.background {
   top: 0;
@@ -434,23 +458,76 @@ nav {
   width: 100%;
   height: 100%;
   z-index: 2;
-  opacity: 0.3;
+  opacity: 0.25;
 }
-.news-tile-img.background img {
-  z-index: 2;
+.news-tile-img.top {
+  width: 100%;
+}
+.news-tile-img.top-inset {
+  width: 100%;
+  padding: 10px;
+  background-color: #cdcdcd;
+}
+.news-tile-img.left img {
+  height: auto;
+}
+.news-tile-img.none {
+  display: none;
 }
 .news-tile-content {
+  padding: 5px;
   position: relative;
   color: black;
   overflow: hidden;
   z-index: 3;
+}
+.news-tile-refer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'Oswald';
+  line-height: 1.4em;
+  font-size: 0.9em;
+  width: 100%;
+  padding: 2px 5px;
+  background: rgba(77, 104, 158, 0.58);
+  background: -moz-linear-gradient(left, rgba(77, 104, 158, 0.58) 0%, rgba(32, 124, 229, 0.58) 0%, rgba(145, 168, 189, 0.29) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(77, 104, 158, 0.58)), color-stop(0%, rgba(32, 124, 229, 0.58)), color-stop(100%, rgba(145, 168, 189, 0.29)));
+  background: -webkit-linear-gradient(left, rgba(77, 104, 158, 0.58) 0%, rgba(32, 124, 229, 0.58) 0%, rgba(145, 168, 189, 0.29) 100%);
+  background: -o-linear-gradient(left, rgba(77, 104, 158, 0.58) 0%, rgba(32, 124, 229, 0.58) 0%, rgba(145, 168, 189, 0.29) 100%);
+  background: -ms-linear-gradient(left, rgba(77, 104, 158, 0.58) 0%, rgba(32, 124, 229, 0.58) 0%, rgba(145, 168, 189, 0.29) 100%);
+  background: linear-gradient(to right, rgba(77, 104, 158, 0.58) 0%, rgba(32, 124, 229, 0.58) 0%, rgba(145, 168, 189, 0.29) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d689e', endColorstr='#91a8bd', GradientType=1);
+}
+.news-tile-date {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-family: 'Oswald';
+  line-height: 1.2em;
+  font-size: 0.8em;
+  border-top: 1px dashed gray;
+  border-left: 1px dashed gray;
+  padding: 0.1em 0.5em;
+}
+.news-tile-title {
+  font-size: 1.0em;
+  margin-top: 1.8em;
+  margin-bottom: 0.4em;
+  font-family: 'Arimo';
+  font-weight: bold;
+}
+.news-tile-summary {
+  margin-bottom: 2em;
+  font-size: 0.9em;
+  font-family: 'PT Sans';
 }
 .news-tile.article-0 .news-tile-wrapper .news-tile-content {
   height: 224px;
 }
 .news-articles-right {
   display: flex;
-  width: 40%;
+  width: 25%;
   background-color: #d3d3d3;
 }
 .news-articles-right * {
