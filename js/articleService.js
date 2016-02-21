@@ -86,25 +86,25 @@ app.service("articleService", ['$rootScope', function($rootScope){
             "image":    {
                 "src":          "assets/img/articles/global-forever-cropped.jpg",
                 "alt":          "",
-                "position":     "left"
+                "position":     "bottom"
             },
             "options":  {
-                "width":    "double"
+                "width":    ""
             }
         }
     );
 
     this.articles.push(
         {
-            "title":    "One time I farted",
-            "date":     "Feb 02, 2016",
-            "bodyText": "Same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is",
-            "referer":  "Philatelynews.com",
-            "src":      "",
+            "title":    "Upright Jenny Invert pane of six sells for $59,205 in Maine auction",
+            "date":     "Feb 19, 2016",
+            "bodyText": "Waterville, Maine, bookseller Robert Sezak auctioned his pane of the upright $2 Jenny Invert stamp through James D. Julia Auctioneers. A high bid of $50,000 won the lot.",
+            "referer":  "Linns.com",
+            "src":      "https://www.linns.com/news/us-stamps-postal-history/2016/february/upright-jenny-invert-pane-of-six-sells-for--59-205-in-maine-auct.html",
             "image":    {
-                "src":          "",
+                "src":          "assets/img/articles/jenny-cropped.jpg",
                 "alt":          "",
-                "position":     "none"
+                "position":     "bottom"
             },
             "options":  {
 
@@ -114,15 +114,15 @@ app.service("articleService", ['$rootScope', function($rootScope){
 
     this.articles.push(
         {
-            "title":    "I love your mom too",
-            "date":     "Jan 12, 2016",
-            "bodyText": "hitecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exer",
+            "title":    "USA Year of the Monkey Forever stamp to Celebrate Lunar New Year",
+            "date":     "Feb 9, 2016",
+            "bodyText": "Year of the Monkey Forever stamp issued by U.S. Postal Service to mark the beginning of the Lunar New Year, one of the most popular and exciting holidays of the year. Year of the Monkey is the ninth of 12 stamps issued by USPS in the Celebrating Lunar New Year",
             "referer":  "Philatelynews.com",
-            "src":      "",
+            "src":      "http://philatelynews.com/usa-year-of-the-monkey-forever-stamp/",
             "image":    {
-                "src":          "",
+                "src":          "assets/img/articles/china-monkey-cropped.jpg",
                 "alt":          "",
-                "position":     "none"
+                "position":     "top"
             },
             "options":  {
 

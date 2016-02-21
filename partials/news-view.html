@@ -13,14 +13,16 @@
 			           transitionDuration: '0.3s'
 			       }"
 			   >
+
 			       <div 
 			       		class="news-tile item" 
 			       		ng-repeat="item in articles track by $index" 
 			       		custom-directive 
 			       		masonry-item-dir
-			       		ng-class="{'article-{{$index}}':1===1, 'double-wide': item.options.width === 'double'}"
+			       		ng-class="{'article-{{$index}}':1===1, 'double-wide': item.options.width === 'double', '{{item.image.position}}':1===1}"
+			       		image-position="{{item.image.position}}"
 			       		> 
-						
+						<a href="{{item.src}}">
 			           	<div 
 			           		class="news-tile-wrapper" 
 			           		ng-class="{'article-{{$index}}':1===1, 'double-wide': item.options.width === 'double', '{{item.image.position}}':1===1}">
@@ -47,6 +49,7 @@
 					           	</div>
 					        </div>   	
 			           </div> <!-- news-tile-wrapper -->
+			           </a>
 			       </div>
 			   </div>
 

@@ -35,8 +35,8 @@ app.directive('masonryWallDir', function(){
                 
                 var self = this;
                 this.debouncedReload = _.debounce(function(){
-                    console.log('I am only ran once after all the destroys are done!');
-                    console.log('item is being destroyed');
+                    // console.log('I am only ran once after all the destroys are done!');
+                    // console.log('item is being destroyed');
                     self.masonry.reloadItems();
                     self.masonry.layout();
                 }, 100);
@@ -53,14 +53,14 @@ app.directive('masonryItemDir',
             require: '^masonryWallDir',
             link: function(scope, element, attributes, masonryWallDirCtrl){
 
-                console.log('item is repeated');
+                // console.log('item is repeated');
 
                 imagesLoaded(element, function(){
                     if(scope.$first){
-                        console.log('I get prepended');
+                        // console.log('I get prepended');
                         masonryWallDirCtrl.masonry.prepended(element);
                     }else{
-                        console.log('I get appended');
+                        // console.log('I get appended');
                         masonryWallDirCtrl.masonry.appended(element);
                     }
                 });
