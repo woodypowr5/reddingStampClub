@@ -401,6 +401,38 @@ nav {
   margin: 2em auto;
   overflow: hidden;
 }
+.links-header {
+  width: 100%;
+  height: 2em;
+}
+.links-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+  height: auto;
+  margin-top: 2em;
+}
+.link-wrapper {
+  float: left;
+  width: 50%;
+  min-height: 5em;
+  height: auto;
+}
+.link-content {
+  border-bottom: 1px dashed gray;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+.ghost-column {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  border-right: 1px dashed gray;
+  height: 100%;
+}
 .news-articles-wrapper {
   position: relative;
   display: flex;

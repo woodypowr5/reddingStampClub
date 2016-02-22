@@ -1,7 +1,8 @@
-app.controller('MainCtrl', ['$scope', 'articleService', function($scope, articleService) {
+app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function($scope, articleService, linkService) {
 	$scope.currentView = 'home';
 	$scope.selectedBio = 1;
 	$scope.articles = articleService.articles;
+	$scope.links = linkService.links;
 	$scope.modal = {
 		'active': 	false,
 		'type': 	null,
