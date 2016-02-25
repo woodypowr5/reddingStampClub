@@ -17,7 +17,7 @@
 		<div class="link-wrapper" ng-repeat="link in category.links track by $index" ng-init="initLinkExpanded($index)">
 			<div class="link">
 				<div class="link-content-wrapper">
-					<div class="link-content">	
+					<a href="{{link.url}}"><div class="link-content">	
 						<div class="link-synopsis-wrapper">
 							<div class="link-title">
 								{{link.title}}
@@ -34,7 +34,7 @@
 						<div class="link-image-wrapper">
 							<img ng-src="{{link.imageSrc}}" class="link-image {{link.imageHook}}">
 						</div>
-					</div>	
+					</div></a>	
 				</div>	
 				
 				<div class="link-content-expanded" ng-if="linksExpanded[$index] === true">

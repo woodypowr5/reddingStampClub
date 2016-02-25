@@ -10,7 +10,7 @@ app.service("linkService", ['$rootScope', function($rootScope){
                     "description":  "National stamp collecting organization's website provides information about membership, expertizing services, sales circuits, and local clubs",
                     "about":        "With nearly 32,000 members in more than 110 countries, the APS is the largest, non-profit organization for stamp collectors in the world. Founded in 1886, the APS serves collectors, educators, postal historians, and the general public by providing a wide variety of programs and services",
                     "imageSrc":     "assets/img/logos/americanPhilatelicSociety.png",
-                    "url":          "http://stamps.org/Home/"
+                    "url":          "http://stamps.org"
                 },
                 {
                     "title":        "American Air Mail Society",
