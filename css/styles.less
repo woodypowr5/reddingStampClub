@@ -160,6 +160,9 @@ a{
 				.header-opacity-layer.calendar-header-opacity-layer{
 					.header-opacity(white);
 				}
+				.header-opacity-layer.links-header-opacity-layer{
+					.header-opacity(white);
+				}
 			.header-texture-layer{
 				width: 100%;
 				height: 100%;
@@ -555,46 +558,149 @@ a{
 						} 
 	// Links
 
-	.links-header{
-		width: 100%;
-		height: 2em;
-	}
+	// .links-header{
+	// 	width: 100%;
+	// 	height: 2em;
+	// }
 	.links-content{
 		.flex-wrap;
 		width: 100%;
 		position: relative;
 		height: auto;
 		margin-top: 2em;
+
 		
 	}
 		.links-category{
 			width: 100%;
 			display: block;
 			z-index: 2;
+			border-bottom: 3px dashed lighten(gray,40);
+			padding-bottom: 2em;
+			margin-bottom: 1.5em;
 		}
 		.link-category-header{
+			padding-left: 25px;
 			width: 100%;
 			display: block;
+			
+			h3{
+				color: darken(gray,10);
+				font-size: 1.3em;
+				margin-top: 1.5em;
+				margin-bottom: 0.3em;
+				font-family: 'Arvo';
+			}
 		}
 		.link-wrapper{
-			background-image: url('../assets/textures/sos.png');
+			position: relative;
 			float: left;
 			width: 50%;
 			min-height: 5em;
 			height: auto;
+			padding-left: 25px;
+			padding-right: 25px;
+			margin: 1em 0;
 		}
-			.link-content{
-				border-bottom: 1px dashed gray;
-				width: 90%;
-				height: 100%;
-				margin: 0 auto;
+			.link{
+				
+				background-image: url('../assets/textures/square_bg.png');
+				background-color: rgba(120, 120, 120, 0.2);
+				border-radius: 3px;
+				box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.75);
+				
 			}
+			.link-expand, .link-collapse{
+				color: darken(gray,10);
+				font-size: 0.7em;
+				margin-top: 3px;
+				text-decoration: underline;
+				&:hover{
+					cursor: pointer;
+					
+					color: black;
+				}
+			}
+				.link-content-wrapper{
+					padding: 8px;
+					&:hover{
+						cursor: pointer;
+						background-color: rgba(255,255,255, 0.3);
+					}
+					// border-bottom: 1px dashed gray;
+					
+				}
+					.link-content{
+						width: 100%;
+						height: 90px;
+						// margin: 0 auto;
+						.flex;
+						justify-content: space-between;
+					}
+					.link-synopsis-wrapper{
+						position: relative;
+						flex-grow: 2;
+						z-index: 1;
+					}
+						.link-title{
+							font-weight: bold;
+							font-size: 1.1em;
+							// font-family: 'Merriweather';
+							
+						}	
+						.link-title-divider{
+							position: relative;
+							height: 2px;
+							margin: 1px 0 7px 0;
+							
+							.link-divider-opacity-layer{
+								position: absolute;
+								width: 100%;
+								height: 100%;
+								.header-opacity(lighten(gray,35));
+								z-index: 2;
+							}	
+							.link-divider-background-layer{
+								border-bottom: 2px dashed gray;
+								position: absolute;
+								width: 100%;
+								height: 100%;
+								z-index: 1;
+							}
+							// height: 2px;
+						}
+						.link-description{
+							font-size: 0.9em;
+							font-family: 'Roboto';
+							// line-height: 1.5em;
+						}
+
+					.link-image-wrapper{
+						height: 100%;
+						width: 230px;
+						position: relative;	
+						.vertically-center-children;
+						align-items: flex-end;
+					}
+						.link-image{
+							max-height: 80px;
+						}
+						.link-image.americanPhilatelicFoundation{
+							max-height: 50px;
+						}
+						.link-image.linnsStampNews{
+							max-height: 40px;
+						}
+				.link-content-expanded{
+					height: 90px;
+				}
+
 	.ghost-column{
 		position: absolute;
 		left: 0;
 		top: 0;
 		width: 50%;
-		border-right: 1px dashed gray;
+		// border-right: 1px dashed gray;
 		height: 100%;
 		z-index: 1;
 	}
