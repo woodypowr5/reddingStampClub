@@ -1,27 +1,7 @@
 app.service("linkService", ['$rootScope', function($rootScope){
     "use strict";
       
-    this.links = [];
-
-    // for (var i = 0; i < 10; i++) {
-        
-    //     this.links.push(
-    //         {
-    //             "title":            "im the title",
-    //             "description":      "This is a short, one line summary of the link",
-    //             "image": {
-    //                 "src":      "blah",
-    //                 "alt":      "blah"
-    //             }
-    //         }
-    //     );
-    // };
-
-    /*
-            
-        
-
-    [
+    this.links = [
         {
             "category":     "National and Regional Societies",
             "links":        [
@@ -48,7 +28,7 @@ app.service("linkService", ['$rootScope', function($rootScope){
                 }
             ]
         },
-        {    
+        {
             "category":     "Dealers and Sales",
             "links":        [
                 {
@@ -86,7 +66,7 @@ app.service("linkService", ['$rootScope', function($rootScope){
                 }
             ]
         },
-        {    
+        {
             "category":     "Authentication and Expertizing",
             "links":        [
                 {
@@ -150,10 +130,8 @@ app.service("linkService", ['$rootScope', function($rootScope){
                 }
             ]
         }
-    ]    
-   
-    */
-   
+    ];
+      
 
     var that = this;
  
