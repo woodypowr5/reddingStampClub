@@ -1,42 +1,50 @@
 <div class="calendar-wrapper">
-	<div class="calendar-left">
-		<div class="calendar-container">
-			<div class="calendar-header">
-				<div 
-					class="calendar-prev-btn" 
-					ng-class="{'prev-month-invalid': calendar.prevMonthInvalid === true}"
-					ng-click="calendarChangeMonth(-1)"
-				>
-					Prev
-				</div>
-				<h2>{{calendar.data[calendar.currentMonth].name}}</h2>
-				<div 
-					class="calendar-next-btn"
-					ng-class="{'next-month-invalid': calendar.nextMonthInvalid === true}"
-					ng-click="calendarChangeMonth(1)"
-				>
-					Next
-				</div>
-			</div>
-			<div class="calendar-row dayofweek-row">
-				<div class="calendar-cell calendar-day" ng-repeat="day in ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] track by $index">
-					<div class="calendar-dayofweek">{{day}}</div>
-				</div>
-			</div>
-			<div class="calendar-row" ng-repeat="row in calendar.data[calendar.currentMonth].dates track by $index">
-				<div ng-if="row.indexOf(1) > -1" class="calendar-cell" ng-repeat="date in calendar.data[calendar.currentMonth].dates[$index] track by $index">
-					<div class="calendar-datebox">{{date}}</div>
-				
-						<div ng-click="selectCalendarEvent(calendar.data[calendar.currentMonth].events[row[row.indexOf(1)]+$index-row.indexOf(1)])" class="calendar-event-name">{{calendar.data[calendar.currentMonth].events[row[row.indexOf(1)]+$index-row.indexOf(1)].name}}</div>		
-				</div>
-				<div ng-if="row.indexOf(1) <= -1" class="calendar-cell" ng-repeat="date in calendar.data[calendar.currentMonth].dates[$index] track by $index">
-					<div class="calendar-datebox">{{date}}</div>
-				
-						<div ng-click="selectCalendarEvent(calendar.data[calendar.currentMonth].events[row[0]+$index])" class="calendar-event-name">{{calendar.data[calendar.currentMonth].events[row[0]+$index].name}}</div>
-					</div>
-				
-			</div>
+	<div class="calendar-left-wrapper">
+		<div class="calendar-header page-heading">
+			<h2>Club Calendar</h2>
+			<div class="header-opacity-layer calendar-header-opacity-layer"></div>
+			<div class="header-texture-layer"></div>
 		</div>
+		<div class="calendar-left">
+			
+			<div class="calendar-container">
+				<div class="calendar-header">
+					<div 
+						class="calendar-prev-btn" 
+						ng-class="{'prev-month-invalid': calendar.prevMonthInvalid === true}"
+						ng-click="calendarChangeMonth(-1)"
+					>
+						Prev
+					</div>
+					<h2>{{calendar.data[calendar.currentMonth].name}}</h2>
+					<div 
+						class="calendar-next-btn"
+						ng-class="{'next-month-invalid': calendar.nextMonthInvalid === true}"
+						ng-click="calendarChangeMonth(1)"
+					>
+						Next
+					</div>
+				</div>
+				<div class="calendar-row dayofweek-row">
+					<div class="calendar-cell calendar-day" ng-repeat="day in ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] track by $index">
+						<div class="calendar-dayofweek">{{day}}</div>
+					</div>
+				</div>
+				<div class="calendar-row" ng-repeat="row in calendar.data[calendar.currentMonth].dates track by $index">
+					<div ng-if="row.indexOf(1) > -1" class="calendar-cell" ng-repeat="date in calendar.data[calendar.currentMonth].dates[$index] track by $index">
+						<div class="calendar-datebox">{{date}}</div>
+					
+							<div ng-click="selectCalendarEvent(calendar.data[calendar.currentMonth].events[row[row.indexOf(1)]+$index-row.indexOf(1)])" class="calendar-event-name">{{calendar.data[calendar.currentMonth].events[row[row.indexOf(1)]+$index-row.indexOf(1)].name}}</div>		
+					</div>
+					<div ng-if="row.indexOf(1) <= -1" class="calendar-cell" ng-repeat="date in calendar.data[calendar.currentMonth].dates[$index] track by $index">
+						<div class="calendar-datebox">{{date}}</div>
+					
+							<div ng-click="selectCalendarEvent(calendar.data[calendar.currentMonth].events[row[0]+$index])" class="calendar-event-name">{{calendar.data[calendar.currentMonth].events[row[0]+$index].name}}</div>
+						</div>
+					
+				</div>
+			</div>
+		</div>	
 	</div>
 	<div class="calendar-right">
 		<div class="calendar-details">

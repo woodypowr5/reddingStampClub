@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/grid.css">
 	<link rel="stylesheet" href="css/styles.css">
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans|Oswald|PT+Sans|Arimo' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Arvo|Lato|Open+Sans|Oswald|PT+Sans|Arimo|Roboto|Merriweather' rel='stylesheet' type='text/css'>
 	<!-- fonts I like: open sans -->
 </head>
 <body ng-controller="MainCtrl">
@@ -79,7 +79,7 @@
 		
 		<div class="modal-body">
 			<div class="modal-close-button" ng-click="deactivateModal()">
-				close(x)
+				&#10006;
 			</div>
 			<iframe src = "{{modal.src}}" width='400' height='300' allowfullscreen webkitallowfullscreen></iframe>
 		</div>
@@ -95,6 +95,7 @@
 	<script src="js/directives/masonry.js"></script>
 	<script src="js/directives/newsTiles.js"></script>
 	<script src="js/articleService.js"></script>
+	<script src="js/linkService.js"></script>
 	<script src="js/MainCtrl.js"></script>
 	
 

@@ -1,12 +1,14 @@
-app.controller('MainCtrl', ['$scope', 'articleService', function($scope, articleService) {
+app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function($scope, articleService, linkService) {
 	$scope.currentView = 'home';
 	$scope.selectedBio = 1;
 	$scope.articles = articleService.articles;
+	$scope.links = linkService.links;
 	$scope.modal = {
 		'active': 	false,
 		'type': 	null,
 		'src': 		null
 	}
+	$scope.linksExpanded = [];
 
 	$scope.activateModal = function(type, src){
 		$scope.modal.type = type ? type : 'unknown';
@@ -31,6 +33,17 @@ app.controller('MainCtrl', ['$scope', 'articleService', function($scope, article
 	});
 
 
+	// Links
+
+	$scope.initLinkExpanded = function(index){
+		$scope.linksExpanded[index] = false;
+	};
+	$scope.expandLink = function(index){
+		$scope.linksExpanded[index] = true;
+	}
+	$scope.collapseLink = function(index){
+		$scope.linksExpanded[index] = false;
+	}
 	// Articles
 
 	$scope.setArticleImage = function(element, article){
@@ -178,9 +191,12 @@ app.controller('MainCtrl', ['$scope', 'articleService', function($scope, article
 	$scope.calendar.currentMonth = 0;
 	$scope.initCalendarEvent();
 	$scope.checkPrevNextButtons();
+
 	
 	console.log($scope.articles);
 	
+
+
 
 
 }]);
