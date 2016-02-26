@@ -33,8 +33,8 @@ app.service("linkService", ['$rootScope', function($rootScope){
             "links":        [
                 {
                     "title":        "National Stamp Dealer's Association",
-                    "description":  "",
-                    "about":        "",
+                    "description":  "Meet NSDA dealers and find out about stamps and cover collecting. ",
+                    "about":        "The National Stamp Dealers Association was founded in 1995 to join small and large stamp dealerships together in a friendly organization with reasonable dues and membership requirements. The primary goals of the NSDA include development and maintenance of a high standard of ethical dealings between dealers and collectors and provision of ongoing information and support to assist members improve and grow their philatelic businesses.",
                     "imageSrc":     "assets/img/logos/nsdalogo-small-trans.gif",
                     "url":          "http://www.nsdainc.org/"
                 }
@@ -45,23 +45,23 @@ app.service("linkService", ['$rootScope', function($rootScope){
             "links":        [
                 {
                     "title":        "Linn's Stamp News",
-                    "description":  "",
-                    "about":        "",
+                    "description":  "Online version of the weekly stamp news magazine",
+                    "about":        "Linn's Stamp News is an American weekly newspaper for stamp collectors. It is published by Amos Media Co., which also publishes the Scott Standard Postage Stamp Catalogue, the Scott Specialized Catalogue of United States Stamps and Covers, and the Scott Classic Specialized Catalogue of Stamps and Covers 1840-1940",
                     "imageSrc":     "assets/img/logos/linnsLogo.png",
                     "url":          "https://www.linns.com/",
                     "imageHook":    "linnsStampNews"
                 },
                 {
-                    "title":        "PhilatelyNews",
-                    "description":  "",
-                    "about":        "",
+                    "title":        "Philately News",
+                    "description":  "Provides news about latest stamp issues, philatelic exhibitions and shows worldwide",
+                    "about":        "Philatelynews is a community for people called “Philatelists” who share the common interest of stamp collecting.Philatelynews provides latest stamps news, exhibition news, auction info, Club news and other philately updates to the collectors, helping to grow their collection",
                     "imageSrc":     "assets/img/logos/philatelyNews.png",
                     "url":          "http://philatelynews.com"
                 },
                 {
                     "title":        "PositivelyPostal",
-                    "description":  "",
-                    "about":        "",
+                    "description":  "Your daily dose of stamps and mailart",
+                    "about":        "Displays examples of postal culture from Great Britain and other nations. Includes a timeline and a photo gallery",
                     "imageSrc":     "assets/img/logos/Positively-Postal.png",
                     "url":          "http://positivelypostal.com/"
                 }
@@ -72,8 +72,8 @@ app.service("linkService", ['$rootScope', function($rootScope){
             "links":        [
                 {
                     "title":        "The Philatelic Foundation",
-                    "description":  "",
-                    "about":        "",
+                    "description":  "Foundation renowned for their expertise in stamps and postal history",
+                    "about":        "Their reference collection is among the finest assemblages of philatelic material in the world. In addition, the Philatelic Foundation has over 5,000 reference works including research notes and correspondence of Stanley Ashbrook, photographic records of major specialized collections and auction catalogues from around the world. Last, but certainly not least, is a photographic record of each of the over 500,000 items that we have certified over the years.",
                     "imageSrc":     "assets/img/logos/philatelicFoundation.png",
                     "url":          "http://www.philatelicfoundation.org/",
                     "imageHook":    "americanPhilatelicFoundation"
@@ -84,23 +84,16 @@ app.service("linkService", ['$rootScope', function($rootScope){
             "category":     "Research and Education",
             "links":        [
                 {
-                    "title":        "Western Philatelic Library",
-                    "description":  "",
-                    "about":        "",
-                    "imageSrc":     "assets/img/logos/westernPhilatelyLibrary.gif",
-                    "url":          "http://www.fwpl.org/"
-                },
-                {
                     "title":        "ISWSC Stamp Identifier",
-                    "description":  "",
-                    "about":        "",
+                    "description":  "World's largest philatelic group for beginners, intermediate and advanced worldwide stamp collectors",
+                    "about":        "The International Society of Worldwide Stamp Collectors serves the interests of all worldwide collectors. It strives to promote the fun and fascination of worldwide stamp collecting to young and old alike, and has an active outreach program serving youth, their leaders and beginners of all ages",
                     "imageSrc":     "assets/img/logos/iswsclgs.png",
                     "url":          "http://www.iswsc.org/iswsc_identifier.html"
                 },
                 {
                     "title":        "Stamp World Catalogue",
-                    "description":  "",
-                    "about":        "",
+                    "description":  "Largest, most complete and updated online stamp catalogue in the world",
+                    "about":        "StampWorld.com is a global development made by people from all over the world. The original idea was developed by a small group of stamp collectors. The results of years of work are now finally online and available to you",
                     "imageSrc":     "assets/img/logos/stampworld-logo.png",
                     "url":          "http://www.stampworld.com/en_US/maps/Europe/"
                 }
