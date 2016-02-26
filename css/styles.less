@@ -43,6 +43,7 @@ a{
 
 }
 
+
 // Dimension Units
 @border-width: 3px;
 @nav-height: 4em;
@@ -242,7 +243,7 @@ a{
 	background-image: url('../assets/img/candidate/dubai3.jpg');
 }
 .hero-section-links{
-	background-image: url('../assets/img/candidate/stripes-cropped.jpg');
+	background-image: url('../assets/img/stampBook.jpg');
 }
 .hero-section-contact{
 	background-image: url('../assets/img/candidate/green.jpg');
@@ -252,7 +253,9 @@ a{
 
 .main-section{
 	border-top: 3px solid lighten(gray, 30);
+	min-height: 500px;
 }
+
 
 	// Home
 
@@ -379,6 +382,9 @@ a{
 				width: 100%;
 				height: 6em;
 				background-color: darken(@main, 10);
+				border-top: @perforated-border;
+				border-bottom: @perforated-border;
+				font-family: 'Nunito';
 				.flex;
 			}
 				.novapex-docs-header{
@@ -387,7 +393,7 @@ a{
 					font-size: 1.3em;
 					font-weight: bold;
 					line-height: (6em/1.3em);
-					border-right: 2px solid lighten(gray,15);
+					border-right: @perforated-border;
 				}
 				.novapex-docs-links{
 					width: 8em;
@@ -409,21 +415,84 @@ a{
 					}	
 			.novapex-gallery-container{
 				position: relative;
-
-				// outline: 2px solid blue;
 			}		
 				.centennial-logo{
 					width: 80%;
 					margin: 3em 10%;	
 				}
-		// .novapex-divider{
-		// 	width: 100%;
-		// 	display: block;
-		// 	height: 200px;
-		// 	border
-		// 	// position: relative;
-		// }		
-		
+		.novapex-listings{
+			width: 100%;
+			.flex;
+			@media all and (max-width: 1400px){
+				.flex-wrap;
+			}
+		}
+			.novapex-listings-header{
+				font-family: 'Arvo';
+				color: darken(gray,10);
+			}
+			.multicol-table{
+				margin-top: 2.2em;
+				width: 100%;
+				border: 4px solid lighten(gray,40);
+				box-shadow: 2px 2px 6px 3px rgba(100,100,100,0.55);
+				font-size: 0.9em;
+				font-family: 'Nunito';
+				@media all and (max-width: 1600px){
+					font-size: 0.8em;
+				}
+				@media all and (max-width: 1400px){
+					font-size: 0.9em;
+				}
+				@media all and (max-width: 800px){
+					font-size: 0.8em;
+				}
+				@media all and (max-width: 700px){
+					font-size: 0.7em;
+				}
+			}
+				.multicol-tbody{
+					
+				}
+					.multicol-tr{
+						.flex;
+						padding: 35px 15px 20px 15px;
+						justify-content: space-between;
+
+					}
+					.dealers-tr{
+						// padding-top: 40px;
+					}
+						.multicol-col{
+
+						}
+							.paragraph{
+								padding: 0 5px;
+							}
+
+			.novapex-listings-exhibits{
+				width: 50%;
+				border-right: @perforated-border;
+				padding: 40px;
+				min-width: 700px;
+				@media all and (max-width: 1400px){
+					width: 100%;
+					border: none;
+					border-bottom: @perforated-border;
+				}
+			}
+
+
+			.novapex-listings-dealers{
+				padding: 40px;
+				width: 50%;
+				min-width: 700px;
+				@media all and (max-width: 1400px){
+					width: 100%;
+				}
+			}
+	
+
 	// Calendar
 
 		.calendar-wrapper{
@@ -992,6 +1061,49 @@ a{
 		}
 
 
+	.footer{
+		height: 4em;
+		background-image: url('../assets/textures/wood.png');
+		
+	}
+		.footer-content{
+			width: 100%;
+			height: 100%;
+			background-color: rgba(255, 255, 255, 0.1);
+			color: white;
+			.flex;
+			justify-content: space-between;
+			font-family: 'Nunito';
+			font-size: 0.8em;
+			padding: 5px 25px;
+		}
+
+			.footer-copyright{
+				height: 100%;
+			}
+				.footer-copyright-top{
+					height: 50%;
+					.vertically-center-children;
+					align-items: flex-start;
+				}
+				.footer-copyright-bottom{
+					height: 50%;
+					.vertically-center-children;
+					align-items: flex-start;
+				}
+			.footer-created-by{
+				height: 100%;
+			}
+				.footer-created-by-top{
+					height: 50%;
+					.vertically-center-children;
+					align-items: flex-end;
+				}
+				.footer-created-by-bottom{
+					height: 50%;
+					.vertically-center-children;
+					align-items: flex-end;
+				}
 // Animations
 
 	.fade {
