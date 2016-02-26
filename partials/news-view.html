@@ -21,7 +21,7 @@
 
 			       <div 
 			       		class="news-tile item" 
-			       		ng-repeat="item in articles track by $index" 
+			       		ng-repeat="item in news track by $index" 
 			       		custom-directive 
 			       		masonry-item-dir
 			       		ng-class="{'article-{{$index}}':1===1, 'double-wide': item.options.width === 'double', '{{item.image.position}}':1===1}"
@@ -68,8 +68,19 @@
 				<div class="header-texture-layer"></div>
 				
 			</div>
-		
+			
+			<div class="articles-container">
+				<div class="article-wrapper" ng-repeat="article in articles">
+					<div class="article-thumb">
+						<img ng-src="{{article.thumbSrc}}" alt="">
+					</div>
+					<div class="article-description">
+						{{article.title}}
+					</div>
+				</div>
 			</div>
+
+			
 		</div>
 	</div>	
 
