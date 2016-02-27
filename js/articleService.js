@@ -1,10 +1,10 @@
 app.service("articleService", ['$rootScope', function($rootScope){
     "use strict";
       
+    this.news = [];
     this.articles = [];
 
-
-    this.articles.push(
+    this.news.push(
         {
             "title":    "15¢ gray Large Queen Canadian stamp will star at the next auction",
             "date":     "Feb 18, 2016",
@@ -22,7 +22,7 @@ app.service("articleService", ['$rootScope', function($rootScope){
         }
     );
 
-    this.articles.push(
+    this.news.push(
         {
           "title":    "UN Special stamps to celebrate the diversity of the LGBT community",
           "date":     "Feb 19, 2016",
@@ -40,7 +40,7 @@ app.service("articleService", ['$rootScope', function($rootScope){
       }
     );
 
-    this.articles.push(
+    this.news.push(
         {
             "title":    "Australian Decimal currency 50 years celebrated through Special stamp",
             "date":     "Feb 15, 2016",
@@ -58,7 +58,7 @@ app.service("articleService", ['$rootScope', function($rootScope){
         }
     );
 
-    this.articles.push(
+    this.news.push(
         {
             "title":    "One time I farted",
             "date":     "Feb 02, 2016",
@@ -76,7 +76,7 @@ app.service("articleService", ['$rootScope', function($rootScope){
         }
     );
 
-    this.articles.push(
+    this.news.push(
         {
             "title":    "USPS promises the moon with global forever stamp",
             "date":     "Jan 12, 2016",
@@ -94,7 +94,7 @@ app.service("articleService", ['$rootScope', function($rootScope){
         }
     );
 
-    this.articles.push(
+    this.news.push(
         {
             "title":    "Upright Jenny Invert pane of six sells for $59,205 in Maine auction",
             "date":     "Feb 19, 2016",
@@ -112,7 +112,7 @@ app.service("articleService", ['$rootScope', function($rootScope){
         }
     );
 
-    this.articles.push(
+    this.news.push(
         {
             "title":    "USA Year of the Monkey Forever stamp to Celebrate Lunar New Year",
             "date":     "Feb 9, 2016",
@@ -130,6 +130,31 @@ app.service("articleService", ['$rootScope', function($rootScope){
         }
     );
    
+
+    this.articles.push(
+        {
+            "title":    "Awards won at NOVAPEX 2014",
+            "date":     "",
+            "bodyText": "",
+            "thumbSrc": "assets/articles/novapex-awards.png",
+            "src":      "assets/articles/novapex14_awards.docx",
+            "options":  {
+
+            }
+        }
+    );
+    this.articles.push(
+        {
+            "title":    "How to Remove Adhesive from Stamps",
+            "date":     "",
+            "bodyText": "",
+            "thumbSrc": "assets/articles/remove-adhesiveBW.png",
+            "src":      "assets/articles/removing_self_adhesive_stamps.pdf",
+            "options":  {
+
+            }
+        }
+    );
 
     var that = this;
  

@@ -9,11 +9,12 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/1.3.1/lodash.min.js"></script>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/grid.css">
+	<!-- <link rel="stylesheet" href="contactForm/contactFormStyles.css"> -->
 	<link rel="stylesheet" href="css/styles.css">
 	<link href='https://fonts.googleapis.com/css?family=Arvo|Lato|Open+Sans|Oswald|PT+Sans|Arimo|Roboto|Merriweather|Nunito' rel='stylesheet' type='text/css'>
 	<!-- fonts I like: open sans -->
 </head>
-<body class="fluid-container" ng-controller="MainCtrl">
+<body class="fluid-container" ng-controller="MainCtrl" ng-class="{'contact-active': currentView==='contact'}">
 	<section 
 		class="hero-section"
 		ng-class="{
