@@ -108,6 +108,22 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 		],
 		"events": []
 	};
+		$scope.calendar.data[0].events[3] = {
+			'id': 	0,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0
+		};
+		$scope.calendar.data[0].events[17] = {
+			'id': 	1,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0
+		};
 	$scope.calendar.data[1] = {
 		"name": "February 2016",
 		"dates": [
@@ -119,6 +135,22 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 		],
 		"events": []
 	};
+		$scope.calendar.data[1].events[7] = {
+			'id': 	2,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0
+		};
+		$scope.calendar.data[1].events[21] = {
+			'id': 	3,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0
+		};
 	$scope.calendar.data[2] = {
 		"name": "March 2016",
 		"dates": [
@@ -130,6 +162,22 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 		],
 		"events": []
 	};
+		$scope.calendar.data[2].events[5] = {
+			'id': 	4,
+			'name': 'NOVAPEX 2016',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': '2016 NOVAPEX Exhibition',
+			'note': 0
+		};
+		$scope.calendar.data[2].events[6] = {
+			'id': 	5,
+			'name': 'NOVAPEX 2016',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': '2016 NOVAPEX Exhibition',
+			'note': 0
+		};
 	$scope.calendar.data[3] = {
 		"name": "April 2016",
 		"dates": [
@@ -141,6 +189,38 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 		],
 		"events": []
 	};
+		$scope.calendar.data[3].events[3] = {
+			'id': 	6,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0
+		};
+		$scope.calendar.data[3].events[17] = {
+			'id': 	7,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0
+		};
+		$scope.calendar.data[3].events[29] = {
+			'id': 	8,
+			'name': 'WESTPEX 2016',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Annual WESTPEX Exhibition',
+			'note': 0
+		};
+		$scope.calendar.data[3].events[30] = {
+			'id': 	9,
+			'name': 'WESTPEX 2016',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Annual WESTPEX Exhibition',
+			'note': 0
+		};
 	$scope.calendar.data[4] = {
 		"name": "May 2016",
 		"dates": [
@@ -152,38 +232,23 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 		],
 		"events": []
 	};
-
+		$scope.calendar.data[4].events[1] = {
+			'id': 	10,
+			'name': 'WESTPEX 2016',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Annual WESTPEX Exhibition',
+			'note': 0
+		};
+		$scope.calendar.data[4].events[22] = {
+			'id': 	11,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0
+		};
 	// October Events
-	$scope.calendar.data[0].events[1] = {
-		'id': 	0,
-		'name': 'Test Event 1',
-		'time': "8:00 to 11:00 AM",
-		'description': 'This is only a test...',
-		'note': 0
-	};
-	$scope.calendar.data[0].events[9] = {
-		'id': 	1,
-		'name': 'Test Event 2',
-		'time': "8:00 to 11:00 AM",
-		'description': 'This is only a test...',
-		'note': "super awesome..."
-	};
-	$scope.calendar.data[0].events[22] = {
-		'id': 	2,
-		'name': 'Test Event 3',
-		'time': "8:00 to 11:00 AM",
-		'description': 'This is only a test...',
-		'note': "Super awesome..."
-	};
-
-	//November Events
-	$scope.calendar.data[1].events[2] = {
-		'id': 	3,
-		'name': 'Test Event 4',
-		'time': "8:00 to 11:00 AM",
-		'description': 'This is only a test...',
-		'note': "Super awesome..."
-	};
 	
 
 
