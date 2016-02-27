@@ -515,29 +515,55 @@ a{
 
 
 			.calendar-header{
+				
 				width: 100%;
 				display: block;
+				
 			}
 				.calendar-container{
 					// height: 40em;
 					width: 80%;
-					margin: 0 auto;
+					margin: 0 auto 5em auto;
 				}
-					.calendar-header{
+					.calendar-heading{
 						.flex;
 						justify-content: space-between;
 						width: 100%;
 						height: 15%;
+						margin-bottom: 1em;
+						h2{
+							color: darken(gray, 10%);
+							font-family: 'Arvo';
+						}
 					}
 						.calendar-prev-btn{
-			
+							color: darken(gray, 10%);
+							font-family: 'Nunito';
+							width: 170px;
+							font-weight: bold;
+							.vertically-center-children;
+							align-items: flex-start;
+							span:hover{
+								cursor: pointer;
+								color: darken(green,3);
+							}
 						}
 						.calendar-month-text{
 							margin: 0 auto;
 						}
 						.calendar-next-btn{
-
+							color: darken(gray, 10%);
+							font-family: 'Nunito';
+							width: 170px;
+							font-weight: bold;
+							.vertically-center-children;
+							align-items: flex-end;
+							span:hover{
+								cursor: pointer;
+								color: darken(green,3);
+							}
 						}
+				
 					.calendar-row{
 						// height: (85%/6);
 						border-top: 2px solid black;
