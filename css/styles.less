@@ -101,6 +101,7 @@ a{
 				line-height: 4em;
 				color: @darkgray;
 				font-weight:  bold;
+				font-family: 'Arimo';
 			}
 			.nav-link-active{
 				background-color: rgba(155, 155, 155, 0.5);
@@ -139,8 +140,8 @@ a{
 				position: relative;
 				margin: 0;
 				font-size: 2.3em;
-				padding-top: 0.7em;
-				padding-bottom: 0.6em;
+				padding-top: 0.6em;
+				padding-bottom: 0.3em;
 				padding-left: 15px;
 				// margin-bottom: 0.05em;
 				z-index: 10;
@@ -253,7 +254,7 @@ a{
 
 .main-section{
 	border-top: 3px solid lighten(gray, 30);
-	min-height: 500px;
+	min-height: 600px;
 }
 
 
@@ -357,8 +358,10 @@ a{
 				width: 80%;
 				margin-top: 2em;
 				margin-left: 10%;
-				margin-bottom: 1.2em;
-				font-family: 'Roboto';
+				margin-bottom: 1.5em;
+				font-family: 'Arvo';
+				font-size: 1.6em;
+				color: darken(gray,10);
 			}	
 			.novapex-content-block{
 				width: 80%;
@@ -367,6 +370,7 @@ a{
 				margin-right: auto;
 				margin-bottom: 3em;
 				line-height: 1.5em;
+				font-family: 'Arimo';
 			}
 		.novapex-right{
 			// float: left;
@@ -1156,3 +1160,93 @@ a{
 	  opacity:0 !important;
 	}
 	
+
+
+
+
+
+
+
+
+
+// Contact Form
+
+/** {
+	margin: 0;
+	padding: 0;
+}
+*/
+body.contact-active {
+	
+	background: url(../contactFOrm/images/stripe.png) repeat;
+
+
+/*p {
+	font-size: 1.3em;
+	margin-bottom: 15px;
+}
+*/
+#page-wrap {
+	outline: @perforated-border;
+	width: 660px;
+	background: white;
+	padding: 35px 30px 20px 30px;
+	margin: 50px auto 50px auto;
+	min-height: 500px;
+	height: auto !important;
+	/*height: 500px;*/
+}
+.contact-header{
+	text-align: center;
+	font-family: 'Arvo';
+	margin-bottom: 1.5em;
+}
+.contact-message{
+	text-align: center;
+	font-family: 'Nunito';
+	margin-bottom: 2em;
+}
+#contact-area {
+	// width: 600px
+	width: 600px;
+	margin: 25px 0;
+}
+#contact-area form{
+	margin-top: 1.5em;
+	width: 600px;
+}
+#contact-area input, #contact-area textarea {
+	padding: 5px;
+	width: 471px;
+	font-family: Helvetica, sans-serif;
+	font-size: 1.4em;
+	margin: 0px 0px 10px 0px;
+	border: 2px solid #ccc;
+}
+
+#contact-area textarea {
+	height: 90px;
+}
+
+#contact-area textarea:focus, #contact-area input:focus {
+	border: 2px solid #900;
+}
+
+#contact-area input.submit-button {
+	width: 100px;
+	float: right;
+	margin-right: 14px;
+	margin-bottom: 30px;
+}
+
+label {
+	font-family: 'Arvo';
+
+	float: left;
+	text-align: right;
+	margin-right: 15px;
+	width: 100px;
+	padding-top: 5px;
+	font-size: 1.0em;
+}
+}
