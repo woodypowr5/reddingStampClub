@@ -137,7 +137,7 @@ app.service("articleService", ['$rootScope', function($rootScope){
             "date":     "",
             "bodyText": "",
             "thumbSrc": "assets/articles/novapex-awards.png",
-            "src":      "assets/articles/novapex14_awards.docx",
+            "src":      "assets/articles/novapex14_awards.pdf",
             "options":  {
 
             }
