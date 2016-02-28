@@ -646,7 +646,7 @@ a{
 				border-left: @perforated-border;
 			}	
 				.calendar-details{
-					
+					font-family: 'Nunito';
 					width: 100%;
 				}
 					.calendar-details-heading{
@@ -654,6 +654,7 @@ a{
 						text-align: center;
 						font-size: 2em;
 						margin-top: 1em;
+						font-family: 'Arvo';
 
 					}
 					.calendar-details-wrapper{
@@ -713,7 +714,13 @@ a{
 			border-bottom: 3px dashed lighten(gray,30);
 			padding-bottom: 2em;
 			margin-bottom: 1.5em;
+			&:last-child{
+				border-bottom: none;
+			}
 		}
+		// .links-category:last-child{
+		// 	border-bottom: none;
+		// }
 		.link-category-header{
 			padding-left: 25px;
 			width: 100%;

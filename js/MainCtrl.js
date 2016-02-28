@@ -1,4 +1,4 @@
-app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function($scope, articleService, linkService) {
+app.controller('MainCtrl', ['$scope', 'articleService', 'linkService','$sce', function($scope, articleService, linkService, $sce) {
 	$scope.currentView = 'home';
 	$scope.selectedBio = 1;
 	$scope.news = articleService.news;
@@ -13,7 +13,18 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 	$scope.today = null;
 	$scope.todaysMonth = null;
 	$scope.todaysDay = null;
-
+	$scope.calendar = {
+		"data": [],
+		"currentMonth": 0,
+		"activeEvent": {
+			"embed": null
+		},
+		"currentDay": null
+	}	
+	$scope.trustSrc = function(src) {
+		console.log(src);
+	    return $sce.trustAsResourceUrl(src);
+  }
 	$scope.activateModal = function(type, src){
 		$scope.modal.type = type ? type : 'unknown';
 		$scope.modal.src = (type === 'pdf' || type === 'doc' || type === 'docx') ? "ViewerJS/#../"+src : src;
@@ -28,7 +39,7 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 		}
 	}
 
-	var googleMapsApiKey = "AIzaSyBW5IYe93clNAAsEcTIZN3huEgjmu6TJqE";
+	var googleMapsApiKey = "AIzaSyB3ARGw6O6Ww2uu_ttgI4Vq6jgbgfHV0Ow";
 
 	$scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
     	if ( angular.isDefined( toState.data.newView ) ) {
@@ -39,15 +50,34 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 
 	// Links
 
-	$scope.initLinkExpanded = function(index){
-		$scope.linksExpanded[index] = false;
-	};
-	$scope.expandLink = function(index){
-		$scope.linksExpanded[index] = true;
+	// $scope.initLinkExpanded = function(index){
+	// 	$scope.linksExpanded[index] = false;
+	// };
+	$scope.expandLink = function(category, link){
+	    for (var i = 0; i < $scope.links.length; i++) { //loop through categories
+	       if($scope.links[i].category === category){
+	       		for (var j = 0; j < $scope.links[i].links.length; j++) {
+	       			if($scope.links[i].links[j].title === link){
+	       				$scope.links[i].links[j].expanded = true;
+	       				return;
+	       			}
+	       		};
+	       }
+	    };
 	}
-	$scope.collapseLink = function(index){
-		$scope.linksExpanded[index] = false;
-	}
+
+	$scope.collapseLink = function(category, link){
+		    for (var i = 0; i < $scope.links.length; i++) { //loop through categories
+		       if($scope.links[i].category === category){
+		       		for (var j = 0; j < $scope.links[i].links.length; j++) {
+		       			if($scope.links[i].links[j].title === link){
+		       				$scope.links[i].links[j].expanded = false;
+		       				return;
+		       			}
+		       		};
+		       }
+		    };
+		}
 	// Articles
 
 	$scope.setArticleImage = function(element, article){
@@ -57,11 +87,14 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 	// Calendar
 
 	$scope.selectCalendarEvent = function(event){
+		console.log(event);
 		$scope.calendar.activeEvent = {
+
 			'name': event.name,
 			'time': event.time,
 			'description': event.description,
-			'note': event.note
+			'note': event.note,
+			'embed': event.embed
 		}
 	}
 	$scope.initCalendarEvent = function(){
@@ -105,12 +138,14 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 		$scope.checkPrevNextButtons();
 		
 	}
-	$scope.calendar = {
-		"data": [],
-		"currentMonth": 0,
-		"activeEvent": {},
-		"currentDay": null
-	}	
+
+	$scope.googleMaps = {
+		"home": "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJe-3cHpfs0lQRpJJ-WK0k4Os&key="+googleMapsApiKey,
+		"novapex": null,
+		"westpex": null
+
+	}
+	
 	$scope.calendar.data[0] = {
 		"name": "January 2016",
 		"dates": [
@@ -129,7 +164,8 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 			'time': "2PM to 4PM",
 			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
 			'description': 'Bi-monthly general meeting',
-			'note': 0
+			'note': 0,
+			'embed': $scope.googleMaps.home 
 		};
 		$scope.calendar.data[0].events[17] = {
 			'id': 	1,
@@ -137,7 +173,8 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 			'time': "2PM to 4PM",
 			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
 			'description': 'Bi-monthly general meeting',
-			'note': 0
+			'note': 0,
+			'embed': $scope.googleMaps.home 
 		};
 	$scope.calendar.data[1] = {
 		"name": "February 2016",
@@ -156,7 +193,8 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 			'time': "2PM to 4PM",
 			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
 			'description': 'Bi-monthly general meeting',
-			'note': 0
+			'note': 0,
+			'embed': $scope.googleMaps.home 
 		};
 		$scope.calendar.data[1].events[21] = {
 			'id': 	3,
@@ -164,7 +202,8 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 			'time': "2PM to 4PM",
 			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
 			'description': 'Bi-monthly general meeting',
-			'note': 0
+			'note': 0,
+			'embed': $scope.googleMaps.home 
 		};
 	$scope.calendar.data[2] = {
 		"name": "March 2016",
@@ -183,7 +222,8 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 			'time': "2PM to 4PM",
 			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
 			'description': '2016 NOVAPEX Exhibition',
-			'note': 0
+			'note': 0,
+			'embed': $scope.googleMaps.home 
 		};
 		$scope.calendar.data[2].events[6] = {
 			'id': 	5,
@@ -191,7 +231,8 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 			'time': "2PM to 4PM",
 			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
 			'description': '2016 NOVAPEX Exhibition',
-			'note': 0
+			'note': 0,
+			'embed': $scope.googleMaps.home 
 		};
 	$scope.calendar.data[3] = {
 		"name": "April 2016",
@@ -210,7 +251,8 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 			'time': "2PM to 4PM",
 			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
 			'description': 'Bi-monthly general meeting',
-			'note': 0
+			'note': 0,
+			'embed': $scope.googleMaps.home 
 		};
 		$scope.calendar.data[3].events[17] = {
 			'id': 	7,
@@ -218,7 +260,8 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 			'time': "2PM to 4PM",
 			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
 			'description': 'Bi-monthly general meeting',
-			'note': 0
+			'note': 0,
+			'embed': $scope.googleMaps.home 
 		};
 		$scope.calendar.data[3].events[29] = {
 			'id': 	8,
@@ -226,7 +269,8 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 			'time': "2PM to 4PM",
 			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
 			'description': 'Annual WESTPEX Exhibition',
-			'note': 0
+			'note': 0,
+			'embed': $scope.googleMaps.home 
 		};
 		$scope.calendar.data[3].events[30] = {
 			'id': 	9,
@@ -234,7 +278,8 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 			'time': "2PM to 4PM",
 			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
 			'description': 'Annual WESTPEX Exhibition',
-			'note': 0
+			'note': 0,
+			'embed': $scope.googleMaps.home 
 		};
 	$scope.calendar.data[4] = {
 		"name": "May 2016",
@@ -253,7 +298,8 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 			'time': "2PM to 4PM",
 			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
 			'description': 'Annual WESTPEX Exhibition',
-			'note': 0
+			'note': 0,
+			'embed': $scope.googleMaps.home 
 		};
 		$scope.calendar.data[4].events[22] = {
 			'id': 	11,
@@ -261,7 +307,8 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 			'time': "2PM to 4PM",
 			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
 			'description': 'Bi-monthly general meeting',
-			'note': 0
+			'note': 0,
+			'embed': $scope.googleMaps.home 
 		};
 	// October Events
 	
