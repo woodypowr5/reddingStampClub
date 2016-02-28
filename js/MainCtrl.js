@@ -10,6 +10,9 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 		'src': 		null
 	}
 	$scope.linksExpanded = [];
+	$scope.today = null;
+	$scope.todaysMonth = null;
+	$scope.todaysDay = null;
 
 	$scope.activateModal = function(type, src){
 		$scope.modal.type = type ? type : 'unknown';
@@ -69,6 +72,17 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 				break;
 			}
 		}
+		$scope.today = new Date();
+		// month 0 = Jan 2016
+		
+		
+		// $scope.calendar.currentMonth = $scope.today.getFullYear();
+		$scope.todaysMonth = $scope.today.getMonth(); 
+		$scope.todaysDay = $scope.today.getDate();
+		$scope.todaysYear = $scope.today.getDate();
+		$scope.calendar.currentMonth = $scope.todaysMonth; 
+		// console.log(month);
+		
 	}
 	$scope.checkPrevNextButtons = function(){
 		if($scope.calendar.currentMonth + 1 <= -1){
@@ -94,7 +108,8 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService', function(
 	$scope.calendar = {
 		"data": [],
 		"currentMonth": 0,
-		"activeEvent": {}
+		"activeEvent": {},
+		"currentDay": null
 	}	
 	$scope.calendar.data[0] = {
 		"name": "January 2016",

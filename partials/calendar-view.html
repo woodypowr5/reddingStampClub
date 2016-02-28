@@ -31,12 +31,21 @@
 					</div>
 				</div>
 				<div class="calendar-row" ng-repeat="row in calendar.data[calendar.currentMonth].dates track by $index">
-					<div ng-if="row.indexOf(1) > -1" class="calendar-cell" ng-repeat="date in calendar.data[calendar.currentMonth].dates[$index] track by $index">
+					<div 
+						ng-if="row.indexOf(1) > -1" 
+						class="calendar-cell" 
+						ng-repeat="date in calendar.data[calendar.currentMonth].dates[$index] track by $index" 
+						ng-class="{'today': (calendar.currentMonth === todaysMonth && date === todaysDay)}"
+						>
 						<div class="calendar-datebox">{{date}}</div>
 					
 							<div ng-click="selectCalendarEvent(calendar.data[calendar.currentMonth].events[row[row.indexOf(1)]+$index-row.indexOf(1)])" class="calendar-event-name">{{calendar.data[calendar.currentMonth].events[row[row.indexOf(1)]+$index-row.indexOf(1)].name}}</div>		
 					</div>
-					<div ng-if="row.indexOf(1) <= -1" class="calendar-cell" ng-repeat="date in calendar.data[calendar.currentMonth].dates[$index] track by $index">
+					<div 
+						ng-if="row.indexOf(1) <= -1" 
+						class="calendar-cell" 
+						ng-repeat="date in calendar.data[calendar.currentMonth].dates[$index] track by $index"
+						ng-class="{'today': (calendar.currentMonth === todaysMonth && date === todaysDay)}">
 						<div class="calendar-datebox">{{date}}</div>
 					
 							<div ng-click="selectCalendarEvent(calendar.data[calendar.currentMonth].events[row[0]+$index])" class="calendar-event-name">{{calendar.data[calendar.currentMonth].events[row[0]+$index].name}}</div>
