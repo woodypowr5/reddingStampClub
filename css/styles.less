@@ -168,6 +168,9 @@ a{
 				.header-opacity-layer.novapex-heading-opacity-layer{
 					.header-opacity(white);
 				}
+				.header-opacity-layer.leadership-header-opacity-layer{
+					.header-opacity(white);
+				}
 			.header-texture-layer{
 				width: 100%;
 				height: 100%;
@@ -243,10 +246,10 @@ a{
 .hero-section-news{
 	background-image: url('../assets/img/candidate/dubai3.jpg');
 }
-.hero-section-links{
+.hero-section-contact{
 	background-image: url('../assets/img/stampBook.jpg');
 }
-.hero-section-contact{
+.hero-section-links{
 	background-image: url('../assets/img/candidate/green.jpg');
 }
 
@@ -254,7 +257,7 @@ a{
 
 .main-section{
 	border-top: 3px solid lighten(gray, 30);
-	min-height: 600px;
+	// min-height: 600px;
 }
 
 
@@ -264,7 +267,11 @@ a{
 
 		.leadership-wrapper{
 			.flex-wrap;
+			// min-height: 600px;
 		}
+			.leadership-header{
+				width: 100%;
+			}
 			.leadership-left{
 				.flex;
 				width: 25%;
@@ -623,7 +630,8 @@ a{
 								padding-right: 4px;
 								
 								margin: 10px auto 0 auto;
-								background-color: darken(white, 5%);
+								// background-color: darken(white, 5%);
+								background-color: lighten(#66BFE8, 30);
 								box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.75);
 								&:hover{
 									cursor: pointer;
@@ -664,27 +672,40 @@ a{
 						// width: 90%;
 						margin: 1em 10%;
 					}	
-						.calendar-event-label{
-							display: inline-block;
-							width: 20%;
-							min-width: 120px;
-							font-weight: bold;
+						.calendar-event{
+							overflow: hidden;	
+							width: 100%;
+							min-height: 4em;
+							// overflow: hidden;
+							.flex;
+							justify-content: space-between;
 						}
-						.calendar-details-name{
-						
-						} 
-						.calendar-details-time{
+							.calendar-event-label{
+								text-align: left;
+								display: inline-block;
+								width: 20%;
+								min-width: 120px;
+								font-weight: bold;
+							}
+							.calendar-event-value{
+								width: 70%;
+								text-align: left;
+							}
+							.calendar-details-name{
+							
+							} 
+							.calendar-details-time{
 
-						} 
-						.calendar-details-location{
+							} 
+							.calendar-details-location{
 
-						} 
-						.calendar-details-description{
+							} 
+							.calendar-details-description{
 
-						} 
-						.calendar-details-note{
+							} 
+							.calendar-details-note{
 
-						} 
+							} 
 						.calendar-details-map{
 							width: 81%;
 							height: 300px;
@@ -718,10 +739,7 @@ a{
 				border-bottom: none;
 			}
 		}
-		// .links-category:last-child{
-		// 	border-bottom: none;
-		// }
-		.link-category-header{
+				.link-category-header{
 			padding-left: 25px;
 			width: 100%;
 			display: block;

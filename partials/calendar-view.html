@@ -61,24 +61,36 @@
 				Event Details
 			</div>
 			<div class="calendar-details-wrapper">
-				<div class="calendar-details-name">
+				<div class="calendar-event calendar-details-name">
 					<div class="calendar-event-label">Event:</div> 
-					{{calendar.activeEvent.name}}
+					<div class="calendar-event-value">	
+						{{calendar.activeEvent.name}}
+					</div>
 				</div>
-				<div class="calendar-details-time">
+				<div class="calendar-event calendar-details-time">
 					<div class="calendar-event-label">Time:</div>
+					<div class="calendar-event-value">	
 					  {{calendar.activeEvent.time}}
+					</div>  
 				</div>
-				<div class="calendar-details-location">
+				<div class="calendar-event calendar-details-location">
 					<div class="calendar-event-label">Location:</div>
-					(see map below): {{calendar.activeEvent.location}}
+					<div class="calendar-event-value">			
+						{{calendar.activeEvent.location}}
+						(see map below)
+					</div>		
 				</div>
-				<div class="calendar-details-description">
+				<div class="calendar-event calendar-details-description">
 					<div class="calendar-event-label">Description:</div>
-					{{calendar.activeEvent.description}}
+					<div class="calendar-event-value">	
+						{{calendar.activeEvent.description}}
+					</div>	
 				</div>
-				<div ng-show="calendar.activeEvent.note != 0" class="calendar-details-note">
-					<div class="calendar-event-label">NOTE:</div>{{calendar.activeEvent.note}}
+				<div ng-show="calendar.activeEvent.note != 0" class="calendar-event calendar-details-note">
+					<div class="calendar-event-label">NOTE:</div>
+					<div class="calendar-event-value">	
+						{{calendar.activeEvent.note}}
+					</div>	
 				</div>
 			</div>
 			<div class="calendar-details-map">	

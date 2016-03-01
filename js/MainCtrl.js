@@ -67,16 +67,16 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService','$sce', fu
 	}
 
 	$scope.collapseLink = function(category, link){
-		    for (var i = 0; i < $scope.links.length; i++) { //loop through categories
-		       if($scope.links[i].category === category){
-		       		for (var j = 0; j < $scope.links[i].links.length; j++) {
-		       			if($scope.links[i].links[j].title === link){
-		       				$scope.links[i].links[j].expanded = false;
-		       				return;
-		       			}
-		       		};
-		       }
-		    };
+	    for (var i = 0; i < $scope.links.length; i++) { //loop through categories
+	       if($scope.links[i].category === category){
+	       		for (var j = 0; j < $scope.links[i].links.length; j++) {
+	       			if($scope.links[i].links[j].title === link){
+	       				$scope.links[i].links[j].expanded = false;
+	       				return;
+	       			}
+	       		};
+	       }
+	    };
 		}
 	// Articles
 
@@ -94,7 +94,8 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService','$sce', fu
 			'time': event.time,
 			'description': event.description,
 			'note': event.note,
-			'embed': event.embed
+			'embed': event.embed,
+			'location': event.location
 		}
 	}
 	$scope.initCalendarEvent = function(){
