@@ -9,31 +9,80 @@
 		<div class="header-texture-layer"></div>
 	</div>
 	<div class="leadership-left">
+		<div class="positions-bg-layer"></div>	
+		<div class="positions-opacity-layer"></div>	
 		<div class="leadership-links">
 			<div class="leadership-left-header-wrapper">
-				<h2 class="leadership-left-header">Current Positions</h2>
+				<h2 class="leadership-left-header">Leadership Positions</h2>
 			</div>
 			<div class="officer-link" ng-click="selectedBio = 1">
 				<h3 class="officer-link-text">President</h3>
 			</div>
 			<div class="officer-link" ng-click="selectedBio = 2">
-				<h3 class="officer-link-text">Vice-President</h3>
+				<h3 class="officer-link-text">Treasurer</h3>
 			</div>
 			<div class="officer-link" ng-click="selectedBio = 3">
-				<h3 class="officer-link-text">Treasurer</h3>
+				<h3 class="officer-link-text">Secretary</h3>
 			</div>
 		</div>
 	</div>
 
 	<div class="leadership-right">
-	<div class="position-description">
-		
-	</div>
+		<div class="position-description">
+			<div class="position-description-left">	
+
+				<h3 class="position-subheader">Position:</h3>	
+				<div class="position-wrapper" ng-if="selectedBio === 1">
+					<h3 class="position-header">President</h3>
+					<p class="position-text">	
+						The President has general supervisory powers over all matters concerning the
+						club. This officer is an ex-officio member of all committees, makes all appointments
+						provided for in the bylaws, or other appointments as necessary, and shall otherwise perform
+						all duties delegated by the bylaws or otherwise assigned by the membership at a duly called
+						meeting. The President shall appoint the committees specified in Article VI, Section 1, and
+						such other committees as the Executive Board determines are necessary. The President shall
+						have the authority to expend club funds not to exceed [$ ] without prior approval of the
+						Executive Board. 
+					</p>	
+				</div>
+				<div class="position-wrapper" ng-if="selectedBio === 2" >
+					<h3 class="position-header">Treasurer & Membership Chair</h3>
+					<p class="position-text">
+						he Vice President will assist the President in the conduct of the club. In the
+						absence of the President at any meeting, the Vice President shall act as President. In the 
+						event of death, disability, resignation, or removal of the President, the Vice President shall
+						succeed to the office of President.
+				</div>
+				<div class="position-wrapper" ng-if="selectedBio === 3">
+					<h3 class="position-header">Secretary</h3>
+					<p class="position-text">
+						The Secretary shall keep an accurate and permanent record of the minutes of
+						the meetings of the club and the Board of Directors; maintain a complete record of
+						membership, including applications, admissions, deaths, resignations, suspensions,
+						expulsions, and reinstatements; issue membership cards and receipts; and countersign,
+						register, and attest to legal documents signed by the President. Any funds collected in the
+						name of the club shall be turned over to the Treasurer. 
+					</p>	
+				</div>
+			</div>
+
+			<div class="position-description-right">	
+				<div class="interested-header">	
+					Interested in becoming a Club Officer?
+				</div>	
+				<div class="interested-body">	
+					Elections are held during xxx each year, at which time the club memebership votes regarding the next years' officers. If you are interested in running, please inform the President by xxxx.	
+				</div>	
+			</div>
+			
+			
+		</div>
 		<!-- BIOS -->
+
 		<div class="bio-wrapper" ng-show="selectedBio === 1">
 			<div class="leader-bio">
 				<h3 class="leader-name">Mark Woodward</h3>
-				<h4 class="leader-position">Leader Position</h4>
+				
 				<p class="leader-bio-text">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta interdum tempor. Sed ac tellus eu augue ullamcorper euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean laoreet odio non ex consectetur, et aliquam nulla consequat. Quisque varius posuere quam, ut egestas risus gravida id. Vivamus vitae quam faucibus, congue enim et, dignissim nibh. Quisque pellentesque volutpat aliquet. Nulla fermentum dui sed nisi commodo mattis. Quisque cursus lacus arcu, id suscipit massa blandit eu. Duis facilisis fringilla purus id faucibus.
 				</p>
@@ -49,7 +98,6 @@
 		<div class="bio-wrapper" ng-show="selectedBio === 2">
 			<div class="leader-bio">
 				<h3 class="leader-name">Roland Muhleman</h3>
-				<h4 class="leader-position">Leader Position</h4>
 				<p class="leader-bio-text">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta interdum tempor. Sed ac tellus eu augue ullamcorper euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean  volutpat aliquet. Nulla fermentum dui sed nisi commodo mattis. Quisque cursus lacus arcu, id suscipit massa blandit eu. Duis facilisis fringilla purus id faucibus.
 				</p>
@@ -65,7 +113,6 @@
 		<div class="bio-wrapper" ng-show="selectedBio === 3">
 			<div class="leader-bio">
 				<h3 class="leader-name">James M. Johnson</h3>
-				<h4 class="leader-position">Leader Position</h4>
 				<p class="leader-bio-text">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta interdum tempor. Sed ac tellus eu augue ullamcorper euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean laoreet odio non ex consectetur, et aliquam nulla consequat. Quisque varius posuere quam, ut egestas risus gravida id. Vivamus vitae quam faucibus, congue enim et, dignissim nibh. Quisque pellentesque volutpat aliquet. Nulla fermentum dui sed nisi commodo mattis. Quisque cursus lacus arcu, id suscipit massa blandit eu. Duis facilisis fringilla purus id faucibus.
 				</p>
