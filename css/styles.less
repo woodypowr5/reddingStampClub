@@ -72,7 +72,29 @@ a{
 	body{
 
 	}
-	
+	.brand-strip{
+		width: 100%;
+		height: 50px;
+		background-color: lighten(black, 30);
+		.flex;
+		justify-content: flex-start;
+		padding-left: 20px;
+		border-bottom: 2px solid lighten(gray, 10);
+	}
+		.brand{
+			font-family: 'Montserrat';		
+			// color: white;
+			color: lighten(gray, 35);
+			height: 100%;
+			.vertically-center-children;
+			font-size: 1.4em;
+			transition: color 150ms linear;
+			&:hover{
+				cursor: pointer;
+				color: white;
+			}	
+		}
+
 	.hero-section{
 		width: 100%;
 		height: @hero-height;
@@ -102,10 +124,15 @@ a{
 				color: @darkgray;
 				font-weight:  bold;
 				font-family: 'Arimo';
+				transition: background-color 150ms linear;
+				&:hover{
+					background-color:  rgba(0,0,0, 0.1);
+					// transition: background-color 150ms linear;
+				}
 			}
 			.nav-link-active{
 				background-color: rgba(155, 155, 155, 0.5);
-				transition: background-color 150ms linear;
+				// transition: background-color 150ms linear;
 			}
 
 	// Hero Floating Content Classes
@@ -456,9 +483,10 @@ a{
 				font-size: 1.1em;
 				margin-left: auto;
 				margin-right: auto;
-				margin-bottom: 3em;
+				margin-bottom: 1.5em;
 				line-height: 1.5em;
 				font-family: 'Arimo';
+				text-align: justify;
 			}
 		.novapex-right{
 			// float: left;
@@ -1021,11 +1049,15 @@ a{
 									overflow: hidden;
 									.flex-column;
 									justify-content: space-between;
+									transition: border 250ms;
 									&:hover{
 										cursor: pointer;
 										// padding: 2px;
 										border: 1px solid black;
-										background-color: lighten(gray, 40);
+										
+										.news-tile-content{
+											background-color: lighten(gray, 45);
+										}	
 									}
 								}
 								// .news-tile-wrapper.left{
@@ -1048,7 +1080,7 @@ a{
 										width: 100%;
 										height: 100%;
 										z-index: 2;
-										opacity: 0.25;
+										opacity: 0.20;
 									}
 									.news-tile-img.top{
 										width: 100%;
@@ -1056,7 +1088,7 @@ a{
 									.news-tile-img.top-inset{
 										width: 100%;
 										padding: 10px;
-										background-color: @article-bg;
+										background-color: lighten(@article-bg, 5);
 									}
 									.news-tile-img.bottom{
 										width: 100%;
@@ -1172,7 +1204,7 @@ a{
 								width: 50%;
 							}
 								.article-thumb{
-								margin: 20px auto;	
+									margin: 20px auto;	
 									width: 150px;
 									height: 200px;
 									background-color: white;
@@ -1180,6 +1212,11 @@ a{
 									img{
 										width: 100%;
 										height: 100%;
+									}
+									transition: border 150ms linear;
+									&:hover{
+										cursor: pointer;
+										border: 2px solid lighten(gray,35);
 									}
 								}
 								.article-description{
