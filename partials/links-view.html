@@ -14,7 +14,7 @@
 		<div class="link-category-header">
 			<h3>{{category.category}}:</h3>
 		</div>
-		<div class="link-wrapper" ng-repeat="link in category.links track by $index" ng-init="initLinkExpanded($index)">
+		<div class="link-wrapper" ng-repeat="link in category.links track by $index">
 			<div class="link">
 				<div class="link-content-wrapper">
 					<a href="{{link.url}}"><div class="link-content">	
@@ -37,7 +37,7 @@
 					</div></a>	
 				</div>	
 				
-				<div class="link-content-expanded" ng-if="linksExpanded[$index] === true">
+				<div class="link-content-expanded" ng-if="link.expanded === true">
 					<div class="link-about">
 						{{link.about}}
 					</div>
@@ -48,11 +48,11 @@
 						</a>
 					</div>
 				</div>
-			</div>	
-			<div class="link-expand" ng-click="expandLink($index)" ng-if="linksExpanded[$index] === false">
+			</div>
+			<div class="link-expand" ng-click="expandLink(category.category, link.title)" ng-if="link.expanded === false">
 				more...
 			</div>
-			<div class="link-collapse" ng-click="collapseLink($index)" ng-if="linksExpanded[$index] === true">
+			<div class="link-collapse" ng-click="collapseLink(category.category, link.title)" ng-if="link.expanded === true">
 				less...
 			</div>
 		</div>
@@ -65,7 +65,5 @@
 		</div>
 	</div> -->
 	
-	<div class="ghost-column">
-		
-	</div>
+	
 </div>

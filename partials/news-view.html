@@ -70,8 +70,12 @@
 			</div>
 			
 			<div class="articles-container">
-				<div class="article-wrapper" ng-repeat="article in articles">
-					<div class="article-thumb">
+				<div 
+					class="article-wrapper" 
+					ng-repeat="article in articles">
+					<div 
+						class="article-thumb"
+						ng-click="activateModal('doc', article.src)">
 						<img ng-src="{{article.thumbSrc}}" alt="">
 					</div>
 					<div class="article-description">

@@ -3,26 +3,32 @@
 	ng-class="{
 		'leadership-view': currentView === 'leadership'
 	}">
-
+	<div class="leadership-header page-heading">
+		<h2>Officers and Biographies</h2>
+		<div class="header-opacity-layer leadership-header-opacity-layer"></div>
+		<div class="header-texture-layer"></div>
+	</div>
 	<div class="leadership-left">
 		<div class="leadership-links">
 			<div class="leadership-left-header-wrapper">
-				<h2 class="leadership-left-header">2015 Officers & Biographies</h2>
+				<h2 class="leadership-left-header">Current Positions</h2>
 			</div>
 			<div class="officer-link" ng-click="selectedBio = 1">
-				<h3 class="officer-link-text">Mark Woodward</h3>
+				<h3 class="officer-link-text">President</h3>
 			</div>
 			<div class="officer-link" ng-click="selectedBio = 2">
-				<h3 class="officer-link-text">Roland Muhleman</h3>
+				<h3 class="officer-link-text">Vice-President</h3>
 			</div>
 			<div class="officer-link" ng-click="selectedBio = 3">
-				<h3 class="officer-link-text">James M. Johnson</h3>
+				<h3 class="officer-link-text">Treasurer</h3>
 			</div>
 		</div>
 	</div>
 
 	<div class="leadership-right">
-
+	<div class="position-description">
+		
+	</div>
 		<!-- BIOS -->
 		<div class="bio-wrapper" ng-show="selectedBio === 1">
 			<div class="leader-bio">

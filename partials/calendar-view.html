@@ -8,21 +8,21 @@
 		<div class="calendar-left">
 			
 			<div class="calendar-container">
-				<div class="calendar-header">
+				<div class="calendar-heading">
 					<div 
 						class="calendar-prev-btn" 
-						ng-class="{'prev-month-invalid': calendar.prevMonthInvalid === true}"
+						
 						ng-click="calendarChangeMonth(-1)"
 					>
-						Prev
+						<span ng-if="{'prev-month-invalid': calendar.prevMonthInvalid !== true}">{{calendar.data[calendar.currentMonth-1].name}}</span>
 					</div>
 					<h2>{{calendar.data[calendar.currentMonth].name}}</h2>
 					<div 
 						class="calendar-next-btn"
-						ng-class="{'next-month-invalid': calendar.nextMonthInvalid === true}"
+						
 						ng-click="calendarChangeMonth(1)"
 					>
-						Next
+						<span ng-if="{'next-month-invalid': calendar.nextMonthInvalid !== true}">{{calendar.data[calendar.currentMonth+1].name}}</span>
 					</div>
 				</div>
 				<div class="calendar-row dayofweek-row">
@@ -31,12 +31,21 @@
 					</div>
 				</div>
 				<div class="calendar-row" ng-repeat="row in calendar.data[calendar.currentMonth].dates track by $index">
-					<div ng-if="row.indexOf(1) > -1" class="calendar-cell" ng-repeat="date in calendar.data[calendar.currentMonth].dates[$index] track by $index">
+					<div 
+						ng-if="row.indexOf(1) > -1" 
+						class="calendar-cell" 
+						ng-repeat="date in calendar.data[calendar.currentMonth].dates[$index] track by $index" 
+						ng-class="{'today': (calendar.currentMonth === todaysMonth && date === todaysDay)}"
+						>
 						<div class="calendar-datebox">{{date}}</div>
 					
 							<div ng-click="selectCalendarEvent(calendar.data[calendar.currentMonth].events[row[row.indexOf(1)]+$index-row.indexOf(1)])" class="calendar-event-name">{{calendar.data[calendar.currentMonth].events[row[row.indexOf(1)]+$index-row.indexOf(1)].name}}</div>		
 					</div>
-					<div ng-if="row.indexOf(1) <= -1" class="calendar-cell" ng-repeat="date in calendar.data[calendar.currentMonth].dates[$index] track by $index">
+					<div 
+						ng-if="row.indexOf(1) <= -1" 
+						class="calendar-cell" 
+						ng-repeat="date in calendar.data[calendar.currentMonth].dates[$index] track by $index"
+						ng-class="{'today': (calendar.currentMonth === todaysMonth && date === todaysDay)}">
 						<div class="calendar-datebox">{{date}}</div>
 					
 							<div ng-click="selectCalendarEvent(calendar.data[calendar.currentMonth].events[row[0]+$index])" class="calendar-event-name">{{calendar.data[calendar.currentMonth].events[row[0]+$index].name}}</div>
@@ -52,28 +61,40 @@
 				Event Details
 			</div>
 			<div class="calendar-details-wrapper">
-				<div class="calendar-details-name">
+				<div class="calendar-event calendar-details-name">
 					<div class="calendar-event-label">Event:</div> 
-					{{calendar.activeEvent.name}}
+					<div class="calendar-event-value">	
+						{{calendar.activeEvent.name}}
+					</div>
 				</div>
-				<div class="calendar-details-time">
+				<div class="calendar-event calendar-details-time">
 					<div class="calendar-event-label">Time:</div>
+					<div class="calendar-event-value">	
 					  {{calendar.activeEvent.time}}
+					</div>  
 				</div>
-				<div class="calendar-details-location">
+				<div class="calendar-event calendar-details-location">
 					<div class="calendar-event-label">Location:</div>
-					(see map below): {{calendar.activeEvent.location}}
+					<div class="calendar-event-value">			
+						{{calendar.activeEvent.location}}
+						(see map below)
+					</div>		
 				</div>
-				<div class="calendar-details-description">
+				<div class="calendar-event calendar-details-description">
 					<div class="calendar-event-label">Description:</div>
-					{{calendar.activeEvent.description}}
+					<div class="calendar-event-value">	
+						{{calendar.activeEvent.description}}
+					</div>	
 				</div>
-				<div ng-show="calendar.activeEvent.note != 0" class="calendar-details-note">
-					<div class="calendar-event-label">NOTE:</div>{{calendar.activeEvent.note}}
+				<div ng-show="calendar.activeEvent.note != 0" class="calendar-event calendar-details-note">
+					<div class="calendar-event-label">NOTE:</div>
+					<div class="calendar-event-value">	
+						{{calendar.activeEvent.note}}
+					</div>	
 				</div>
 			</div>
 			<div class="calendar-details-map">	
-				<iframe width="100%" height="300px" frameborder="0" style="border:1px solid black;" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJQ8Twj27r0lQRICmqWt11No0&key=AIzaSyB3ARGw6O6Ww2uu_ttgI4Vq6jgbgfHV0Ow" allowfullscreen></iframe>
+				<iframe width="100%" height="300px" frameborder="0" style="border:1px solid black;" ng-src="{{trustSrc(calendar.activeEvent.embed)}}" allowfullscreen></iframe>
 			</div>
 		</div>	
 	</div>
