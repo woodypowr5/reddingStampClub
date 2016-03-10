@@ -12,16 +12,39 @@
 		<div class="positions-bg-layer"></div>	
 		<div class="positions-opacity-layer"></div>	
 		<div class="leadership-links">
-			<div class="leadership-left-header-wrapper">
+			<div class="leadership-left-header-wrapper" ng-class="{
+			
+						'prev-active': selectedBio === 1
+					}">
 				<h2 class="leadership-left-header">Leadership Positions</h2>
 			</div>
-			<div class="officer-link" ng-click="selectedBio = 1">
+			<div 
+				class="officer-link" 
+				ng-click="selectedBio = 1" 
+				ng-class="{
+						'active': selectedBio === 1,
+						'prev-active': selectedBio === 2
+					}">
 				<h3 class="officer-link-text">President</h3>
 			</div>
-			<div class="officer-link" ng-click="selectedBio = 2">
+			<div 
+					class="officer-link" 
+					ng-click="selectedBio = 2" 
+					ng-class="
+							{'active': selectedBio === 2,
+							'prev-active': selectedBio === 3,
+							'next-active': selectedBio === 1}
+					">
 				<h3 class="officer-link-text">Treasurer</h3>
 			</div>
-			<div class="officer-link" ng-click="selectedBio = 3">
+			<div 
+					class="officer-link" 
+					ng-click="selectedBio = 3" 
+					ng-class="{
+							'active': selectedBio === 3,
+							'next-active': selectedBio === 2
+							
+					}">
 				<h3 class="officer-link-text">Secretary</h3>
 			</div>
 		</div>

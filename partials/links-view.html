@@ -14,8 +14,8 @@
 		<div class="link-category-header">
 			<h3>{{category.category}}:</h3>
 		</div>
-		<div class="link-wrapper" ng-repeat="link in category.links track by $index">
-			<div class="link">
+		<div class="link-wrapper"  ng-repeat="link in category.links track by $index">
+			<div class="link" ng-class="{'expanded': link.expanded === true}">
 				<div class="link-content-wrapper">
 					<a href="{{link.url}}"><div class="link-content">	
 						<div class="link-synopsis-wrapper">
