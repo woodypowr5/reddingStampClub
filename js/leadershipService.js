@@ -6,13 +6,12 @@ app.service("leadershipService", ['$rootScope', function($rootScope){
 
     this.officers.push(
         {
-            "title":        "",
+            "title":        "President",
             "description":  "",
             "current": {
                 "name":         "",
                 "biography"     "",
                 "imageSrc":     ""
-
             }     
         }
     );
