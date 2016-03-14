@@ -118,6 +118,105 @@ app.service("articleService", ['$rootScope', function($rootScope){
             }
         }
     );
+
+    this.news.push(
+        {
+            "title":    "Canada Post celebrates International Women’s Day with special stamp",
+            "date":     "Mar 11, 2016",
+            "numDate":  "2016-03-11",
+            "bodyText": "Canada Post issued a special stamp on International Women’s Day, celebrating the centenary of women’s suffrage in Canada. The special stamp issue marks 100 years since the first Canadian women won the right to vote. ",
+            "referer":  "Philatelynews.com",
+            "src":      "http://philatelynews.com/canada-post-celebrates-international-womens-day-special-stamp/",
+            "image":    {
+                "src":          "assets/img/articles/womensDay.jpg",
+                "alt":          "womensDay",
+                "position":     "bottom"
+            },
+            "options":  {
+
+            }
+        }
+    );
+
+    this.news.push(
+        {
+            "title":    "Born March 13: Charles Grey",
+            "date":     "Mar 13, 2016",
+            "numDate":  "2016-03-13",
+            "bodyText": "As prime minister of the United Kingdom, Charles Grey oversaw the 1832 reforms that included the abolition of slavery.",
+            "referer":  "Linns.com",
+            "src":      "http://www.linns.com/news/world-stamps-postal-history/2016/march/born-march-13--charles-grey.html",
+            "image":    {
+                "src":          "assets/img/articles/charlesGrey.jpg",
+                "alt":          "Charles Grey",
+                "position":     "top"
+            },
+            "options":  {
+
+            }
+        }
+    );
+
+    this.news.push(
+        {
+            "title":    "New philatelic issue on nature released by Guernsey Post",
+            "date":     "Feb 25, 2016",
+            "numDate":  "2016-02-25",
+            "bodyText": "The Philippine Eagle that aapered on a new stamp issue by Guernsey Post has been illustrated by world renowned wildlife artist, Joel Kirk, who has worked on all of our endangered species stamps",
+            "referer":  "StampNews.com",
+            "src":      "http://www.stampnews.com/stamps/stamps_2016/stamp_the-philippine-eagle-as-one-of-the-worlds-largest-and-most-powerful-ones-new-philatelic-issue-on-nature-released-by-guernsey-post.html",
+            "image":    {
+                "src":          "assets/img/articles/eagleStamp.jpg",
+                "alt":          "Philippine Eagle",
+                "position":     "bottom"
+            },
+            "options":  {
+
+            }
+        }
+    );
+
+    this.news.push(
+        {
+            "title":    "Book of exhibiting tips set for WSS-NY 2016 release",
+            "date":     "Mar 10, 2016",
+            "numDate":  "2016-03-10",
+            "bodyText": "After a 28-year publishing hiatus, the AAPE will come out with a 200-page, eight-chapter publication in early June at World Stamp Show-NY 2016.",
+            "referer":  "Linns.com",
+            "src":      "http://www.linns.com/news/us-stamps-postal-history/2016/march/the-american-association-of-philatelic-exhibitors-first-book-in-28-years-will-debut-at-worlds-stamp-show.html",
+            "image":    {
+                "src":          "assets/img/articles/tipsBook.jpg",
+                "alt":          "",
+                "position":     "top"
+            },
+            "options":  {
+
+            }
+        }
+    );
+
+// Blank Tempate: 
+
+   
+
+    // this.news.push(
+    //     {
+    //         "title":    "",
+    //         "date":     "Feb 9, 2016",
+    //         "numDate":  "2016-02-09",
+    //         "bodyText": "",
+    //         "referer":  "",
+    //         "src":      "",
+    //         "image":    {
+    //             "src":          "assets/img/articles/###",
+    //             "alt":          "",
+    //             "position":     "top"
+    //         },
+    //         "options":  {
+
+    //         }
+    //     }
+    // );
    
 
 
