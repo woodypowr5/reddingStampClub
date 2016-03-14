@@ -83,7 +83,9 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService','$sce', fu
 	$scope.setArticleImage = function(element, article){
 
 	}
-
+	$scope.sortDate = function(item){
+		return articleService.getSortDate(item.numDate);
+	}
 	// Calendar
 
 	$scope.selectCalendarEvent = function(event){

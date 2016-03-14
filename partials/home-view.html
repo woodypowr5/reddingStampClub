@@ -26,7 +26,12 @@
 		<div class="home-hot-links">
 			<div class="hot-link-wrapper">
 				<div class="hot-link">
-					
+					<div class="hot-link-title">
+						NOVAPEX Prospectus
+					</div>
+					<div class="hot-link-text">
+						This includes worldwide and specific countries encompassing perfins, covers, train cancels, revenues, pre-cancelled and more
+					</div>
 				</div>
 			</div>
 			<div class="hot-link-wrapper">
@@ -66,7 +71,7 @@
 		</div>
 		<div class="home-media-links">
 			
-			<div class="home-media-link-wrapper" ng-repeat="item in news  | limitTo:5">
+			<div class="home-media-link-wrapper" ng-repeat="item in news | orderBy: sortDate:true | limitTo:5">
 				<a href="{{item.src}}">
 					<div class="home-media-link">
 						<div class="media-link-content">
