@@ -60,24 +60,6 @@ app.service("articleService", ['$rootScope', function($rootScope){
 
     this.news.push(
         {
-            "title":    "One time I farted",
-            "date":     "Feb 02, 2016",
-            "bodyText": "Same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is",
-            "referer":  "Philatelynews.com",
-            "src":      "",
-            "image":    {
-                "src":          "",
-                "alt":          "",
-                "position":     "none"
-            },
-            "options":  {
-
-            }
-        }
-    );
-
-    this.news.push(
-        {
             "title":    "USPS promises the moon with global forever stamp",
             "date":     "Jan 12, 2016",
             "bodyText": "The newest round global forever stamp from the United States Postal Service pictures Earth’s moon. Features of the lunar surface are easily seen in the detailed image created from an existing photograph by Beth Swanson. The stamp and pane selvage were designed by Greg Breeding. William J. Gicker was the USPS art director for this issue.",
