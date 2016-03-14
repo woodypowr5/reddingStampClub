@@ -386,11 +386,11 @@ a{
 				}
 					.home-media-link-wrapper{
 						height: 20%;
-						border-bottom: 4px solid darken(white, 5);
-						border-top: 2px solid darken(white, 10);
-						.flex;
-						justify-content: space-between;
-
+						border-bottom: 4px solid darken(white, 7);
+						border-top: 2px solid darken(white, 15);
+						
+						
+						
 						&:nth-child(even){
 							.media-link-image{
 								order:1;
@@ -402,22 +402,43 @@ a{
 						}	
 						&:nth-child(odd){
 						}
-					}
+						&:hover{
+							cursor: pointer;
+							border-bottom: 4px solid darken(white, 12);
+							border-top: 2px solid darken(white, 30);
+							.media-link-title{
+								background-color: darken(white, 5);
+							}
+							.media-link-meta{
+								background-color: darken(white, 12);
+
+							}
+							.media-link-image{
+								opacity: 0.7;
+							}
+						}
+					}	
+						.home-media-link{
+							.flex;
+							justify-content: space-between;
+							height: 100%;
+							wiidth: 100%;
+						}
 
 						.media-link-content{
 							flex-grow: 2;
 							height: 100%;
 						}
 							.media-link-title{
-								padding: 8px 5px 5px 5px;
+								padding: 6px 5px 5px 5px;
 								overflow: hidden;
 								height: 70%;
 								font-family: 'Nunito';
 								// font-weight: bold;
-								font-size: 0.9em;
-								line-height: 1.5em;
+								font-size: 0.8em;
+								line-height: 1.2em;
 								// text-overflow: ellipsis;
-								// .vertically-center-children;
+								.vertically-center-children;
 							}
 								.media-link-title-text{
 									// text-overflow: ellipsis;
@@ -431,11 +452,15 @@ a{
 								overflow: hidden;
 								height: 30%;
 								// width: 100%;
+								border-bottom: 2px solid lighten(gray,40);
 								background-color: darken(white, 3);
 							}
 								.media-link-date{
-									font-size: 0.8em;
+									font-size: 0.65em;
+									padding-top: 0.5em;
 									font-weight: bold;
+									font-family: 'Arvo';
+									color: darken(gray,10);
 								}
 								.media-link-refer{
 

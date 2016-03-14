@@ -43,27 +43,30 @@
 			<div class="header-texture-layer"></div>
 		</div>
 		<div class="home-media-links">
+			
 			<div class="home-media-link-wrapper" ng-repeat="item in news  | limitTo:5">
-				<div class="media-link-content">
-					<div class="media-link-meta">
-						<div class="media-link-date">
-							{{item.date}}
-						</div>
-						<div class="media-link-refer">
-							{{item.referer}}
-						</div>
+				<a href="{{item.src}}">
+					<div class="home-media-link">
+						<div class="media-link-content">
+							<div class="media-link-meta">
+								<div class="media-link-date">
+									{{item.date}}
+								</div>
+							<!-- 	<div class="media-link-refer">
+									{{item.referer}}
+								</div> -->
 
-					</div>		
-					<div class="media-link-title">
-						<div class="media-link-title-text">
-							{{item.title}}
+							</div>		
+							<div class="media-link-title">
+								<div class="media-link-title-text">
+									{{item.title}}
+								</div>
+							</div>
+								
 						</div>
-					</div>
-						
-				</div>
-				<img ng-src="{{item.image.src}}" class="media-link-image">
-					
-				
+						<img ng-src="{{item.image.src}}" class="media-link-image">
+					</div>	
+				</a>	
 			</div>
 		</div>
 	</div>
