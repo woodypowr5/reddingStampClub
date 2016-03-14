@@ -48,7 +48,7 @@ a{
 @border-width: 3px;
 @nav-height: 4em;
 @hero-height: 25em;
-
+@homepage-header-height: 4.1em;
 // Breakpoints
 
 @mobile-md: 200px;
@@ -188,7 +188,7 @@ a{
 			}
 		}
 		.home-heading{
-			height: 4.1em;
+			height: @homepage-header-height;
 			h2{
 				font-size: 1.8em;
 				padding-top: 0.6em;
@@ -362,6 +362,26 @@ a{
 					border-right: none;
 					border-top: none;
 			}	
+				.home-hot-links{
+					padding-top: 20px;
+					padding-bottom: 20px;
+					height: 20em - @homepage-header-height;
+
+					.flex-wrap;
+						
+				}
+					.hot-link-wrapper{
+						flex-shrink: 0;
+						width: 50%;
+						height: 50%;
+						.vertically-center-children;
+					}
+						.hot-link{
+							width: 88%;
+							height: 60%;
+							background-color: lighten(#FFFAD6,5);
+							border: 3px solid lighten(gray, 35);
+						}
 			.home-news-section{
 				position: absolute;
 					height: 30em;
@@ -382,7 +402,7 @@ a{
 					border-bottom: none;
 			}	
 				.home-media-links{
-					height: 30em - 4.1em;
+					height: 30em - @homepage-header-height;
 				}
 					.home-media-link-wrapper{
 						height: 20%;
@@ -470,7 +490,7 @@ a{
 						.media-link-image{
 							height: 100%;
 							flex-shrink: 0;
-							
+
 						}
 			.home-info-section{
 				position: absolute;
