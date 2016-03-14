@@ -79,11 +79,11 @@ a{
 
 	.brand-strip{
 		width: 100%;
-		height: 50px;
+		height: 65px;
 		background-color: lighten(black, 20);
 		.flex;
 		justify-content: flex-start;
-		padding-left: 20px;
+		// padding-left: 20px;
 		border-bottom: 2px solid lighten(gray, 10);
 	}
 		.brand{
@@ -379,21 +379,49 @@ a{
 						.hot-link{
 							width: 88%;
 							height: 60%;
-							background-color: lighten(#FFFAD6,5);
-							border: 3px solid lighten(gray, 25);
+							background-color: lighten(#FFFAD6,7);
+							border: 2px solid lighten(gray, 28);
+							box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.85);
+							overflow: hidden;
+							transition: border 200ms linear;
+							.flex;
 							&:hover{
-								
+								border: 2px solid lighten(black, 8);
+								cursor: pointer;
+								.hot-link-go{
+									opacity: 1;
+								}	
 							}
 						}
-							.hot-link-title{
-								font-size: 0.8em;
-								text-align: right;
-								padding-right: 5px;
+							.hot-link-content{
+								padding-left: 3px;
+								flex-grow: 2;
 							}
-							.hot-link-text{
-
+								.hot-link-title{
+									font-family: 'Arvo';
+									font-size: 1em;
+									text-align: left;
+									padding: 3px 3px 0px 3px;
+									font-weight: bold;
+								}
+								.hot-link-text{
+									font-size: 0.8em;
+								}
+							.hot-link-go{
+								width: 8em;
+								height: 100%;
+								transition: opacity 250ms linear;
+								opacity: 0.5;
+								// background-color: red;
+								.vertically-center-children;
 							}
+									.hot-link-go-icon{
 
+										height:70%;
+										width: 70%;
+										
+
+									}
 			.home-news-section{
 				position: absolute;
 					height: 30em;
