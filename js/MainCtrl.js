@@ -1,5 +1,6 @@
 app.controller('MainCtrl', ['$scope', 'articleService', 'linkService','$sce', function($scope, articleService, linkService, $sce) {
 	$scope.currentView = 'home';
+	$scope.mobileNavActive = false;
 	$scope.selectedBio = 1;
 	$scope.news = articleService.news;
 	$scope.articles = articleService.articles;
@@ -22,9 +23,15 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService','$sce', fu
 		"currentDay": null
 	}	
 	$scope.trustSrc = function(src) {
-		console.log(src);
+		// console.log(src);
 	    return $sce.trustAsResourceUrl(src);
-  }
+	}
+	$scope.toggleMobileNav = function(){
+		$scope.mobileNavActive = !$scope.mobileNavActive;
+	}
+	$scope.closeMobileNav = function(){
+		$scope.mobileNavActive = false;
+	}
 	$scope.activateModal = function(type, src){
 		$scope.modal.type = type ? type : 'unknown';
 		$scope.modal.src = (type === 'pdf' || type === 'doc' || type === 'docx') ? "ViewerJS/#../"+src : src;
@@ -83,11 +90,13 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService','$sce', fu
 	$scope.setArticleImage = function(element, article){
 
 	}
-
+	$scope.sortDate = function(item){
+		return articleService.getSortDate(item.numDate);
+	}
 	// Calendar
 
 	$scope.selectCalendarEvent = function(event){
-		console.log(event);
+		// console.log(event);
 		$scope.calendar.activeEvent = {
 
 			'name': event.name,
@@ -322,7 +331,7 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService','$sce', fu
 	$scope.checkPrevNextButtons();
 
 	
-	console.log($scope.articles);
+	// console.log($scope.articles);
 	
 
 

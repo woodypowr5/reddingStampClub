@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ui.router', 'ngAnimate', 'ngSanitize']);
+var app = angular.module('app', ['ui.router', 'ngAnimate', 'ngSanitize', 'anim-in-out']);
 
 app.config(function($stateProvider, $urlRouterProvider, $provide){
 
