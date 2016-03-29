@@ -1,69 +1,70 @@
 <!-- <div class="page-heading links-header">
 	<h2>Useful Links</h2>
 </div>	 -->
-
-<div class="links-header page-heading">
-	<h2>Useful Links</h2>
-	<div class="header-opacity-layer links-header-opacity-layer"></div>
-	<div class="header-texture-layer"></div>
-	
-</div>
-
-<div class="links-content">
-	<div class="links-category" ng-repeat="category in links">
-		<div class="link-category-header">
-			<h3>{{category.category}}:</h3>
-		</div>
-		<div class="link-wrapper"  ng-repeat="link in category.links track by $index">
-			<div class="link" ng-class="{'expanded': link.expanded === true}">
-				<div class="link-content-wrapper">
-					<a href="{{link.url}}"><div class="link-content">	
-						<div class="link-synopsis-wrapper">
-							<div class="link-title">
-								{{link.title}}
-							</div>
-							<div class="link-title-divider">
-								<div class="link-divider-opacity-layer"></div>
-								<div class="link-divider-background-layer"></div>
-							</div>
-							<div class="link-description">
-								{{link.description}}
-							</div>
-						</div>
+<div class="links-wrapper anim-fade">
+	<div class="links-header page-heading">
+		<h2>Useful Links</h2>
+		<div class="header-opacity-layer links-header-opacity-layer"></div>
+		<div class="header-texture-layer"></div>
 		
-						<div class="link-image-wrapper">
-							<img ng-src="{{link.imageSrc}}" class="link-image {{link.imageHook}}">
+	</div>
+
+	<div class="links-content">
+		<div class="links-category" ng-repeat="category in links">
+			<div class="link-category-header">
+				<h3>{{category.category}}:</h3>
+			</div>
+			<div class="link-wrapper"  ng-repeat="link in category.links track by $index">
+				<div class="link" ng-class="{'expanded': link.expanded === true}">
+					<div class="link-content-wrapper">
+						<a href="{{link.url}}"><div class="link-content">	
+							<div class="link-synopsis-wrapper">
+								<div class="link-title">
+									{{link.title}}
+								</div>
+								<div class="link-title-divider">
+									<div class="link-divider-opacity-layer"></div>
+									<div class="link-divider-background-layer"></div>
+								</div>
+								<div class="link-description">
+									{{link.description}}
+								</div>
+							</div>
+			
+							<div class="link-image-wrapper">
+								<img ng-src="{{link.imageSrc}}" class="link-image {{link.imageHook}}">
+							</div>
+						</div></a>	
+					</div>	
+					
+					<div class="link-content-expanded" ng-if="link.expanded === true">
+						<div class="link-about">
+							{{link.about}}
 						</div>
-					</div></a>	
-				</div>	
-				
-				<div class="link-content-expanded" ng-if="link.expanded === true">
-					<div class="link-about">
-						{{link.about}}
-					</div>
-					<div class="link-url">
-						Website: 
-						<a href="{{link.url}}">
-							{{link.url}}
-						</a>
+						<div class="link-url">
+							Website: 
+							<a href="{{link.url}}">
+								{{link.url}}
+							</a>
+						</div>
 					</div>
 				</div>
+				<div class="link-expand" ng-click="expandLink(category.category, link.title)" ng-if="link.expanded === false">
+					more...
+				</div>
+				<div class="link-collapse" ng-click="collapseLink(category.category, link.title)" ng-if="link.expanded === true">
+					less...
+				</div>
 			</div>
-			<div class="link-expand" ng-click="expandLink(category.category, link.title)" ng-if="link.expanded === false">
-				more...
-			</div>
-			<div class="link-collapse" ng-click="collapseLink(category.category, link.title)" ng-if="link.expanded === true">
-				less...
-			</div>
-		</div>
-	</div>	
+		</div>	
 
 
-	<!-- <div class="link-wrapper" ng-repeat="link in links track by $index">
-		<div class="link-content">
-			
-		</div>
-	</div> -->
-	
-	
-</div>
+		<!-- <div class="link-wrapper" ng-repeat="link in links track by $index">
+			<div class="link-content">
+				
+			</div>
+		</div> -->
+		
+		
+	</div>
+</div>	
