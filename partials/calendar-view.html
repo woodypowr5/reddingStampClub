@@ -16,7 +16,7 @@
 					>
 						<span ng-if="{'prev-month-invalid': calendar.prevMonthInvalid !== true}">{{calendar.data[calendar.currentMonth-1].name}}</span>
 					</div>
-					<h2>{{calendar.data[calendar.currentMonth].name}}</h2>
+					<h2 class="calendar-current-month">{{calendar.data[calendar.currentMonth].name}}</h2>
 					<div 
 						class="calendar-next-btn"
 						
@@ -77,7 +77,6 @@
 					<div class="calendar-event-label">Location:</div>
 					<div class="calendar-event-value">			
 						{{calendar.activeEvent.location}}
-						(see map below)
 					</div>		
 				</div>
 				<div class="calendar-event calendar-details-description">
