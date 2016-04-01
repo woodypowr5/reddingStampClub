@@ -1178,6 +1178,7 @@ a{
 				box-shadow: 2px 2px 6px 3px rgba(100,100,100,0.55);
 				font-size: 0.9em;
 				font-family: 'Nunito';
+
 				overflow: hidden;
 				@media all and (max-width: 1600px){
 					font-size: 0.8em;
@@ -1191,36 +1192,41 @@ a{
 				@media all and (max-width: 700px){
 					font-size: 0.7em;
 				}
-				@media all and (max-width: 725px){
-					width: auto;
-									max-width: 10000px;
+				@media all and (max-width: 585px){
+					font-size: 0.65em;
 				}
-				// @media all and (max-width: 600px){
-				// 	max-width: 500px;
-				// }
-				// @media all and (max-width: 500px){
-				// 	max-width: 400px;
-				// }
+				@media all and (max-width: 550px){
+					font-size: 0.6em;
+				}
+				@media all and (max-width: 515px){
+					overflow: hidden;
+				}
 				// @media all and (max-width: 400px){
-				// 	max-width: 300px;
+				// 	font-size: 0.55em;
 				// }
+				
 			}	
 				.multicol-col{
 					flex-shrink: 2;
 					@media all and (max-width: 725px){
-						flex-grow: 2;
+						// flex-grow: 2;
 					}	
 				}
+
 				.multicol-tbody{
 					
 				}
 					.multicol-tr{
+
 						.flex;
 						padding: 35px 15px 20px 15px;
 						justify-content: space-between;
 						max-width: 100% ;
 						overflow: hidden;						
-
+						@media all and (max-width: 515px){
+							padding-left: 5px;
+							padding-right: 5px;
+						}
 					}
 					.dealers-tr{
 						// padding-top: 40px;
@@ -1234,37 +1240,43 @@ a{
 							.paragraph{
 								padding: 0 5px;
 								max-width: 100%;
+								white-space: nowrap;
 								overflow: hidden;
 							}
-
-			.novapex-listings-exhibits{
+			
+			.novapex-listings-table{
 				width: 50%;
-				border-right: @perforated-border;
 				padding: 40px;
 				min-width: 700px;
 				@media all and (max-width: 1400px){
 					width: 100%;
-					border: none;
-					border-bottom: @perforated-border;
-				}
+				}	
 				@media all and (max-width: 725px){
 					padding-left: 15px;
 					padding-right: 15px;
 					max-width: 100%;
+					min-width: 0px;
 					overflow: hidden;
+				}
+				@media all and (max-width: 520px){
+					padding-left: 5px;
+					padding-right: 5px;
+				}	
+			}
+			.novapex-listings-exhibits{
+				border-right: @perforated-border;
+				@media all and (max-width: 1400px){
+					
+					border: none;
+					border-bottom: @perforated-border;
+				}
+				@media all and (max-width: 725px){
+				
 				}
 			}
 
-
 			.novapex-listings-dealers{
-				padding: 40px;
-				width: 50%;
-				min-width: 700px;
-				@media all and (max-width: 1400px){
-					width: 100%;
-				}
-				max-width: 100%;
-				overflow: hidden;
+			
 			}
 	
 
