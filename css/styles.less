@@ -787,6 +787,9 @@ a{
 						height: 5em;
 						border-bottom: none;
 					}
+					@media all and (max-width: 550px){
+						height: 4em;
+					}
 				}
 					.leadership-left-header-wrapper{
 						text-align: center;
@@ -823,6 +826,11 @@ a{
 							width: 33.33%;
 							border-bottom: none !important;
 						}
+						@media all and (max-width: 550px){
+							height: 4em;
+							min-height: 4em;
+							max-height: 4em;
+						}
 						&:hover{
 							cursor: pointer;
 							background-color: darken(@main, 3);
@@ -852,6 +860,9 @@ a{
 							align-self: center;
 							@media all and (max-width: 1250px){
 								font-size: 1em;
+							}
+							@media all and (max-width: 550px){
+								font-size: 0.8em;
 							}
 						}
 			.leadership-right{
@@ -884,8 +895,11 @@ a{
 						flex-grow: 2;
 						padding: 2em;
 						padding-top: 30px;
-
 						.flex;
+						@media all and (max-width: 550px){
+							padding-top: 4em;
+							padding-bottom: 4em;
+						}
 
 					}	
 
@@ -901,6 +915,10 @@ a{
 								@media all and (max-width: 950px){
 									height: 2em;
 								}	
+								@media all and (max-width: 550px){
+									margin-bottom: 0.5em;
+									font-weight: bold;
+								}
 							}
 							.position-text{
 								font-family: 'Open Sans';
@@ -908,6 +926,10 @@ a{
 								margin-top: 0.25em;
 								@media all and (max-width: 1100px){
 									font-size: 0.9em;	
+								}
+								@media all and (max-width: 550px){
+									font-size: 1.0em;
+									line-height: 1.5em;	
 								}
 							}
 					.position-description-right{
@@ -951,6 +973,10 @@ a{
 										text-align: left;			
 										height: 2em;		
 									}
+									@media all and (max-width: 550px){
+										margin-bottom: 1em;
+										font-weight: bold;
+									}
 
 							}
 							.interested-body{
@@ -961,7 +987,10 @@ a{
 										font-size: 0.9em;	
 										line-height: 1.5em;
 									}
-									// text-align: justify;
+									@media all and (max-width: 550px){
+										line-height: 1.8em;
+										font-size: 1.1em;
+									}
 							}
 				.bio-wrapper{
 					border-top: 4px solid white;
@@ -973,8 +1002,11 @@ a{
 						// width: 66.666%;
 						width: 100%;
 						padding: 2em;
-						padding-top: 1em;
-
+						padding-top: 1em;	
+						@media all and (max-width: 550px){
+							padding-top: 4em;
+							padding-bottom: 4em;
+						}
 					}
 						.leader-name{
 							font-size: 1.6em;
@@ -982,6 +1014,10 @@ a{
 							// font-family: 'Nunito';
 							font-family: 'Arvo';
 							color: darken(white, 60);
+							@media all and (max-width: 550px){	
+								margin-bottom: 1.6em;
+								margin-top: 0em;
+							}
 						}
 						.leader-position{
 							font-size: 1.4em;
@@ -991,6 +1027,10 @@ a{
 							text-align: justify;
 							@media all and (max-width: 950px){
 								font-size: 0.9em;
+							}
+							@media all and (max-width: 550px){	
+								font-size: 1.1em;
+								line-height: 1.4em;
 							}
 						}
 					.leader-photo{
@@ -1004,10 +1044,14 @@ a{
 				.position-description-mobile{
 					border-top: @perforated-border;
 					padding: 2em;
-					@media all and (min-width: 950px){
-						
+					@media all and (min-width: 950px){	
 						display: none;
 					}
+					@media all and (max-width: 550px){
+						padding-top: 4em;
+						padding-bottom: 4em;
+					}
+
 				}
 					.position-description-mobile-wrapper{
 
@@ -1301,6 +1345,10 @@ a{
 			width: 70%;
 			min-width: 800px;
 			padding: 0;
+			@media all and (max-width: 1400px){
+
+			}
+
 		}
 			.calendar-left{
 				.flex;
