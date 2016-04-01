@@ -1405,7 +1405,11 @@ a{
 							}
 						}
 						.calendar-month-text{
-							margin: 0 auto;
+							
+							white-space: nowrap;
+							@media all and (max-width: 500px){
+								font-size: 0.9em;
+							}
 						}
 						.calendar-current-month{
 							white-space: nowrap;

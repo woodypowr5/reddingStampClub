@@ -14,7 +14,7 @@
 						
 						ng-click="calendarChangeMonth(-1)"
 					>
-						<span ng-if="{'prev-month-invalid': calendar.prevMonthInvalid !== true}">{{calendar.data[calendar.currentMonth-1].name}}</span>
+						<span class="calendar-month-text" ng-if="{'prev-month-invalid': calendar.prevMonthInvalid !== true}">{{calendar.data[calendar.currentMonth-1].name}}</span>
 					</div>
 					<h2 class="calendar-current-month">{{calendar.data[calendar.currentMonth].name}}</h2>
 					<div 
@@ -22,7 +22,7 @@
 						
 						ng-click="calendarChangeMonth(1)"
 					>
-						<span ng-if="{'next-month-invalid': calendar.nextMonthInvalid !== true}">{{calendar.data[calendar.currentMonth+1].name}}</span>
+						<span class="calendar-month-text"  ng-if="{'next-month-invalid': calendar.nextMonthInvalid !== true}">{{calendar.data[calendar.currentMonth+1].name}}</span>
 					</div>
 				</div>
 				<div class="calendar-row dayofweek-row">
