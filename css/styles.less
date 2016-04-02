@@ -191,6 +191,12 @@ a{
 				.vertically-center-children;
 				line-height: 4em;
 			}
+			*{
+			border: 1px dashed black;
+			}
+			*:last-child{
+				width: 100%;
+			}
 		}
 	// Hero Floating Content Classes
 		
@@ -703,7 +709,6 @@ a{
 					width: 40%;
 				}	
 				@media all and (max-width: 900px){
-					
 					height: 30em;
 					width: 100%;
 					left: 0%;
@@ -730,6 +735,7 @@ a{
 					flex-grow: 2;
 					.flex-column;
 					justify-content: space-between;
+					overflow: hidden;
 				}
 					.home-corner-first-words{
 						font-size: 1.2em;
@@ -2392,7 +2398,9 @@ a{
 	.footer{
 		height: 4em;
 		background-image: url('../assets/textures/wood.png');
-		
+		@media all and (max-width: 630px){
+			height: 8em;
+		}
 	}
 		.footer-content{
 			width: 100%;
@@ -2404,33 +2412,67 @@ a{
 			font-family: 'Nunito';
 			font-size: 0.8em;
 			padding: 5px 25px;
+			@media all and (max-width: 750px){
+				font-size: 0.7em;
+			}
+			@media all and (max-width: 630px){
+				height: 8em;
+				display: block;
+			}
+			@media all and (max-width: 420px){
+				padding: 5px 10px;
+				font-size: 0.6em;
+			}
 		}
 
 			.footer-copyright{
 				height: 100%;
+				@media all and (max-width: 630px){
+					height: 50%;
+					width: 100%;
+					display: block;
+					text-align: center;
+				}
 			}
 				.footer-copyright-top{
 					height: 50%;
 					.vertically-center-children;
 					align-items: flex-start;
+					@media all and (max-width: 630px){
+						align-items: center;
+					}
 				}
 				.footer-copyright-bottom{
 					height: 50%;
 					.vertically-center-children;
 					align-items: flex-start;
+					@media all and (max-width: 630px){
+						align-items: center;
+					}
 				}
 			.footer-created-by{
 				height: 100%;
+				@media all and (max-width: 630px){
+					height: 50%;
+					width: 100%;
+					display: block;
+				}
 			}
 				.footer-created-by-top{
 					height: 50%;
 					.vertically-center-children;
 					align-items: flex-end;
+					@media all and (max-width: 630px){
+						align-items: center;
+					}
 				}
 				.footer-created-by-bottom{
 					height: 50%;
 					.vertically-center-children;
 					align-items: flex-end;
+					@media all and (max-width: 630px){
+						align-items: center;
+					}
 				}
 // Animations
 
