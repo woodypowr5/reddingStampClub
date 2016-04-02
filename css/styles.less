@@ -173,6 +173,7 @@ a{
 					border-left: 1px dashed gray;
 					border-right: 1px dashed gray;
 					background-color: white !important;
+					color: black;
 					&:first-child{
 						border-left: none;
 					}
@@ -181,21 +182,29 @@ a{
 					}
 			}
 		.nav-wrapper.mobile{
+			background-color:  rgba(255, 255, 255, 0.85);
+			border-top: none;
 			height: 16em;
 			top: 0;
 			display: flex;
 			flex-wrap: wrap;
 			.nav-link{
+				color: lighten(@darkgray,4);
 				width: 50%;
 				height: 4em;
 				.vertically-center-children;
 				line-height: 4em;
+			}
+			.nav-link-active{
+				font-weight: bold;
+				color: black;
 			}
 			*{
 			border: 1px dashed black;
 			}
 			*:last-child{
 				width: 100%;
+				border-bottom: 3px solid lighten(black,20);
 			}
 		}
 	// Hero Floating Content Classes
