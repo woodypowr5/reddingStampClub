@@ -1,4 +1,4 @@
-app.controller('MainCtrl', ['$scope', 'articleService', 'linkService','$sce', function($scope, articleService, linkService, $sce) {
+app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService','$sce', 'scrollService', function($scope, $location, articleService, linkService, $sce, scrollService) {
 	$scope.currentView = 'home';
 	$scope.mobileNavActive = false;
 	$scope.selectedBio = 1;
@@ -25,6 +25,13 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService','$sce', fu
 	$scope.trustSrc = function(src) {
 		// console.log(src);
 	    return $sce.trustAsResourceUrl(src);
+	}
+	$scope.scrollTo = function(element){
+		// var el = $document.getElementById(element);
+		 $location.hash(element);
+ 
+      // call $anchorScroll()
+      scrollService.scrollTo(element);
 	}
 	$scope.toggleMobileNav = function(){
 		$scope.mobileNavActive = !$scope.mobileNavActive;
