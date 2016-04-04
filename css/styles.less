@@ -422,6 +422,7 @@ a{
 				overflow: hidden;
 			}
 			.home-who-section{
+				font-size: 16px;
 				position: absolute;
 				height: 20em;
 				width: 35%;
@@ -450,10 +451,74 @@ a{
 						// position: relative;
 						font-family: 'Arvo';
 						padding: 1.25em;
-						font-size: 1.em;
+						font-size: 1em;
 						text-align: justify;
 						line-height: 1.5em;
 						width: ~'calc(100% - 190px)';
+						@media all and (max-width: 1520px){
+							width: ~'calc(100% - 170px)';
+						}
+						@media all and (max-width: 1450px){
+							font-size: 0.95em;
+						}
+						@media all and (max-width: 1315px){
+							font-size: 0.9em;
+						}
+						@media all and (max-width: 1250px){ // width change
+							font-size: 1.2em;
+							width: ~'calc(100% - 230px)';
+						}
+						@media all and (max-width: 1115px){
+							font-size: 1.2em;
+							width: ~'calc(100% - 210px)';
+							padding-top: 0.75em;
+						}
+						@media all and (max-width: 1080px){ 
+							font-size: 1.1em;
+							padding-top: 0.5em;
+							width: ~'calc(100% - 190px)';
+						}
+						@media all and (max-width: 940px){
+							font-size: 0.95em;
+						}	
+						@media all and (max-width: 900px){ // width change
+							font-size: 0.9em;
+							width: ~'calc(100% - 160px)';
+							padding-top: 1em;
+						}
+						@media all and (max-width: 860px){
+							width: 100%;
+							font-size: 1.1em;
+							padding-top: 1.4em;
+						}
+						@media all and (max-width: 805px){
+							padding-top: 0.6em; 
+						}	
+						@media all and (max-width: 750px){ // width change
+							padding-top: 0.6em; 
+							overflow: hidden;
+							// height: 
+							// 30em * 16px = 480px total - 67px for heading 413px for content 
+							height: 220px;
+							margin: 0px;
+							font-size: 1.0em;
+							// font-size: 1.3em;
+						}
+						@media all and (max-width: 700px){ 
+							font-size: 0.95em;
+							padding-top: 0.3em;
+						}	
+						@media all and (max-width: 675px){
+							height: 240px;
+							padding-top: 1.7em;
+						}	
+						@media all and (max-width: 600px){
+							height: 100%;
+							font-size: 1.3em;
+							padding-top: 3em;
+							line-height: 1.7em;
+						}
+
 					}
 						.home-who-image-container{
 							position: absolute;
@@ -463,14 +528,110 @@ a{
 							height: 90%;
 							padding: 20px;
 							opacity: .9;
-							img{
+							@media all and (max-width: 1520px){
+								width: 190px; // 170 + 20 padding
+							}
+							@media all and (max-width: 1250px){ // width change
+								width: 230px;
+								height: 100%;
+								padding-top: 0;
+							}
+							@media all and (max-width: 1115px){
+								width: 210px;
+								height: 90%;
+								padding-top: 10px;
+							}
+							@media all and (max-width: 975px){
+								width: 190px; // 170 + 20 padding
+							}
+							@media all and (max-width: 900px){ // width change
+								width: 170px; // 150 + 20 padding
+								
+							}
+							@media all and (max-width: 860px){
+								display: none;
+							}	
+							@media all and (max-width: 750px){ // switch to vertical
+								display: initial;
+								position: absolute;
+								top: 290px;
+								// 413 -250px = 163px
+								height: 193px;
+								width: 100%;
+								margin: 0px;
+								padding: 10px;
+							}
+							@media all and (max-width: 675px){
+								padding: 5px;
+								height: 173px;
+								top: 308px;
+							}	
+
+
+							img.who-image-vert{
 								border: 1px solid black;
 								box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.85);
 								margin-top: 18%;
+								@media all and (max-width: 1520px){
+									margin-top: 42%;
+								}
+								@media all and (max-width: 1250px){ // width change
+									margin-top: 15%;
+									width: 100%;
+									height: 90%;
+								}
+								@media all and (max-width: 1115px){ 
+									margin-top: 25%;
+									width: auto;
+									// height: 90%;
+								}
+								@media all and (max-width: 975px){ 
+									margin-top: 45%;
+									height: auto;
+								}	
+								@media all and (max-width: 900px){  // width change
+									margin-top: 65%;
+								}	
+								@media all and (max-width: 750px){  // width change
+									display: none;
+								}	
 							}
+							.who-image-horiz{
+							
+								@media all and (min-width: 751px){  // width change
+									display: none;
+								}
+								@media all and (max-width: 750px){  // width change
+									position: relative;	
+									width: 300px;
+									height: 193px;
+									margin: 0 auto;
+									img{
+										width: 100%;
+										height: 167px;
+										margin: 0 auto;
+
+									}
+								}
+								@media all and (max-width: 675px){
+									width: 285px;
+									height: 173px;
+									img{
+										height: 157px;
+									}
+								}	
+								@media all and (max-width: 600px){
+									display: none;
+								}	
+								img{
+									box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.85);
+								}
+								
+							}	
 						}
 
 				}
+	
 			.home-hot-section{
 				position: absolute;
 				height: 20em;
@@ -480,6 +641,7 @@ a{
 				border-left: none;
 				border-right: none;
 				border-top: none;
+
 				@media all and (max-width: 1250px){
 					width: 30%;
 					top: 40em;
@@ -500,6 +662,7 @@ a{
 				@media all and (max-width: 750px){
 					height: 30em;
 				}
+
 			}	
 				.home-hot-links{
 					padding-top: 20px;
@@ -507,14 +670,40 @@ a{
 					height: 20em - @homepage-header-height;
 
 					.flex-wrap;
-						
+					@media all and (max-width: 1250px){ 
+						height: 413px;
+					}	
+					@media all and (max-width: 900px){
+						height: 20em - @homepage-header-height;
+					} 
+					@media all and (max-width: 750px){ 
+						height: 413px;
+					}	
+					@media all and (max-width: 600px){
+						padding-top: 60px;
+					}
 				}
-
-					.hot-link-wrapper{
-						flex-shrink: 0;
+					.hot-link-wrapper-stack{
+						width: 100%;
+						height: 25%;
+					}
+					.hot-link-wrapper-horiz{
 						width: 50%;
 						height: 50%;
+					}
+					.hot-link-wrapper{
+						flex-shrink: 0;
+						.hot-link-wrapper-horiz;
 						.vertically-center-children;
+						@media all and (max-width: 1250px){
+							.hot-link-wrapper-stack;
+						} 
+						@media all and (max-width: 900px){
+							.hot-link-wrapper-horiz;
+						} 
+						@media all and (max-width: 750px){
+							.hot-link-wrapper-stack;
+						} 
 					}
 						.hot-link{
 							width: 88%;
@@ -532,9 +721,11 @@ a{
 									font-weight: bold;
 								}
 								.hot-link-go{
-
 									opacity: 1;
 								}	
+							}
+							@media all and (max-width: 1250px){ 
+								height: 70%;
 							}
 						}
 							.hot-link-content{
@@ -547,11 +738,31 @@ a{
 									text-align: left;
 									padding: 3px 3px 0px 3px;
 									font-weight: bold;
+									@media all and (max-width: 1650px){ 
+										white-space: nowrap;
+										// overflow: visible;
+										font-size: 0.9em;
+									}
+									@media all and (max-width: 750px){ 
+										font-size: 1em;
+									}
+									@media all and (max-width: 380px){ 
+										font-size: 0.9em;
+									}
 								}
 								.hot-link-text{
 									transition: all 150ms linear;
 									font-size: 0.8em;
 									padding-left: 3px;
+									@media all and (max-width: 1650px){ 
+										font-size: 0.7em;
+									}
+									@media all and (max-width: 750px){ 
+										font-size: 0.8em;
+									}
+									@media all and (max-width: 380px){ 
+										font-size: 0.7em;
+									}
 								}
 							.hot-link-go{
 								width: 30px;
@@ -562,12 +773,22 @@ a{
 								opacity: 0.5;
 								// width: 30px;
 								.vertically-center-children;
+								@media all and (max-width: 1500px){
+									display: none;
+								}	
+								@media all and (max-width: 1250px){
+									.vertically-center-children; // sets display to flex
+								}	
+								@media all and (max-width: 900px){
+									display: none;
+								}	
+								@media all and (max-width: 750px){
+									.vertically-center-children;
+								}	
 							}
 									.hot-link-go-icon{
 										height:70%;
 										width: 70%;
-										
-
 									}
 			.home-media-section{
 				position: absolute;
@@ -722,6 +943,28 @@ a{
 					top: 70em;
 				}
 			}
+				.info-section-wrapper{
+					padding: 30px;
+					height: 413px;
+					.vertically-center-children;
+					font-size: 3.2em;
+					color: lighten(black, 40);
+					font-family: 'Arvo';
+					text-align: center;
+					@media all and (max-width: 1250px){
+						height: 413px - 160px;
+						font-size: 2.3em;
+					}
+					@media all and (max-width: 1250px){
+						font-size: 2.0em;
+					}
+					@media all and (max-width: 600px){
+						height: auto;
+						padding-top: 80px;
+						padding-bottom: 30px;
+						font-size: 2.0em;
+					}
+				}
 			.home-corner-section{
 				position: absolute;
 				height: 50em;
