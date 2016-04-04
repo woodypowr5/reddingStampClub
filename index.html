@@ -2,6 +2,7 @@
 <html lang="en" ng-app="app">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Document</title>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.1/masonry.pkgd.js"></script>
@@ -25,16 +26,7 @@
 		<div class="header-mobile-nav">
 			<img class="header-mobile-nav-icon" src="assets/img/hamburger.png" alt="mobile-navigation" ng-click="toggleMobileNav()">
 		</div>
-		<!-- <nav class="mobile-nav-wrapper" ng-show="mobileNavActive === true">
-			hELLO
-		</nav> -->
 	</header>
-	
-
-	<!-- <div class="brand-strip">	 -->
-			<!-- <div class="brand">ReddingStampClub</div> -->
-			
-	<!-- </div>	 -->
 
 	<section 
 		class="hero-section"
@@ -48,13 +40,6 @@
 			'hero-section-contact': currentView === 'contact'
 		}"
 		>	
-
-			<!-- Home -->
-			<!-- <div class="hero-content hero-content-home" ng-show="currentView === 'home'">
-				<p class="hero-content-block">
-					The Redding Stamp Club is the premier philatelic organization of Shasta County, California. Our members' interests and collections cover a wide array of stamp collecting. This includes worldwide and specific countries encompassing perfins, covers, train cancels, revenues, pre-cancelled and more
-				</p>
-			</div> -->
 
 			<!-- Novapex -->
 			<div class="hero-stamp hero-stamp-yosemite" ng-show="currentView === 'novapex'">
@@ -81,7 +66,7 @@
 					LINKS
 			</a>	
 			<a class="nav-link" ui-sref="news" autoscroll="false" ng-class="{'nav-link-active': currentView === 'news'}" ng-click="closeMobileNav()">
-					NEWS & ARTICLES
+					NEWS<div class="hide-small">&nbsp;& ARTICLES</div>
 			</a>	
 			<a class="nav-link" ui-sref="contact" autoscroll="false" ng-class="{'nav-link-active': currentView === 'contact'}" ng-click="closeMobileNav()">
 					CONTACT

@@ -168,6 +168,18 @@ a{
 					background-color:  rgba(0,0,0, 0.1);
 					// transition: background-color 150ms linear;
 				}
+				@media all and (max-width: 1200px){
+					font-size: 0.9em;
+					line-height: @nav-height*(10/9);
+				}
+				@media all and (max-width: 1000px){
+					font-size: 0.8em;
+					line-height: @nav-height*(10/8);
+				}
+				@media all and (max-width: 750px){
+					font-size: 1em;
+					line-height: @nav-height;
+				}
 			}
 			.nav-link-active{
 					border-left: 1px dashed gray;
@@ -180,6 +192,12 @@ a{
 					&:last-child{
 						border-right: none;
 					}
+			}
+			.nav-link .hide-small{
+				display: inline-block;
+				@media all and (max-width: 750px){
+					display: none !important;
+				}	
 			}
 		.nav-wrapper.mobile{
 			background-color:  rgba(255, 255, 255, 0.85);
@@ -2402,7 +2420,11 @@ a{
 				height: 50em;
 			}
 		}
+		
+		.contact-section{
 
+				
+		}
 
 	.footer{
 		height: 4em;
@@ -2530,73 +2552,85 @@ body.contact-active {
 	
 	background: url(../contactFOrm/images/stripe.png) repeat;
 
+	#page-wrap {
+		outline: @perforated-border;
+		width: 660px;
+		background: white;
+		padding: 35px 30px 20px 30px;
+		margin: 50px auto 50px auto;
+		min-height: 500px;
+		height: auto !important;
+		/*height: 500px;*/
+		@media all and (max-width: 760px){
+			width: 90% !important;
+			margin-left: 5%;		
+		}	
 
-/*p {
-	font-size: 1.3em;
-	margin-bottom: 15px;
-}
-*/
-#page-wrap {
-	outline: @perforated-border;
-	width: 660px;
-	background: white;
-	padding: 35px 30px 20px 30px;
-	margin: 50px auto 50px auto;
-	min-height: 500px;
-	height: auto !important;
-	/*height: 500px;*/
-}
-.contact-header{
-	text-align: center;
-	font-family: 'Arvo';
-	margin-bottom: 1.5em;
-}
-.contact-message{
-	text-align: center;
-	font-family: 'Nunito';
-	margin-bottom: 2em;
-}
-#contact-area {
-	// width: 600px
-	width: 600px;
-	margin: 25px 0;
-}
-#contact-area form{
-	margin-top: 1.5em;
-	width: 600px;
-}
-#contact-area input, #contact-area textarea {
-	padding: 5px;
-	width: 471px;
-	font-family: Helvetica, sans-serif;
-	font-size: 1.4em;
-	margin: 0px 0px 10px 0px;
-	border: 2px solid #ccc;
-}
+	}
+	.contact-header{
+		text-align: center;
+		font-family: 'Arvo';
+		margin-bottom: 1.5em;
+	}
+	.contact-message{
+		text-align: center;
+		font-family: 'Nunito';
+		margin-bottom: 2em;
+	}
+	#contact-area {
+		// width: 600px
+		//width: 600px;
+		//margin: 25px 0;
+		width: 90%;
+		margin-left: 5%;
+		@media all and (max-width: 500px){
+			width: 100%;
+			margin-left:0px;
+			margin: 0px auto;
+		}
+	}
+	#contact-area form{
+		margin-top: 1.5em;
+		width: 100%;
+	}
+	#contact-area input, #contact-area textarea {
+		padding: 5px;
+		//width: 471px;
+		width: 75%;
+		font-family: Helvetica, sans-serif;
+		font-size: 1.4em;
+		margin: 0px 0px 10px 0px;
+		border: 2px solid #ccc;
+		@media all and (max-width: 500px){
+			width: 72%;
+		}
+	}
 
-#contact-area textarea {
-	height: 90px;
-}
+	#contact-area textarea {
+		height: 90px;
+	}
 
-#contact-area textarea:focus, #contact-area input:focus {
-	border: 2px solid #900;
-}
-
-#contact-area input.submit-button {
-	width: 100px;
-	float: right;
-	margin-right: 14px;
-	margin-bottom: 30px;
-}
-
-label {
-	font-family: 'Arvo';
-
-	float: left;
-	text-align: right;
-	margin-right: 15px;
-	width: 100px;
-	padding-top: 5px;
-	font-size: 1.0em;
-}
+	#contact-area textarea:focus, #contact-area input:focus {
+		border: 2px solid #900;
+	}
+	#contact-area input.submit-button {
+		width: 100px;
+		float: right;
+		margin-right: 0px;
+		margin-bottom: 30px;
+	}
+	label {
+		font-family: 'Arvo';
+		float: left;
+		text-align: right;
+		margin-right: 5%;
+		//width: 100px;
+		width: 20%;	
+		padding-top: 5px;
+		font-size: 1.0em;
+		@media all and (max-width: 500px){
+			font-size: 0.8em;
+			margin-right: 8%;
+		}
+	}
 }
