@@ -275,13 +275,14 @@ a{
 				padding-bottom: 15px;
 				}
 			}
+
 		}
 		.home-heading{
 			height: @homepage-header-height;
 			h2{
 				font-size: 1.8em;
-				padding-top: 0.6em;
-				padding-bottom: 0.3em;
+				// padding-top: 0.6em;
+				// padding-bottom: 0.4em;
 			}
 		}
 			.header-opacity-layer{
@@ -291,6 +292,9 @@ a{
 				top: 0;
 				left: 0;
 				z-index: 2;
+				@media all and (max-width: 750px){
+					display: none;
+				}
 			}
 				.header-opacity-layer.news-header-opacity-layer{
 					.header-opacity(@main-light);
