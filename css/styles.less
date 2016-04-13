@@ -1037,12 +1037,10 @@ a{
 						font-weight: bold;
 					}
 					.home-corner-wrapper-paragraph{
-						// width: 40%;
 						text-align: justify;
 						font-size: 0.95em;
 						font-family: 'Arvo';
 						margin: 0.5em 0;
-
 
 						@media all and (max-width: 1430px){
 							font-size: 0.9em;
@@ -1313,6 +1311,8 @@ a{
 							min-height: 4em;
 							max-height: 4em;
 						}
+						transition: all 150ms linear;
+					
 						&:hover{
 							cursor: pointer;
 							background-color: darken(@main, 3);
@@ -1620,7 +1620,7 @@ a{
 					margin-bottom: 1em;
 					line-height: 1.5em;
 					font-family: 'Arimo';
-					text-align: justify;
+					text-align: left;
 					@media all and (max-width: 1100px){
 						font-size: 1em;
 						text-align: left;
@@ -2868,27 +2868,28 @@ a{
 	.fade.ng-hide-add, .fade.ng-hide-remove {
 	  transition: opacity linear 0.1s;
 	}
+
 	.fade.ng-hide {
 	  opacity: 0;
+	  max-height: 0;
 	}
 	.fade.ng-enter {
 	  transition:0.5s linear all;
 	  opacity:0 !important;
 	}
-	/* The finishing CSS styles for the enter animation */
+
 	.fade.ng-enter.ng-enter-active {
 	  opacity:1 !important;
 	}
 	.fade.ng-leave {
-	  transition:0.5s linear all;
+	height: 0px;
+	  transition:0.0s linear all;
 	  opacity:1 !important;
 	}
 	.fade.ng-leave.ng-leave-active {
 	  opacity:0 !important;
 	}
 	
-
-
 
 
 
