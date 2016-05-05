@@ -42,7 +42,7 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 	$scope.activateModal = function(type, src){
 		$scope.modal.type = type ? type : 'unknown';
 		$scope.modal.src = (type === 'pdf' || type === 'doc' || type === 'docx') ? "ViewerJS/#../"+src : src;
-		console.log($scope.modal.src);
+		// console.log($scope.modal.src);
 		$scope.modal.active = true;
 	}
 	$scope.deactivateModal = function(){
