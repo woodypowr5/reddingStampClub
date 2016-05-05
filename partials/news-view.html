@@ -1,10 +1,13 @@
 <div class="news-articles-wrapper anim-fade">
 	
 	
-	<div class="news-articles-left">
+	<div class="news-articles-left" id="news-section">
 		<div class="news-wrapper">
 			<div class="news-header page-heading">
 				<h2>News & Current Events</h2>
+				<div class="mobile-section-link mobile-articles-link" ng-click="scrollTo('articles-section')">
+					go to Articles &#x21E9;
+				</div>		
 				<div class="header-opacity-layer news-header-opacity-layer"></div>
 				<div class="header-texture-layer"></div>
 				
@@ -60,10 +63,13 @@
 			</div>   
 		</div>	
 	</div>
-	<div class="news-articles-right">
+	<div class="news-articles-right" id="articles-section">
 		<div class="articles-wrapper">
 			<div class="news-header page-heading">
 				<h2>Articles</h2>
+				<div class="mobile-section-link mobile-news-link" ng-click="scrollTo('news-section')">
+					back to News &#x21E7;
+				</div>		
 				<div class="header-opacity-layer news-header-opacity-layer"></div>
 				<div class="header-texture-layer"></div>
 				

@@ -8,7 +8,7 @@
 		<div class="header-opacity-layer leadership-header-opacity-layer"></div>
 		<div class="header-texture-layer"></div>
 	</div>
-	<div class="leadership-left">
+	<div class="leadership-left anim-fade">
 		<div class="positions-bg-layer"></div>	
 		<div class="positions-opacity-layer"></div>	
 		<div class="leadership-links">
@@ -55,7 +55,7 @@
 			<div class="position-description-left">	
 				<div class="position-description-left-wrapper">
 					<h3 class="position-subheader">Position:</h3>	
-					<div class="position-wrapper" ng-if="selectedBio === 1">
+					<div class="position-wrapper fade" ng-if="selectedBio === 1">
 						<div class="position-header">President</div>
 						<p class="position-text">	
 							The President has general supervisory powers over all matters concerning the
@@ -68,7 +68,7 @@
 							Executive Board. 
 						</p>	
 					</div>
-					<div class="position-wrapper" ng-if="selectedBio === 2" >
+					<div class="position-wrapper fade" ng-if="selectedBio === 2" >
 						<div class="position-header">Treasurer & Membership Chair</div>
 						<p class="position-text">
 							he Vice President will assist the President in the conduct of the club. In the
@@ -76,7 +76,7 @@
 							event of death, disability, resignation, or removal of the President, the Vice President shall
 							succeed to the office of President.
 					</div>
-					<div class="position-wrapper" ng-if="selectedBio === 3">
+					<div class="position-wrapper fade" ng-if="selectedBio === 3">
 						<div class="position-header">Secretary</div>
 						<p class="position-text">
 							The Secretary shall keep an accurate and permanent record of the minutes of
@@ -105,7 +105,7 @@
 		</div>
 		<!-- BIOS -->
 
-		<div class="bio-wrapper" ng-show="selectedBio === 1">
+		<div class="bio-wrapper fade" ng-if="selectedBio === 1">
 			<div class="leader-bio">
 				<h3 class="leader-name">Mark Woodward</h3>
 				
@@ -125,7 +125,7 @@
 			</div> -->
 		</div>
 		
-		<div class="bio-wrapper" ng-show="selectedBio === 2">
+		<div class="bio-wrapper fade" ng-if="selectedBio === 2">
 			<div class="leader-bio">
 				<h3 class="leader-name">Roland Muhleman</h3>
 				<p class="leader-bio-text">
@@ -140,7 +140,7 @@
 			</div> -->
 		</div>
 
-		<div class="bio-wrapper" ng-show="selectedBio === 3">
+		<div class="bio-wrapper fade" ng-if="selectedBio === 3">
 			<div class="leader-bio">
 				<h3 class="leader-name">James M. Johnson</h3>
 				<p class="leader-bio-text">

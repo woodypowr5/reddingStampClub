@@ -1,5 +1,5 @@
 <!-- div.home-section -->
-<div class="home-wrapper  anim-fade">	
+<div class="home-wrapper anim-fade" id="home-wrapper">	
 
 	<div class="home-who-section home-section">	
 		<div class="home-who-wrapper">
@@ -8,11 +8,15 @@
 				<div class="header-opacity-layer links-header-opacity-layer"></div>
 				<div class="header-texture-layer"></div>
 			</div>
-			<div class="content-block">
+			<div class="who-content-block content-block">
 				The Redding Stamp Club is the premier philatelic organization of Shasta County, California. Our members' interests and collections cover a wide array of stamp collecting. This includes worldwide and specific countries encompassing perfins, covers, train cancels, revenues, pre-cancelled and more
 			</div>
 			<div class="home-who-image-container">
-				<img src="assets/img/photos/p4crop.jpg" alt="">
+				<img class="who-image-vert" src="assets/img/photos/p4crop.jpg" alt="">
+				
+				<div class="who-image-horiz">
+					<img src="assets/img/photos/p4crophoriz.jpg" alt="">
+				</div>	
 			</div>	
 		</div>		
 	</div>
@@ -24,7 +28,7 @@
 			<div class="header-texture-layer"></div>
 		</div>
 		<div class="home-hot-links ">
-			<div class="hot-link-wrapper">
+			<div class="hot-link-wrapper" ui-sref="novapex">
 				<div class="hot-link">
 					<div class="hot-link-content">		
 						<div class="hot-link-title">
@@ -39,7 +43,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="hot-link-wrapper">
+			<div class="hot-link-wrapper" ui-sref="novapex">
 				<div class="hot-link">
 					<div class="hot-link-content">		
 						<div class="hot-link-title">
@@ -54,7 +58,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="hot-link-wrapper">
+			<div class="hot-link-wrapper" ui-sref="calendar">
 				<div class="hot-link">
 					<div class="hot-link-content">		
 						<div class="hot-link-title">
@@ -69,7 +73,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="hot-link-wrapper">
+			<div class="hot-link-wrapper" ui-sref="contact">
 				<div class="hot-link">
 					<div class="hot-link-content">		
 						<div class="hot-link-title">
@@ -145,6 +149,23 @@
 			<h2>Stamp of the Week</h2>
 			<div class="header-opacity-layer links-header-opacity-layer"></div>
 			<div class="header-texture-layer"></div>
+		</div>
+		<div class="info-section-wrapper">
+			<p class="info-section-content-block">
+				The Penny Black was the world's first adhesive postage stamp used in a public postal system. It first was issued in Great Britain on 1 May 1840, for official use from 6 May of that year. It features a profile of Queen Victoria.
+			</p>
+				
+			<p class="info-section-content-block">
+				In 1837, British postal rates were high, complex and anomalous. To simplify matters, Sir Rowland Hill proposed an adhesive stamp to indicate pre-payment of postage. At the time it was normal for the recipient to pay postage on delivery, charged by the sheet and on distance travelled. By contrast, the Penny Black allowed letters of up to half an ounce (14g) to be delivered at a flat rate of one penny, regardless of distance.
+			</p>
+			<p class="info-section-content-block remove-content-mobile">
+				The Penny Black lasted less than a year. A red cancellation was hard to see on the black design and the red ink was easy to remove; both made it possible to re-use cancelled stamps. In February 1841, the Treasury switched to the Penny Red and began using black ink for cancellations instead, which was more effective and harder to remove.
+			</p>
+
+			<p class="info-section-content-block">
+				Because Great Britain was the first country to issue an official postage stamp the UPU granted Great Britain the right to be the only country without its name on its stamps.
+			</p>
+			<img class="info-section-stamp-image" src="assets/img/pennyblack-combined.png" alt="" align="right">
 		</div>
 	</div>
 

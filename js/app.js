@@ -34,19 +34,20 @@ app.config(function($stateProvider, $urlRouterProvider, $provide){
 			data: {newView: 'calendar'}
 		})
 
-		// CALENDAR
+		// LINIKS
 		.state('links', {
 			url: '/links',
 			templateUrl: 'partials/links-view.html',
 			data: {newView: 'links'}
 		})
 
-		// CALENDAR
+		// NEWS
 		.state('news', {
 			url: '/news',
 			templateUrl: 'partials/news-view.html',
 			data: {newView: 'news'}
 		})
+
 
 		// CONTACT
 		.state('contact', {

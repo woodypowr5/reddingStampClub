@@ -1,4 +1,4 @@
-app.controller('MainCtrl', ['$scope', 'articleService', 'linkService','$sce', function($scope, articleService, linkService, $sce) {
+app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService','$sce', 'scrollService', function($scope, $location, articleService, linkService, $sce, scrollService) {
 	$scope.currentView = 'home';
 	$scope.mobileNavActive = false;
 	$scope.selectedBio = 1;
@@ -26,6 +26,13 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService','$sce', fu
 		// console.log(src);
 	    return $sce.trustAsResourceUrl(src);
 	}
+	$scope.scrollTo = function(element){
+		// var el = $document.getElementById(element);
+		 $location.hash(element);
+ 
+      // call $anchorScroll()
+      scrollService.scrollTo(element);
+	}
 	$scope.toggleMobileNav = function(){
 		$scope.mobileNavActive = !$scope.mobileNavActive;
 	}
@@ -35,7 +42,7 @@ app.controller('MainCtrl', ['$scope', 'articleService', 'linkService','$sce', fu
 	$scope.activateModal = function(type, src){
 		$scope.modal.type = type ? type : 'unknown';
 		$scope.modal.src = (type === 'pdf' || type === 'doc' || type === 'docx') ? "ViewerJS/#../"+src : src;
-		console.log($scope.modal.src);
+		// console.log($scope.modal.src);
 		$scope.modal.active = true;
 	}
 	$scope.deactivateModal = function(){
