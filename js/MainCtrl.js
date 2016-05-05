@@ -57,8 +57,15 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 
 	$scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
     	if ( angular.isDefined( toState.data.newView ) ) {
-        	$scope.currentView = toState.data.newView;
-    	}
+        	$scope.currentView = toState.data.newView;		
+    	};
+		if ( angular.isDefined( toState.data.modal )){
+	    	if(toState.data.modal === "palmares"){
+	    		console.log("palmares");
+	    	} else if (toState.data.modal === "prospectus"){
+				console.log("prospectus");
+			}	
+		}
 	});
 
 

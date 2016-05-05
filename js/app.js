@@ -26,6 +26,17 @@ app.config(function($stateProvider, $urlRouterProvider, $provide){
 			templateUrl: 'partials/novapex-view.html',
 			data: {newView: 'novapex'}
 		})
+			.state('novapex.prospectus', {
+				url: '/novapex',
+				templateUrl: 'partials/novapex-view.html',
+				data: {newView: 'novapex', modal: 'prospectus'}
+			})
+			.state('novapex.palmares', {
+				url: '/novapex',
+				templateUrl: 'partials/novapex-view.html',
+				data: {newView: 'novapex', modal: 'palmares'}
+			})
+
 
 		// CALENDAR
 		.state('calendar', {
