@@ -141,6 +141,7 @@ a{
 	}	
 	// Navbar
 		.nav-wrapper{
+			
 			position: absolute;
 			bottom: 0;
 			.flex;
@@ -206,6 +207,7 @@ a{
 			top: 0;
 			display: flex;
 			flex-wrap: wrap;
+
 			.nav-link{
 				color: lighten(@darkgray,4);
 				width: 50%;
@@ -273,6 +275,7 @@ a{
 				h2{
 				padding-top: 15px;
 				padding-bottom: 15px;
+				padding-left: 0px;
 				}
 			}
 
@@ -518,7 +521,7 @@ a{
 						}	
 						@media all and (max-width: 600px){
 							height: 100%;
-							font-size: 1.3em;
+							font-size: 1.2em;
 							padding-top: 3em;
 							line-height: 1.7em;
 						}
@@ -1013,6 +1016,9 @@ a{
 							margin-left: 20px;
 							margin-right: 20px;
 							margin-bottom: 2.5em;
+							&:first-child{
+								margin-top: 0px;
+							}
 						}	
 					}
 					.info-section-content-block.remove-content-mobile{
@@ -1209,6 +1215,10 @@ a{
 						@media all and (max-width: 900px){
 							width: 53px;
 							height: 70px;
+						}	
+						@media all and (max-width: 600px){
+							height: 140px;
+							width: 107px;
 						}	
 					}
 					.corner-signature-content{
@@ -2829,7 +2839,10 @@ a{
 		left: 0;
 		background-color: rgba(0, 0, 0, 0.8);
 		display: none;
-		z-index: 10;
+		z-index: 12;
+		// @media all and (max-width: 600px){
+		// 	position: absolute;
+		// }	
 	}
 	.modal-section.modal-active{	
 		display: block;
@@ -2842,6 +2855,10 @@ a{
 			margin-left: 15%;
 			margin-top: 3em;
 			min-height: 30em;
+			@media all and (max-width: 600px){
+				width: 100%;
+				margin-left: 0;
+			}	
 
 			.modal-close-button{
 				cursor: pointer;
