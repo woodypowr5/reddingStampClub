@@ -1,7 +1,6 @@
 app.service("linkService", ['$rootScope', function($rootScope){
     "use strict";
       
-   
     this.links = [
         {
             "category":     "National and Regional Societies",
@@ -29,7 +28,16 @@ app.service("linkService", ['$rootScope', function($rootScope){
                     "imageSrc":     "assets/img/logos/CNCPS-LOG.jpg",
                     "url":          "http://norcalstamps.org/",
                     "expanded":     false
+                },
+                {
+                    "title":        "British North America Philatelic Society",
+                    "description":  "Organization that supports collectors of the stamps, covers, and postal markings of Canada and the former colonies that comprise the country.",
+                    "about":        "The British North America Philatelic Society Ltd. - BNAPS - is an international organization (founded 1943) devoted to the collecting and study of the stamps, markings, and postal history of Canada and the pre-confederation colonies of British North America (British Columbia, Canada, New Brunswick, Newfoundland, Nova Scotia and Prince Edward Island).",
+                    "imageSrc":     "assets/img/logos/bnaps.png",
+                    "url":          "http://www.bnaps.org/",
+                    "expanded":     false
                 }
+                // NEW LINKS GO HERE (remember to insert a comma before each new link)
             ]
         },
         {
@@ -41,6 +49,22 @@ app.service("linkService", ['$rootScope', function($rootScope){
                     "about":        "The National Stamp Dealers Association was founded in 1995 to join small and large stamp dealerships together in a friendly organization with reasonable dues and membership requirements. The primary goals of the NSDA include development and maintenance of a high standard of ethical dealings between dealers and collectors and provision of ongoing information and support to assist members improve and grow their philatelic businesses.",
                     "imageSrc":     "assets/img/logos/nsdalogo-small-trans.gif",
                     "url":          "http://www.nsdainc.org/",
+                    "expanded":     false
+                },
+                {
+                    "title":        "Ebay",
+                    "description":  "World's Largest Online Auction & Marketplace",
+                    "about":        "",
+                    "imageSrc":     "assets/img/logos/ebay.png",
+                    "url":          "http://www.ebay.com/",
+                    "expanded":     false
+                },
+                {
+                    "title":        "United States Postal Service",
+                    "description":  "Official Postal Service of the US",
+                    "about":        "",
+                    "imageSrc":     "assets/img/logos/usps.png",
+                    "url":          "http://www.usps.com/",
                     "expanded":     false
                 }
             ]
@@ -106,6 +130,13 @@ app.service("linkService", ['$rootScope', function($rootScope){
                     "about":        "StampWorld.com is a global development made by people from all over the world. The original idea was developed by a small group of stamp collectors. The results of years of work are now finally online and available to you",
                     "imageSrc":     "assets/img/logos/stampworld-logo.png",
                     "url":          "http://www.stampworld.com/en_US/maps/Europe/",
+                    "expanded":     false
+                },
+                {
+                    "title":        "American Association of Philatelic Exhibitors",
+                    "description":  "Group that enables collectors to share and discuss ideas and techniques for preparing and judging philatelic exhibits",
+                    "imageSrc":     "assets/img/logos/AAPE.png",
+                    "url":          "http://http://www.aape.org/",
                     "expanded":     false
                 }
             ]

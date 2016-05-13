@@ -1,7 +1,7 @@
 <?php
 
-$EmailFrom = "cwoodward55@hotmail.com";
-$EmailTo = "cwoodward55@hotmail.com";
+$EmailFrom = "contact.reddingstampclub@yahoo.com";
+$EmailTo = "reddingstampclub@yahoo.com";
 $Subject = "Contact the Redding Stamp Club";
 $Name = Trim(stripslashes($_POST['Name'])); 
 $Tel = Trim(stripslashes($_POST['Tel'])); 
