@@ -248,7 +248,7 @@ a{
 			right: 2em;
 		}		
 
-	// Hero FLoating Content Specific Instances
+	// HEADINGS
 		.page-heading{
 			position: relative;
 			h2{
@@ -271,6 +271,7 @@ a{
 				text-align: center;
 				.vertically-center-children;
 				h2{
+				padding-left: 0px;
 				padding-top: 15px;
 				padding-bottom: 15px;
 				}
@@ -985,11 +986,40 @@ a{
 					}
 					@media all and (max-width: 600px){
 						height: auto;
-						padding-top: 80px;
+						padding-top: 48px;
 						padding-bottom: 30px;
 						// font-size: 2.0em;
 					}
 				}
+
+					.info-section-title{
+						font-family: 'Arvo';
+						top: 10px;
+						position: absolute;
+						right: 15px;
+						color: lighten(black,30);
+						// padding-left: 254px;
+						font-size: 1.4em;
+						// margin-top: 11px;
+						z-index: 3;
+						@media all and (max-width: 900px){
+							top: 23px;
+							font-size: 0.9em;
+						}	
+						@media all and (max-width: 790px){
+							display: none;
+						}	
+					}
+					.info-section-title-mobile{
+						text-align: center;
+						color: lighten(black,30);
+						font-size: 1.6em;
+						margin-bottom: 1.5em;
+						@media all and (min-width: 600px){
+							display: none;
+						}	
+
+					}
 					.info-section-content-block{
 						font-size: 0.95em;
 						// float: left;
@@ -2835,6 +2865,10 @@ a{
 		background-color: rgba(0, 0, 0, 0.8);
 		display: none;
 		z-index: 10;
+		@media all and (max-width: 700px){
+			position: absolute;
+			height: 200em;
+		}	
 	}
 	.modal-section.modal-active{	
 		display: block;
@@ -2847,7 +2881,13 @@ a{
 			margin-left: 15%;
 			margin-top: 3em;
 			min-height: 30em;
-
+			@media all and (max-width: 700px){
+				position: absolute;
+				margin-left: 5%;
+				width: 90%;
+				padding: 1em;
+				padding-top: 2.5em;
+			}
 			.modal-close-button{
 				cursor: pointer;
 				position: absolute;

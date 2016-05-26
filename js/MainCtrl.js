@@ -63,6 +63,7 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 	    	if(toState.data.modal === "palmares"){
 	    		console.log("palmares");
 	    	} else if (toState.data.modal === "prospectus"){
+	    		$scope.activateModal('pdf', 'assets/documents/novapex_2015_entry_and_prospectus.pdf');
 				console.log("prospectus");
 			}	
 		}

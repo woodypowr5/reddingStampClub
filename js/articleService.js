@@ -5,6 +5,7 @@ app.service("articleService", ['$rootScope', function($rootScope){
     this.articles = [];
     this.separator = '-';
 
+
     this.news.push(
         {
             "title":    "15¢ gray Large Queen Canadian stamp will star at the next auction",
@@ -35,7 +36,7 @@ app.service("articleService", ['$rootScope', function($rootScope){
           "image":    {
               "src":          "assets/img/articles/LGBT-diversity-cropped.jpg",
               "alt":          "Queen Canadian Stamp",
-              "position":     "top-inset"
+              "position":     "bottom"
           },
           "options":  {
 
@@ -54,7 +55,7 @@ app.service("articleService", ['$rootScope', function($rootScope){
             "image":    {
                 "src":          "assets/img/articles/australia-cropped.jpg",
                 "alt":          "",
-                "position":     "top-inset"
+                "position":     "bottom"
             },
             "options":  {
 
@@ -111,7 +112,7 @@ app.service("articleService", ['$rootScope', function($rootScope){
             "image":    {
                 "src":          "assets/img/articles/china-monkey-cropped.jpg",
                 "alt":          "",
-                "position":     "top"
+                "position":     "bottom"
             },
             "options":  {
 
@@ -149,7 +150,7 @@ app.service("articleService", ['$rootScope', function($rootScope){
             "image":    {
                 "src":          "assets/img/articles/charlesGrey.jpg",
                 "alt":          "Charles Grey",
-                "position":     "top"
+                "position":     "bottom"
             },
             "options":  {
 
@@ -187,7 +188,7 @@ app.service("articleService", ['$rootScope', function($rootScope){
             "image":    {
                 "src":          "assets/img/articles/tipsBook.jpg",
                 "alt":          "",
-                "position":     "top"
+                "position":     "bottom"
             },
             "options":  {
 
@@ -195,9 +196,217 @@ app.service("articleService", ['$rootScope', function($rootScope){
         }
     );
 
-// Blank Tempate: 
+    this.news.push(
+        {
+            "title":    "When Hawaii Was a Kingdom…Stamps of that time are expected to fetch US$2 million at auction!",
+            "date":     "May 21, 2016",
+            "numDate":  "2016-05-21",
+            "bodyText": "It contains 10 examples of very rare Hawaiian Missionary stamps issued in 1851 ‒ some unused, some cancelled and on original envelopes, some containing letters. A 13-cent unused Missionary in near mint condition is expected to bring $50,000 to $75,000.",
+            "referer":  "StampNews.com",
+            "src":      "http://www.stampnews.com/stamps/stamps_2016/stamp_when-hawaii-was-a-kingdomstamps-of-that-time-are-expected-to-fetch-us2-million-at-auction.html",
+            "image":    {
+                "src":          "assets/img/articles/hawaii.jpg",
+                "alt":          "",
+                "position":     "bottom"
+            },
+            "options":  {
 
-   
+            }
+        }
+    );
+
+    this.news.push(
+        {
+            "title":    "Surprising and original – contemporary art of Finland! Four bright stamps unveiled",
+            "date":     "May 23, 2016",
+            "numDate":  "2016-05-23",
+            "bodyText": "Finnish contemporary art boasts with its originality and unusual forms – from abstract to the most sophisticated ones.",
+            "referer":  "StampNews.com",
+            "src":      "http://www.stampnews.com/stamps/stamps_2016/stamp_surprising-and-original-contemporary-art-of-finland-four-bright-stamps-unveiled.html",
+            "image":    {
+                "src":          "assets/img/articles/art.jpg",
+                "alt":          "",
+                "position":     "bottom"
+            },
+            "options":  {
+
+            }
+        }
+    );
+
+    this.news.push(
+        {
+            "title":    "April financial results better than U.S. Postal Service predicted",
+            "date":     "May 25, 2016",
+            "numDate":  "2016-05-25",
+            "bodyText": "Some mailers are saying that the end of the temporary surcharge on stamp prices appears to have helped the United States Postal Service’s bottom line.",
+            "referer":  "Linns.com",
+            "src":      "http://www.linns.com/news/postal-updates/2016/may/april-financial-results-united-states-postal-service.html",
+            "image":    {
+                "src":          "assets/img/articles/uspsFinance.jpg",
+                "alt":          "",
+                "position":     "bottom"
+            },
+            "options":  {
+
+            }
+        }
+    );
+
+    this.news.push(
+        {
+            "title":    "Ropex stamp show postmarks recall 1934 National Parks commemoratives: Postmark Pursuit",
+            "date":     "May 16, 2016",
+            "numDate":  "2016-05-16",
+            "bodyText": "The National Park Service is celebrating its 100th anniversary in 2016, and the show will celebrate with postmarks that recall the designs of the popular National Parks commemorative stamps issued in 1934.",
+            "referer":  "Linns.com",
+            "src":      "http://www.linns.com/news/postal-updates/2016/may/ropex-stamp-show-postmarks-national-parks.html",
+            "image":    {
+                "src":          "assets/img/articles/yosemite.jpg",
+                "alt":          "",
+                "position":     "bottom"
+            },
+            "options":  {
+
+            }
+        }
+    );
+
+    this.news.push(
+        {
+            "title":    "The Sand Will Remember. Memorial Day 2016 marked with a new stamp",
+            "date":     "May 6, 2016",
+            "numDate":  "2016-05-06",
+            "bodyText": "The letter card, cover and stamp – all of which are special and unique to Memorial Day – constitute the basis of a sensitive, original and extraordinary tradition that came into being following the War of Independence.",
+            "referer":  "StampNews.com",
+            "src":      "http://www.stampnews.com/stamps/stamps_2016/stamp_the-sand-will-remember-memorial-day-2016-marked-with-a-new-stamp.html",
+            "image":    {
+                "src":          "assets/img/articles/memorialSands.jpg",
+                "alt":          "",
+                "position":     "bottom"
+            },
+            "options":  {
+
+            }
+        }
+    );
+
+    this.news.push(
+        {
+            "title":    "Stolen famous “inverted Jenny” stamp resurfaces in New York City! Stamp collectors are amazed…",
+            "date":     "April 21, 2016",
+            "numDate":  "2016-04-21",
+            "bodyText": "In 1955, a block of four rare postage stamps was stolen from a display case at a convention. Over the years, two were recovered, but there were no signs of the others ‒ until now.",
+            "referer":  "StampNews.com",
+            "src":      "http://www.stampnews.com/stamps/stamps_2016/stamp_stolen-famous-inverted-jenny-stamp-resurfaces-in-new-york-city-stamp-collectors-are-amazed.html",
+            "image":    {
+                "src":          "assets/img/articles/jennyFound.jpg",
+                "alt":          "",
+                "position":     "bottom"
+            },
+            "options":  {
+
+            }
+        }
+    );
+
+    this.news.push(
+        {
+            "title":    "55th anniversary of the first human flight into space… One bright stamp released by Russian Post",
+            "date":     "April 17, 2016",
+            "numDate":  "2016-04-17",
+            "bodyText": "2016 marks the 55th anniversary of the first human flight into space, a remarkable date for the Russian cosmonautics. To commemorate this occasion Rusmarka has released a special commemorative stamp depicting the portrait of world-famous Yuri Gagarin.",
+            "referer":  "StampNews.com",
+            "src":      "http://www.stampnews.com/stamps/stamps_2016/stamp_55th-anniversary-of-the-first-human-flight-into-space-one-bright-stamp-released-by-russian-post.html",
+            "image":    {
+                "src":          "assets/img/articles/spaceFlight.jpg",
+                "alt":          "",
+                "position":     "bottom"
+            },
+            "options":  {
+
+            }
+        }
+    );
+
+    this.news.push(
+        {
+            "title":    "Rio 2016 Olympic stamps : Exploring the world of Sports",
+            "date":     "May 25, 2016",
+            "numDate":  "2016-05-25",
+            "bodyText": "Olympic Stamps are very favourite among collectors and with the upcoming Summer Olympics we bring these complete collection of Rio 2016 Olympic stamps.",
+            "referer":  "PhilatelyNews.com",
+            "src":      "http://philatelynews.com/rio-2016-olympic-stamps-collection/",
+            "image":    {
+                "src":          "assets/img/articles/rio.jpg",
+                "alt":          "",
+                "position":     "bottom"
+            },
+            "options":  {
+
+            }
+        }
+    );
+
+    this.news.push(
+        {
+            "title":    "Star Trek 50th anniversary stamp collection from Canada post",
+            "date":     "May 6, 2016",
+            "numDate":  "2016-05-06",
+            "bodyText": "Canada post issued a unique collection of Star Trek 50th anniversary stamp depicting cast members and battle cruiser from Star Trek: The Original Series.The products available for Star Trek 50th anniversary stamp are prestige booklet, official first day covers, souvenir sheets, uncut press sheets, panes, and booklets, fans will discover a galaxy of memorabilia, including postcards and stamp dispensers.",
+            "referer":  "PhilatelyNews.com",
+            "src":      "http://philatelynews.com/star-trek-50th-anniversary-stamp-collection-canada-post/",
+            "image":    {
+                "src":          "assets/img/articles/starTrek.jpg",
+                "alt":          "",
+                "position":     "bottom"
+            },
+            "options":  {
+
+            }
+        }
+    );
+
+    this.news.push(
+        {
+            "title":    "USPS to celebrate 100th Anniversary of National Park Service with Forever Stamps",
+            "date":     "Apr 25, 2016",
+            "numDate":  "2016-04-25",
+            "bodyText": "The U.S. Postal Service will be issuing a pane of National Park Service Forever Stamps celebrating the 100th Anniversary of NPS on August 25, 2016.The stunning Forever stamps depicting 16 examples of US national treasures will be issued on June 2, 2016.",
+            "referer":  "PhilatelyNews.com",
+            "src":      "http://philatelynews.com/usps-celebrate-100th-anniversary-national-park-service-forever-stamps/",
+            "image":    {
+                "src":          "assets/img/articles/NatlParks.jpg",
+                "alt":          "",
+                "position":     "bottom"
+            },
+            "options":  {
+
+            }
+        }
+    );
+
+    this.news.push(
+        {
+            "title":    "100 years of Albert Einstein General theory of relativity",
+            "date":     "Mar 20, 2016",
+            "numDate":  "2016-03-20",
+            "bodyText": "The Croatian Post Ltd. Mostar issued a commemorative stamp to celebrate 100 years of Albert Einstein General theory of relativity. The stamp features the most famous photo of Albert Einstein and his famous equation E = mc².",
+            "referer":  "PhilatelyNews.com",
+            "src":      "http://philatelynews.com/100-years-albert-einstein-general-theory-relativity/",
+            "image":    {
+                "src":          "assets/img/articles/einstein.jpg",
+                "alt":          "",
+                "position":     "bottom"
+            },
+            "options":  {
+
+            }
+        }
+    );
+
+    this.news.reverse();
+// Blank Tempate: 
 
     // this.news.push(
     //     {
@@ -222,6 +431,18 @@ app.service("articleService", ['$rootScope', function($rootScope){
 
 //////  ARTICLES  /////
 
+    this.articles.push(
+        {
+            "title":    "Awards won at NOVAPEX 2016",
+            "date":     "",
+            "bodyText": "",
+            "thumbSrc": "assets/articles/2016NovapexPalmares.png",
+            "src":      "assets/articles/NOVAPEX 2016 Palmares.pdf",
+            "options":  {
+
+            }
+        }
+    );
 
     this.articles.push(
         {
@@ -235,6 +456,7 @@ app.service("articleService", ['$rootScope', function($rootScope){
             }
         }
     );
+
     this.articles.push(
         {
             "title":    "How to Remove Adhesive from Stamps",
@@ -247,6 +469,8 @@ app.service("articleService", ['$rootScope', function($rootScope){
             }
         }
     );
+
+   
 
 
     this.getSortDate = function(datestring){
