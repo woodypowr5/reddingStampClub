@@ -132,14 +132,11 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 		}
 		$scope.today = new Date();
 		// month 0 = Jan 2016
-		
-		
-		// $scope.calendar.currentMonth = $scope.today.getFullYear();
-		$scope.todaysMonth = $scope.today.getMonth(); 
-		$scope.todaysDay = $scope.today.getDate();
-		$scope.todaysYear = $scope.today.getDate();
+			
+		$scope.todaysDay = $scope.today.getDay();
+		$scope.todaysYear = 118-$scope.today.getYear();
+		$scope.todaysMonth = $scope.today.getMonth()+(12*$scope.todaysYear); 
 		$scope.calendar.currentMonth = $scope.todaysMonth; 
-		// console.log(month);
 		
 	}
 	$scope.checkPrevNextButtons = function(){
@@ -171,6 +168,8 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 
 	}
 	
+	// $scope.calendar.data  = calendarService.getData();
+
 	$scope.calendar.data[0] = {
 		"name": "January 2016",
 		"dates": [
@@ -317,31 +316,242 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 		],
 		"events": []
 	};
-		$scope.calendar.data[4].events[1] = {
-			'id': 	10,
-			'name': 'WESTPEX 2016',
-			'time': "2PM to 4PM",
-			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
-			'description': 'Annual WESTPEX Exhibition',
-			'note': 0,
-			'embed': $scope.googleMaps.home 
-		};
-		$scope.calendar.data[4].events[22] = {
-			'id': 	11,
-			'name': 'General Meeting',
-			'time': "2PM to 4PM",
-			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
-			'description': 'Bi-monthly general meeting',
-			'note': 0,
-			'embed': $scope.googleMaps.home 
-		};
-	// October Events
-	
+	$scope.calendar.data[4].events[1] = {
+		'id': 	10,
+		'name': 'WESTPEX 2016',
+		'time': "2PM to 4PM",
+		'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+		'description': 'Annual WESTPEX Exhibition',
+		'note': 0,
+		'embed': $scope.googleMaps.home 
+	};
+	$scope.calendar.data[4].events[22] = {
+		'id': 	11,
+		'name': 'General Meeting',
+		'time': "2PM to 4PM",
+		'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+		'description': 'Bi-monthly general meeting',
+		'note': 0,
+		'embed': $scope.googleMaps.home 
+	};
+
+	$scope.calendar.data[5] = {
+		"name": "June 2016",
+		"dates": [
+			[1,2,3,4,5,6,7],
+			[8,9,10,11,12,13,14],
+			[15,16,17,18,19,20,21],
+			[22,23,24,25,26,27,28],
+			[29, 30, 31, "", "", "", ""]
+		],
+		"events": []
+	};
+	$scope.calendar.data[6] = {
+		"name": "July 2016",
+		"dates": [
+			[1,2,3,4,5,6,7],
+			[8,9,10,11,12,13,14],
+			[15,16,17,18,19,20,21],
+			[22,23,24,25,26,27,28],
+			[29, 30, 31, "", "", "", ""]
+		],
+		"events": []
+	};
+	$scope.calendar.data[7] = {
+		"name": "Aug 2016",
+		"dates": [
+			[1,2,3,4,5,6,7],
+			[8,9,10,11,12,13,14],
+			[15,16,17,18,19,20,21],
+			[22,23,24,25,26,27,28],
+			[29, 30, 31, "", "", "", ""]
+		],
+		"events": []
+	};
+	$scope.calendar.data[8] = {
+		"name": "Sept 2016",
+		"dates": [
+			[1,2,3,4,5,6,7],
+			[8,9,10,11,12,13,14],
+			[15,16,17,18,19,20,21],
+			[22,23,24,25,26,27,28],
+			[29, 30, 31, "", "", "", ""]
+		],
+		"events": []
+	};	
+	$scope.calendar.data[9] = {
+		"name": "Oct 2016",
+		"dates": [
+			[1,2,3,4,5,6,7],
+			[8,9,10,11,12,13,14],
+			[15,16,17,18,19,20,21],
+			[22,23,24,25,26,27,28],
+			[29, 30, 31, "", "", "", ""]
+		],
+		"events": []
+	};	
+	$scope.calendar.data[10] = {
+		"name": "Nov 2016",
+		"dates": [
+			[1,2,3,4,5,6,7],
+			[8,9,10,11,12,13,14],
+			[15,16,17,18,19,20,21],
+			[22,23,24,25,26,27,28],
+			[29, 30, 31, "", "", "", ""]
+		],
+		"events": []
+	};	
+	$scope.calendar.data[11] = {
+		"name": "Dec 2016",
+		"dates": [
+			[1,2,3,4,5,6,7],
+			[8,9,10,11,12,13,14],
+			[15,16,17,18,19,20,21],
+			[22,23,24,25,26,27,28],
+			[29, 30, 31, "", "", "", ""]
+		],
+		"events": []
+	};	
 
 
+	$scope.calendar.data[12] = {
+		"name": "Jan 2017",
+		"dates": [
+			[1,2,3,4,5,6,7],
+			[8,9,10,11,12,13,14],
+			[15,16,17,18,19,20,21],
+			[22,23,24,25,26,27,28],
+			[29, 30, 31, "", "", "", ""]
+		],
+		"events": []
+	};
+	$scope.calendar.data[13] = {
+		"name": "Feb 2017",
+		"dates": [
+			["", "", "", 1, 2, 3, 4],
+			[5,6,7,8,9,10,11],
+			[12,13,14,15,16,17,18],
+			[19,20,21,22,23,24,25],
+			[26,27,28,"", "", "", ""]
+		],
+		"events": []
+	};
+	$scope.calendar.data[14] = {
+		"name": "Mar 2017",
+		"dates": [
+			["","","",1,2,3,4],
+			[5,6,7,8,9,10,11],
+			[12,13,14,15,16,17,18],
+			[19,20,21,22,23,24,25],
+			[26,27,28, 29, 30, 31, ""]
+		],
+		"events": []
+	};
+	$scope.calendar.data[15] = {
+		"name": "Apr 2017",
+		"dates": [
+			["","","","","","",1],
+			[2,3,4,5,6,7,8],
+			[9,10,11,12,13,14,15],
+			[16,17,18,19,20,21,22],
+			[23,24,25,26,27,28, 29],
+			[30,"","","","","",""]
+		],
+		"events": []
+	};
+	$scope.calendar.data[16] = {
+		"name": "May 2017",
+		"dates": [
+			["",1,2,3,4,5,6],
+			[7,8,9,10,11,12,13],
+			[14,15,16,17,18,19,20],
+			[21,22,23,24,25,26,27],
+			[28,29, 30, 31, "", "",""]
+		],
+		"events": []
+	};
+	$scope.calendar.data[17] = {
+		"name": "June 2017",
+		"dates": [
+			["","","","",1,2,3],
+			[4,5,6,7,8,9,10],
+			[11,12,13,14,15,16,17],
+			[18,19,20,21,22,23,24],
+			[25,26,27,28,29,30,""]
+		],
+		"events": []
+	};
+	$scope.calendar.data[18] = {
+		"name": "July 2017",
+		"dates": [
+			["","","","","","",1],
+			[2,3,4,5,6,7,8],
+			[9,10,11,12,13,14,15],
+			[16,17,18,19,20,21,22],
+			[23,24,25,26,27,28, 29],
+			[30,31,"","","","",""]
+		],
+		"events": []
+	};
+	$scope.calendar.data[19] = {
+		"name": "August 2017",
+		"dates": [
+			["","",1,2,3,4,5],
+			[6,7,8,9,10,11,12],
+			[13,14,15,16,17,18,19],
+			[20,21,22,23,24,25,26],
+			[27,28,29,30,31, "", ""]
+		],
+		"events": []
+	};
+	$scope.calendar.data[20] = {
+		"name": "September 2017",
+		"dates": [
+			["","","","","",1,2],
+			[3,4,5,6,7,8,9],
+			[10,11,12,13,14,15,16],
+			[17,18,19,20,21,22,23],
+			[24,25,26,27,28,29,30]
+		],
+		"events": []
+	};
+	$scope.calendar.data[21] = {
+		"name": "October 2017",
+		"dates": [
+			[1,2,3,4,5,6,7],
+			[8,9,10,11,12,13,14],
+			[15,16,17,18,19,20,21],
+			[22,23,24,25,26,27,28],
+			[29, 30, 31, "", "", "", ""]
+		],
+		"events": []
+	};
+	$scope.calendar.data[22] = {
+		"name": "Novermber 2017",
+		"dates": [
+			["","","",1,2,3,4],
+			[5,6,7,8,9,10,11],
+			[12,13,14,15,16,17,18],
+			[19,20,21,22,23,24,25],
+			[26,27,28, 29, 30, 31, ""]
+		],
+		"events": []
+	};
+	$scope.calendar.data[23] = {
+		"name": "December 2017",
+		"dates": [
+			["","","","","",1,2],
+			[3,4,5,6,7,8,9],
+			[10,11,12,13,14,15,16],
+			[17,18,19,20,21,22,23],
+			[24,25,26,27,28,29,30],
+			[31,"","","","","",""]
+		],
+		"events": []
+	};
 	// Run Calendar
 
-	$scope.calendar.currentMonth = 0;
+	$scope.calendar.currentMonth = 12;
 	$scope.initCalendarEvent();
 	$scope.checkPrevNextButtons();
 
