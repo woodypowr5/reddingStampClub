@@ -425,6 +425,24 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 		],
 		"events": []
 	};
+		$scope.calendar.data[12].events[1] = {
+			'id': 	6,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0,
+			'embed': $scope.googleMaps.home 
+		};
+		$scope.calendar.data[12].events[15] = {
+			'id': 	7,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0,
+			'embed': $scope.googleMaps.home 
+		};
 	$scope.calendar.data[13] = {
 		"name": "Feb 2017",
 		"dates": [
@@ -436,6 +454,24 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 		],
 		"events": []
 	};
+		$scope.calendar.data[13].events[5] = {
+			'id': 	6,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0,
+			'embed': $scope.googleMaps.home 
+		};
+		$scope.calendar.data[13].events[19] = {
+			'id': 	7,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0,
+			'embed': $scope.googleMaps.home 
+		};
 	$scope.calendar.data[14] = {
 		"name": "Mar 2017",
 		"dates": [
@@ -447,6 +483,24 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 		],
 		"events": []
 	};
+		$scope.calendar.data[14].events[5] = {
+			'id': 	6,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0,
+			'embed': $scope.googleMaps.home 
+		};
+		$scope.calendar.data[14].events[19] = {
+			'id': 	7,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0,
+			'embed': $scope.googleMaps.home 
+		};
 	$scope.calendar.data[15] = {
 		"name": "Apr 2017",
 		"dates": [
@@ -459,6 +513,16 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 		],
 		"events": []
 	};
+		$scope.calendar.data[15].events[2] = {
+			'id': 	6,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0,
+			'embed': $scope.googleMaps.home 
+		};
+		
 	$scope.calendar.data[16] = {
 		"name": "May 2017",
 		"dates": [
@@ -470,6 +534,24 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 		],
 		"events": []
 	};
+		$scope.calendar.data[16].events[7] = {
+			'id': 	6,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0,
+			'embed': $scope.googleMaps.home 
+		};
+		$scope.calendar.data[16].events[21] = {
+			'id': 	7,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0,
+			'embed': $scope.googleMaps.home 
+		};
 	$scope.calendar.data[17] = {
 		"name": "June 2017",
 		"dates": [
@@ -481,6 +563,24 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 		],
 		"events": []
 	};
+		$scope.calendar.data[17].events[4] = {
+			'id': 	6,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0,
+			'embed': $scope.googleMaps.home 
+		};
+		$scope.calendar.data[17].events[18] = {
+			'id': 	7,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0,
+			'embed': $scope.googleMaps.home 
+		};
 	$scope.calendar.data[18] = {
 		"name": "July 2017",
 		"dates": [
@@ -493,6 +593,24 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 		],
 		"events": []
 	};
+		$scope.calendar.data[18].events[2] = {
+			'id': 	6,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0,
+			'embed': $scope.googleMaps.home 
+		};
+		$scope.calendar.data[18].events[16] = {
+			'id': 	7,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0,
+			'embed': $scope.googleMaps.home 
+		};
 	$scope.calendar.data[19] = {
 		"name": "August 2017",
 		"dates": [
@@ -504,6 +622,24 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 		],
 		"events": []
 	};
+		$scope.calendar.data[19].events[6] = {
+			'id': 	6,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0,
+			'embed': $scope.googleMaps.home 
+		};
+		$scope.calendar.data[19].events[20] = {
+			'id': 	7,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0,
+			'embed': $scope.googleMaps.home 
+		};
 	$scope.calendar.data[20] = {
 		"name": "September 2017",
 		"dates": [
@@ -515,6 +651,24 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 		],
 		"events": []
 	};
+		$scope.calendar.data[20].events[3] = {
+			'id': 	6,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0,
+			'embed': $scope.googleMaps.home 
+		};
+		$scope.calendar.data[20].events[17] = {
+			'id': 	7,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0,
+			'embed': $scope.googleMaps.home 
+		};
 	$scope.calendar.data[21] = {
 		"name": "October 2017",
 		"dates": [
@@ -526,6 +680,24 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 		],
 		"events": []
 	};
+		$scope.calendar.data[21].events[1] = {
+			'id': 	6,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0,
+			'embed': $scope.googleMaps.home 
+		};
+		$scope.calendar.data[21].events[15] = {
+			'id': 	7,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0,
+			'embed': $scope.googleMaps.home 
+		};
 	$scope.calendar.data[22] = {
 		"name": "Novermber 2017",
 		"dates": [
@@ -537,6 +709,24 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 		],
 		"events": []
 	};
+		$scope.calendar.data[22].events[5] = {
+			'id': 	6,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0,
+			'embed': $scope.googleMaps.home 
+		};
+		$scope.calendar.data[22].events[19] = {
+			'id': 	7,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0,
+			'embed': $scope.googleMaps.home 
+		};
 	$scope.calendar.data[23] = {
 		"name": "December 2017",
 		"dates": [
@@ -549,6 +739,24 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 		],
 		"events": []
 	};
+		$scope.calendar.data[23].events[3] = {
+			'id': 	6,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0,
+			'embed': $scope.googleMaps.home 
+		};
+		$scope.calendar.data[23].events[17] = {
+			'id': 	7,
+			'name': 'General Meeting',
+			'time': "2PM to 4PM",
+			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'description': 'Bi-monthly general meeting',
+			'note': 0,
+			'embed': $scope.googleMaps.home 
+		};
 	// Run Calendar
 
 	$scope.calendar.currentMonth = 12;
