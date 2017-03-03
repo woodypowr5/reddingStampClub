@@ -168,7 +168,7 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 
 	}
 	
-	// $scope.calendar.data  = calendarService.getData();
+
 
 	$scope.calendar.data[0] = {
 		"name": "January 2016",
