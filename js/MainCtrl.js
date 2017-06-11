@@ -567,7 +567,7 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 			'id': 	6,
 			'name': 'General Meeting',
 			'time': "2PM to 4PM",
-			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'location': "River Commons 301 Hartnell Dr. Redding, CA 96002",
 			'description': 'Bi-monthly general meeting',
 			'note': 0,
 			'embed': $scope.googleMaps.home 
@@ -576,7 +576,7 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 			'id': 	7,
 			'name': 'General Meeting',
 			'time': "2PM to 4PM",
-			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'location': "River Commons 301 Hartnell Dr. Redding, CA 96002",
 			'description': 'Bi-monthly general meeting',
 			'note': 0,
 			'embed': $scope.googleMaps.home 
@@ -597,7 +597,7 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 			'id': 	6,
 			'name': 'General Meeting',
 			'time': "2PM to 4PM",
-			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'location': "River Oaks Commons 301 Hartnell Dr. Redding, CA 96002",
 			'description': 'Bi-monthly general meeting',
 			'note': 0,
 			'embed': $scope.googleMaps.home 
@@ -606,7 +606,7 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 			'id': 	7,
 			'name': 'General Meeting',
 			'time': "2PM to 4PM",
-			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'location': "River Commons 301 Hartnell Dr. Redding, CA 96002",
 			'description': 'Bi-monthly general meeting',
 			'note': 0,
 			'embed': $scope.googleMaps.home 
@@ -626,7 +626,7 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 			'id': 	6,
 			'name': 'General Meeting',
 			'time': "2PM to 4PM",
-			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'location': "River Commons 301 Hartnell Dr. Redding, CA 96002",
 			'description': 'Bi-monthly general meeting',
 			'note': 0,
 			'embed': $scope.googleMaps.home 
@@ -635,7 +635,7 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 			'id': 	7,
 			'name': 'General Meeting',
 			'time': "2PM to 4PM",
-			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'location': "River Commons 301 Hartnell Dr. Redding, CA 96002",
 			'description': 'Bi-monthly general meeting',
 			'note': 0,
 			'embed': $scope.googleMaps.home 
@@ -655,7 +655,7 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 			'id': 	6,
 			'name': 'General Meeting',
 			'time': "2PM to 4PM",
-			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'location': "River Commons 301 Hartnell Dr. Redding, CA 96002",
 			'description': 'Bi-monthly general meeting',
 			'note': 0,
 			'embed': $scope.googleMaps.home 
@@ -664,7 +664,7 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 			'id': 	7,
 			'name': 'General Meeting',
 			'time': "2PM to 4PM",
-			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'location': "River Commons 301 Hartnell Dr. Redding, CA 96002",
 			'description': 'Bi-monthly general meeting',
 			'note': 0,
 			'embed': $scope.googleMaps.home 
@@ -684,7 +684,7 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 			'id': 	6,
 			'name': 'General Meeting',
 			'time': "2PM to 4PM",
-			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'location': "River Commons 301 Hartnell Dr. Redding, CA 96002",
 			'description': 'Bi-monthly general meeting',
 			'note': 0,
 			'embed': $scope.googleMaps.home 
@@ -693,7 +693,7 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 			'id': 	7,
 			'name': 'General Meeting',
 			'time': "2PM to 4PM",
-			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'location': "River Commons 301 Hartnell Dr. Redding, CA 96002",
 			'description': 'Bi-monthly general meeting',
 			'note': 0,
 			'embed': $scope.googleMaps.home 
@@ -713,7 +713,7 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 			'id': 	6,
 			'name': 'General Meeting',
 			'time': "2PM to 4PM",
-			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'location': "River Commons 301 Hartnell Dr. Redding, CA 96002",
 			'description': 'Bi-monthly general meeting',
 			'note': 0,
 			'embed': $scope.googleMaps.home 
@@ -722,7 +722,7 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 			'id': 	7,
 			'name': 'General Meeting',
 			'time': "2PM to 4PM",
-			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'location': "River Commons 301 Hartnell Dr. Redding, CA 96002",
 			'description': 'Bi-monthly general meeting',
 			'note': 0,
 			'embed': $scope.googleMaps.home 
@@ -743,7 +743,7 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 			'id': 	6,
 			'name': 'General Meeting',
 			'time': "2PM to 4PM",
-			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'location': "River Commons 301 Hartnell Dr. Redding, CA 96002",
 			'description': 'Bi-monthly general meeting',
 			'note': 0,
 			'embed': $scope.googleMaps.home 
@@ -752,22 +752,15 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 			'id': 	7,
 			'name': 'General Meeting',
 			'time': "2PM to 4PM",
-			'location': "River Oaks Retirement Community 301 Hartnell Dr. Redding, CA 96002",
+			'location': "River Commons 301 Hartnell Dr. Redding, CA 96002",
 			'description': 'Bi-monthly general meeting',
 			'note': 0,
 			'embed': $scope.googleMaps.home 
 		};
-	// Run Calendar
 
-	$scope.calendar.currentMonth = 12;
+	// Run Calendar
 	$scope.initCalendarEvent();
 	$scope.checkPrevNextButtons();
-
-	
-	// console.log($scope.articles);
-	
-
-
 
 
 }]);
