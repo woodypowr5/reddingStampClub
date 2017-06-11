@@ -123,6 +123,12 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 		}
 	}
 	$scope.initCalendarEvent = function(){
+		$scope.today = new Date();
+		$scope.todaysDay = $scope.today.getDay();
+		$scope.todaysYear = 118-$scope.today.getYear();
+		$scope.todaysMonth = $scope.today.getMonth()+(12*$scope.todaysYear); 
+		$scope.calendar.currentMonth = $scope.todaysMonth; 
+		
 		// set activeEvent to first event of the month
 		for(var i = 0; i < $scope.calendar.data[$scope.calendar.currentMonth].events.length; i++){
 			if(typeof($scope.calendar.data[$scope.calendar.currentMonth].events[i]) != 'undefined'){
@@ -130,14 +136,6 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 				break;
 			}
 		}
-		$scope.today = new Date();
-		// month 0 = Jan 2016
-			
-		$scope.todaysDay = $scope.today.getDay();
-		$scope.todaysYear = 118-$scope.today.getYear();
-		$scope.todaysMonth = $scope.today.getMonth()+(12*$scope.todaysYear); 
-		$scope.calendar.currentMonth = $scope.todaysMonth; 
-		
 	}
 	$scope.checkPrevNextButtons = function(){
 		if($scope.calendar.currentMonth + 1 <= -1){
@@ -757,8 +755,8 @@ app.controller('MainCtrl', ['$scope', '$location','articleService', 'linkService
 			'note': 0,
 			'embed': $scope.googleMaps.home 
 		};
-
 	// Run Calendar
+
 	$scope.initCalendarEvent();
 	$scope.checkPrevNextButtons();
 
