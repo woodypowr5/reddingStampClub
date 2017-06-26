@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="css/anim-in-out.css">
 	<!-- <link rel="stylesheet" href="contactForm/contactFormStyles.css"> -->
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/novapex2018.css">
 	<link href='https://fonts.googleapis.com/css?family=Arvo|Lato|Open+Sans|Oswald|PT+Sans|Arimo|Roboto|Merriweather|Nunito|Montserrat' rel='stylesheet' type='text/css'>
 	<!-- fonts I like: open sans -->
 </head>
@@ -44,13 +45,43 @@
 		}"
 		>	
 
-			<!-- Novapex -->
+		<!-- Elements present on specific pages -->
+
+			<!-- Homepage 2018 Novapex Notification -->
+			<div class="hero-stamp hero-stamp-novapex-2018" ng-show="currentView === 'home'">
+				<div class="hero-stamp-text hero-stamp-title">
+					NOVAPEX 2018 Information
+				</div>
+				<div class="hero-stamp-text hero-stamp-heading">
+					Dates:
+				</div>
+				<div class="hero-stamp-text hero-stamp-body">
+					March 3-4, 2018
+				</div>
+				<div class="hero-stamp-text hero-stamp-heading">
+					Location:
+				</div>
+				<div class="hero-stamp-text hero-stamp-body">	
+					Senior Citizen's Hall
+				</div>
+				<div class="hero-stamp-text hero-stamp-body">	
+					2290 Benton Drive
+				</div>
+				<div class="hero-stamp-text hero-stamp-body">	
+					Redding, CA 96002
+				</div>
+				<div class="hero-stamp-text hero-stamp-elaboration">	
+					More information coming soon 
+				</div>	
+			</div>	
+
+			<!-- Novapex Stamp Inset -->
 			<div class="hero-stamp hero-stamp-yosemite" ng-show="currentView === 'novapex'">
 				<img src="assets/img/yosemite-stamps.png" alt="">
 			</div>	
+
+		<!--  -->	
 			
-		<!-- </div> -->
-		
 		<nav class="nav-wrapper" ng-class="{'mobile':mobileNavActive === true}">
 			<a class="nav-link" ui-sref="home" autoscroll="false" ng-class="{'nav-link-active': currentView === 'home'}" ng-click="closeMobileNav()">
 					HOME

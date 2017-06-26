@@ -1,0 +1,36 @@
+.hero-stamp-novapex-2018{
+	top: 20px;
+	right: 20px;
+	border: 2px solid #AAA;
+	border-radius: 5px;
+	background-color: rgba(60,60,60, 0.80);
+	color: #DDD;
+	height: auto;
+	padding: 20px 30px;
+	min-width: 295px;
+	font-size: 1em;
+}
+	.hero-stamp-text{
+		width: 100%;
+		text-align: left;
+		margin-bottom: 10px;
+	}
+	.hero-stamp-body{
+		font-size: 0.9em;
+		padding-left: 15px;
+		margin-bottom: 8px;
+	}
+	.hero-stamp-title{
+		font-size: 1.2em;
+		font-weight: bold;
+		text-decoration: underline;
+		margin-bottom: 15px;
+	}
+	.hero-stamp-heading{
+		font-weight: bold;
+	}
+	.hero-stamp-elaboration{
+		margin-top: 10px;
+		font-size: 0.9em;
+		font-weight: bold;
+	}
