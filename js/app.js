@@ -13,52 +13,12 @@ app.config(function($stateProvider, $urlRouterProvider, $provide){
 			data: {newView: 'home'}
 		})
 
-		// LEADERSHIP
-		.state('leadership', {
-			url: '/leadership',
-			templateUrl: 'partials/leadership-view.html',
-			data: {newView: 'leadership'}
-		})
-
-		// NOVAPEX
-		.state('novapex', {
-			url: '/novapex',
-			templateUrl: 'partials/novapex-view.html',
-			data: {newView: 'novapex'}
-		})
-			.state('novapex.prospectus', {
-				url: '/novapex',
-				templateUrl: 'partials/novapex-view.html',
-				data: {newView: 'novapex', modal: 'prospectus'}
-			})
-			.state('novapex.palmares', {
-				url: '/novapex',
-				templateUrl: 'partials/novapex-view.html',
-				data: {newView: 'novapex', modal: 'palmares'}
-			})
-
-
-		// CALENDAR
-		.state('calendar', {
-			url: '/calendar',
-			templateUrl: 'partials/calendar-view.html',
-			data: {newView: 'calendar'}
-		})
-
-		// LINIKS
+		// LINKS
 		.state('links', {
 			url: '/links',
 			templateUrl: 'partials/links-view.html',
 			data: {newView: 'links'}
 		})
-
-		// NEWS
-		.state('news', {
-			url: '/news',
-			templateUrl: 'partials/news-view.html',
-			data: {newView: 'news'}
-		})
-
 
 		// CONTACT
 		.state('contact', {
